@@ -1,12 +1,10 @@
-import HeroSection from "./components/Landing/HeroSection";
-import Navbar from "./components/Navigation/Navbar";
+import HeroSection from "../components/Landing/HeroSection";
 
 export default function Home() {
   return (
     <>
       <div>
-        <Navbar />
-        <HeroSection />
+        {/* <HeroSection /> */}
       </div>
     </>
   );

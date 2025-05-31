@@ -164,14 +164,14 @@ export default function Navigation() {
   }, [])
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 h-[6rem] flex justify-center items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 h-[4rem] flex justify-center items-center">
+      <div className="max-w-4xl md:max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* logo */}
          <Image
           className="dark:invert"
-          src=""
-          alt="Next.js logo"
+          src="/logo.png"
+          alt="Xolace logo"
           width={180}
           height={38}
           priority

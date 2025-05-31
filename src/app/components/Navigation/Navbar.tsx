@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "motion/react"
 import { ChevronDown, Menu, X, Building2, Package, BookOpen, HelpCircle } from "lucide-react"
 import { Button } from "../ui/button"
 import Image from "next/image"

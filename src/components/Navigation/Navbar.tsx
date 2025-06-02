@@ -1,24 +1,33 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useRef, useEffect } from "react"
-import { motion, AnimatePresence } from "motion/react"
-import { ChevronDown, Menu, X, Building2, Package, BookOpen, HelpCircle } from "lucide-react"
-import { Button } from "../ui/button"
-import Image from "next/image"
+import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import {
+  ChevronDown,
+  Menu,
+  X,
+  Building2,
+  Package,
+  BookOpen,
+  HelpCircle,
+} from "lucide-react";
+import { Button } from "../ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 interface DropdownItem {
-  label: string
-  href: string
-  description?: string
-  icon?: React.ReactNode
+  label: string;
+  href: string;
+  description?: string;
+  icon?: React.ReactNode;
 }
 
 interface NavItem {
-  label: string
-  href: string
-  dropdown?: DropdownItem[]
+  label: string;
+  href: string;
+  dropdown?: DropdownItem[];
 }
 
 const navigationData: NavItem[] = [
@@ -38,7 +47,12 @@ const navigationData: NavItem[] = [
         description: "Join our growing team",
         icon: <Building2 className="w-4 h-4" />,
       },
-      { label: "News", href: "/news", description: "Latest company updates", icon: <Building2 className="w-4 h-4" /> },
+      {
+        label: "News",
+        href: "/news",
+        description: "Latest company updates",
+        icon: <Building2 className="w-4 h-4" />,
+      },
       {
         label: "Contact",
         href: "/contact",
@@ -63,7 +77,12 @@ const navigationData: NavItem[] = [
         description: "Advanced data insights",
         icon: <Package className="w-4 h-4" />,
       },
-      { label: "API", href: "/api", description: "Developer tools and APIs", icon: <Package className="w-4 h-4" /> },
+      {
+        label: "API",
+        href: "/api",
+        description: "Developer tools and APIs",
+        icon: <Package className="w-4 h-4" />,
+      },
       {
         label: "Integrations",
         href: "/integrations",
@@ -132,64 +151,102 @@ const navigationData: NavItem[] = [
       },
     ],
   },
-]
+];
 
 export default function Navigation() {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
-    setActiveDropdown(label)
-  }
+    setActiveDropdown(label);
+  };
 
   const handleMouseLeave = () => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
     timeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null)
-    }, 150)
-  }
+      setActiveDropdown(null);
+    }, 150);
+  };
 
+  // Close mobile menu when clicking outside or on escape
   useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current)
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMobileMenuOpen(false);
       }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest("nav")) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("keydown", handleEscape);
+      document.addEventListener("click", handleClickOutside);
     }
-  }, [])
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("click", handleClickOutside);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [isMobileMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 h-[4rem] flex justify-center items-center">
-      <div className="max-w-4xl md:max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* logo */}
-         <Image
-          className="dark:invert"
-          src="/logo.png"
-          alt="Xolace logo"
-          width={180}
-          height={38}
-          priority
-        />
+    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 md:h-[7rem] md:flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 lg:h-20 gap-36">
+          {/* Logo */}
           <motion.div
-            className="flex-shrink-0"
+            className="flex-shrink-0 flex items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="text-2xl font-bold font-aicon-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Xolace
-            </div>
+            <Link href={"/"}>
+              <div className="flex items-center space-x-3">
+                <Image
+                  className="dark:invert w-8 h-8 sm:w-10 sm:h-10"
+                  src="/logo.png"
+                  alt="Xolace logo"
+                  width={40}
+                  height={40}
+                  priority
+                />
+                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Xolace
+                </div>
+              </div>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-[12rem] flex items-baseline space-x-8">
+          <div className="hidden lg:flex items-center justify-center flex-1 max-w-2xl mx-8">
+            <div className="flex items-center space-x-1 xl:space-x-4">
               {navigationData.map((item, index) => (
                 <div
                   key={item.label}
@@ -198,22 +255,22 @@ export default function Navigation() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <motion.button
-                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-[19px] font-medium flex items-center gap-1 transition-colors duration-200"
+                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm xl:text-base font-medium flex items-center gap-1 transition-colors duration-200 rounded-lg hover:bg-gray-50"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                   >
                     {item.label}
                     <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-200 ${
+                      className={`w-3 h-3 xl:w-4 xl:h-4 transition-transform duration-200 ${
                         activeDropdown === item.label ? "rotate-180" : ""
                       }`}
                     />
                   </motion.button>
 
-                  {/* Dropdown Menu */}
+                  {/* Desktop Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.label && item.dropdown && (
                       <motion.div
@@ -221,23 +278,32 @@ export default function Navigation() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50"
+                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-72 xl:w-80 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50"
                       >
                         {item.dropdown.map((dropdownItem, dropdownIndex) => (
                           <motion.a
                             key={dropdownItem.label}
                             href={dropdownItem.href}
-                            className="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150"
+                            className="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150 rounded-lg mx-2"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.2, delay: dropdownIndex * 0.05 }}
+                            transition={{
+                              duration: 0.2,
+                              delay: dropdownIndex * 0.05,
+                            }}
                             whileHover={{ x: 5 }}
                           >
-                            <div className="text-blue-600 mt-0.5">{dropdownItem.icon}</div>
-                            <div>
-                              <div className="font-medium text-gray-900">{dropdownItem.label}</div>
+                            <div className="text-blue-600 mt-0.5 flex-shrink-0">
+                              {dropdownItem.icon}
+                            </div>
+                            <div className="min-w-0">
+                              <div className="font-medium text-gray-900 truncate">
+                                {dropdownItem.label}
+                              </div>
                               {dropdownItem.description && (
-                                <div className="text-gray-500 text-xs mt-1">{dropdownItem.description}</div>
+                                <div className="text-gray-500 text-xs mt-1 line-clamp-2">
+                                  {dropdownItem.description}
+                                </div>
                               )}
                             </div>
                           </motion.a>
@@ -250,16 +316,16 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - Desktop */}
           <motion.div
-            className="hidden md:block"
+            className="hidden lg:block flex-shrink-0"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 xl:px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl text-sm xl:text-base"
                 onClick={() => (window.location.href = "/xolace")}
               >
                 Head to Xolace
@@ -268,69 +334,115 @@ export default function Navigation() {
           </motion.div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden flex items-center space-x-2">
+            {/* CTA Button - Mobile (smaller) */}
+            <motion.div
+              className="hidden sm:block"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <Button
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-3 py-1.5 rounded-lg font-medium text-xs"
+                onClick={() => (window.location.href = "/xolace")}
+              >
+                Xolace
+              </Button>
+            </motion.div>
+
             <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              className="text-gray-700 hover:text-blue-600 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Toggle navigation menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </motion.button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t border-gray-200"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navigationData.map((item, index) => (
-                <MobileNavItem key={item.label} item={item} index={index} />
-              ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: navigationData.length * 0.1 }}
-                className="pt-4"
-              >
-                <Button
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium"
-                  onClick={() => (window.location.href = "/xolace")}
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/20 z-40 lg:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+
+            {/* Mobile Menu */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50 lg:hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navigationData.map((item, index) => (
+                  <MobileNavItem key={item.label} item={item} index={index} />
+                ))}
+
+                {/* Mobile CTA Button */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: navigationData.length * 0.1,
+                  }}
+                  className="pt-4 sm:hidden"
                 >
-                  Head to Xolace
-                </Button>
-              </motion.div>
-            </div>
-          </motion.div>
+                  <Button
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      window.location.href = "/xolace";
+                    }}
+                  >
+                    Head to Xolace
+                  </Button>
+                </motion.div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
-  )
+  );
 }
 
 function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
+      className="border-b border-gray-100 last:border-b-0 pb-4 last:pb-0"
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 py-2 font-medium"
+        className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 py-3 font-medium text-base transition-colors duration-200 min-h-[44px]"
+        aria-expanded={isOpen}
       >
-        {item.label}
-        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+        <span>{item.label}</span>
+        <ChevronDown
+          className={`w-5 h-5 transition-transform duration-200 flex-shrink-0 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
       </button>
 
       <AnimatePresence>
@@ -340,29 +452,37 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="ml-4 mt-2 space-y-2"
+            className="overflow-hidden"
           >
-            {item.dropdown.map((dropdownItem, dropdownIndex) => (
-              <motion.a
-                key={dropdownItem.label}
-                href={dropdownItem.href}
-                className="flex items-start gap-3 py-2 text-sm text-gray-600 hover:text-blue-600"
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.2, delay: dropdownIndex * 0.05 }}
-              >
-                <div className="text-blue-600 mt-0.5">{dropdownItem.icon}</div>
-                <div>
-                  <div className="font-medium">{dropdownItem.label}</div>
-                  {dropdownItem.description && (
-                    <div className="text-gray-500 text-xs mt-1">{dropdownItem.description}</div>
-                  )}
-                </div>
-              </motion.a>
-            ))}
+            <div className="ml-4 mt-2 space-y-1">
+              {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                <motion.a
+                  key={dropdownItem.label}
+                  href={dropdownItem.href}
+                  className="flex items-start gap-3 py-3 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg px-3 -mx-3 transition-colors duration-200 min-h-[44px]"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, delay: dropdownIndex * 0.05 }}
+                >
+                  <div className="text-blue-600 mt-1 flex-shrink-0">
+                    {dropdownItem.icon}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-medium text-gray-900">
+                      {dropdownItem.label}
+                    </div>
+                    {dropdownItem.description && (
+                      <div className="text-gray-500 text-xs mt-1 line-clamp-2">
+                        {dropdownItem.description}
+                      </div>
+                    )}
+                  </div>
+                </motion.a>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
     </motion.div>
-  )
+  );
 }

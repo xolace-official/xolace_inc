@@ -1,309 +1,43 @@
 "use client";
 
-import { motion } from "motion/react";
 import Image from "next/image";
-// import Link from 'next/link';
-// import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
     <>
-    <section
-      className="relative bg-black text-white h-[38rem] items-center 
-      overflow-hidden flex justify-between px-[15rem]"
-    >
-      {/* mascot */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <Image
-          className=""
-          src="/photos/Landing/mascotLanding.webp"
-          alt="Next.js logo"
-          width={280}
-          height={200}
-          priority
-        />
-      </motion.div>
+      <main className="min-h-screen">
+        {/* first section-heropage */}
+        <section className="text-white bg-black px-4 sm:px-6 lg:px-12 py-10 h-screen flex justify-center">
+          <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 lg:px-34">
+            {/* Image on Left (on large screens) */}
+            <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
+              <Image
+                src="/assets/photos/Landing/mascotLanding.webp"
+                alt="mascot image"
+                width={300}
+                height={300}
+                priority
+                className="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72 h-auto pt-5 lg:pt-0"
+              />
+            </div>
 
-      {/* Hero page text   */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-center px-6 max-w-3xl z-10"
-      >
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-right">
-          Lorem ipsum dolor sit amet consectetur.{" "}
-          <span className="text-[#00FFFF]">Officia perspiciatis</span>
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-gray-300 text-left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, porro
-          assumenda. Praesentium, similique porro fugiat ad amet sapiente
-          doloribus veniam alias dolorem quia esse? Odit reprehenderit nostrum
-          iste laudantium consequuntur?
-        </p>
-        {/* <Link href="/signup">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#00FFFF] text-black font-semibold rounded-full shadow-md hover:bg-cyan-400 transition"
-          >
-            Get Started
-            <ArrowRight size={18} />
-          </motion.button>
-        </Link> */}
-      </motion.div>
-
-      {/* Background Effects */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 2 }}
-        className="absolute inset-0 bg-noise-pattern opacity-20"
-      />
-    </section>
-
-        <section
-      className="relative bg-black text-white h-[38rem] items-center 
-      overflow-hidden flex justify-between px-[15rem]"
-    >
-      {/* mascot */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <Image
-          className=""
-          src="/photos/Landing/mascotLanding.webp"
-          alt="Next.js logo"
-          width={280}
-          height={200}
-          priority
-        />
-      </motion.div>
-
-      {/* Hero page text   */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-center px-6 max-w-3xl z-10"
-      >
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-right">
-          Lorem ipsum dolor sit amet consectetur.{" "}
-          <span className="text-[#00FFFF]">Officia perspiciatis</span>
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-gray-300 text-left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, porro
-          assumenda. Praesentium, similique porro fugiat ad amet sapiente
-          doloribus veniam alias dolorem quia esse? Odit reprehenderit nostrum
-          iste laudantium consequuntur?
-        </p>
-        {/* <Link href="/signup">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#00FFFF] text-black font-semibold rounded-full shadow-md hover:bg-cyan-400 transition"
-          >
-            Get Started
-            <ArrowRight size={18} />
-          </motion.button>
-        </Link> */}
-      </motion.div>
-
-      {/* Background Effects */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 2 }}
-        className="absolute inset-0 bg-noise-pattern opacity-20"
-      />
-    </section>
-
-
-    <section
-      className="relative bg-black text-white h-[38rem] items-center 
-      overflow-hidden flex justify-between px-[15rem]"
-    >
-      {/* mascot */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <Image
-          className=""
-          src="/photos/Landing/mascotLanding.webp"
-          alt="Next.js logo"
-          width={280}
-          height={200}
-          priority
-        />
-      </motion.div>
-
-      {/* Hero page text   */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-center px-6 max-w-3xl z-10"
-      >
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-right">
-          Lorem ipsum dolor sit amet consectetur.{" "}
-          <span className="text-[#00FFFF]">Officia perspiciatis</span>
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-gray-300 text-left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, porro
-          assumenda. Praesentium, similique porro fugiat ad amet sapiente
-          doloribus veniam alias dolorem quia esse? Odit reprehenderit nostrum
-          iste laudantium consequuntur?
-        </p>
-        {/* <Link href="/signup">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#00FFFF] text-black font-semibold rounded-full shadow-md hover:bg-cyan-400 transition"
-          >
-            Get Started
-            <ArrowRight size={18} />
-          </motion.button>
-        </Link> */}
-      </motion.div>
-
-      {/* Background Effects */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 2 }}
-        className="absolute inset-0 bg-noise-pattern opacity-20"
-      />
-    </section>
-
-
-    <section
-      className="relative bg-black text-white h-[38rem] items-center 
-      overflow-hidden flex justify-between px-[15rem]"
-    >
-      {/* mascot */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <Image
-          className=""
-          src="/photos/Landing/mascotLanding.webp"
-          alt="Next.js logo"
-          width={280}
-          height={200}
-          priority
-        />
-      </motion.div>
-
-      {/* Hero page text   */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-center px-6 max-w-3xl z-10"
-      >
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-right">
-          Lorem ipsum dolor sit amet consectetur.{" "}
-          <span className="text-[#00FFFF]">Officia perspiciatis</span>
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-gray-300 text-left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, porro
-          assumenda. Praesentium, similique porro fugiat ad amet sapiente
-          doloribus veniam alias dolorem quia esse? Odit reprehenderit nostrum
-          iste laudantium consequuntur?
-        </p>
-        {/* <Link href="/signup">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#00FFFF] text-black font-semibold rounded-full shadow-md hover:bg-cyan-400 transition"
-          >
-            Get Started
-            <ArrowRight size={18} />
-          </motion.button>
-        </Link> */}
-      </motion.div>
-
-      {/* Background Effects */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 2 }}
-        className="absolute inset-0 bg-noise-pattern opacity-20"
-      />
-    </section>
-
-
-    <section
-      className="relative bg-black text-white h-[38rem] items-center 
-      overflow-hidden flex justify-between px-[15rem]"
-    >
-      {/* mascot */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <Image
-          className=""
-          src="/photos/Landing/mascotLanding.webp"
-          alt="Next.js logo"
-          width={280}
-          height={200}
-          priority
-        />
-      </motion.div>
-
-      {/* Hero page text   */}
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-center px-6 max-w-3xl z-10"
-      >
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-right">
-          Lorem ipsum dolor sit amet consectetur.{" "}
-          <span className="text-[#00FFFF]">Officia perspiciatis</span>
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-gray-300 text-left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, porro
-          assumenda. Praesentium, similique porro fugiat ad amet sapiente
-          doloribus veniam alias dolorem quia esse? Odit reprehenderit nostrum
-          iste laudantium consequuntur?
-        </p>
-        {/* <Link href="/signup">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#00FFFF] text-black font-semibold rounded-full shadow-md hover:bg-cyan-400 transition"
-          >
-            Get Started
-            <ArrowRight size={18} />
-          </motion.button>
-        </Link> */}
-      </motion.div>
-
-      {/* Background Effects */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 2 }}
-        className="absolute inset-0 bg-noise-pattern opacity-20"
-      />
-    </section>
-
+            {/* Text on Right */}
+            <div className="w-full lg:w-1/2 text-left lg:text-left">
+              <h4 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6">
+                <span className="text-teal-200">The anonymous circle </span>
+                where minds connect and hearts heal.
+              </h4>
+              <h1 className="text-left sm:text-lg md:text-xl leading-relaxed">
+                Xolace is a safe, anonymous space to share your struggles, seek
+                support, and connect with others. It’s more than just a platform
+                — it’s a community where your story matters, and healing begins
+                through shared experiences. 🌿
+              </h1>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
-
-    
   );
 };
 

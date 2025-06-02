@@ -1,4 +1,5 @@
-import {Megaphone, Leaf, Shield, HeartHandshake } from "lucide-react";
+import { Megaphone, Leaf, Shield, HeartHandshake } from "lucide-react";
+import { InteractiveHoverButton } from "../ui/magicui/interactive-hover-button";
 
 export default function WhyXolaceSection() {
   const features = [
@@ -9,7 +10,7 @@ export default function WhyXolaceSection() {
         "Post and share your thoughts and experiences anonymously, without judgment.",
     },
     {
-      icon: HeartHandshake ,
+      icon: HeartHandshake,
       title: " Find Your Tribe",
       description:
         "Connect with people who understand and share your struggles.",
@@ -17,14 +18,12 @@ export default function WhyXolaceSection() {
     {
       icon: Leaf,
       title: "A Space to Heal",
-      description:
-        "Quietly process, reflect, and grow at your own pace.",
+      description: "Quietly process, reflect, and grow at your own pace.",
     },
     {
       icon: Shield,
       title: "Your Privacy, Our Priority",
-      description:
-        "Your data is safe. Your identity stays yours.",
+      description: "Your data is safe. Your identity stays yours.",
     },
   ];
 
@@ -69,16 +68,24 @@ export default function WhyXolaceSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-teal-300 mb-4">
+                  <h3 className="text-xl font-semibold text-teal-100 mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-teal-300/70 leading-relaxed">
+                  <p className="text-teal-50 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
               </div>
             );
           })}
+        </div>
+        {/* CTA button */}
+        <div className="md:flex justify-center py-10 hidden">
+          <InteractiveHoverButton>Explore Xolace</InteractiveHoverButton>
+        </div>
+        <div className="flex justify-center">
+          <button className="md:hidden bg-black text-teal-300 py-2 px-5 mt-10 border-teal-300 border-2 rounded-4xl">Explore Xolace</button>
+
         </div>
       </div>
     </section>

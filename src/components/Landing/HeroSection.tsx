@@ -11,12 +11,12 @@ const HeroSection = () => {
             {/* Image on Left (on large screens) */}
             <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
               <Image
-                src="/assets/photos/Landing/mascotLanding1.png"
+                src="/assets/photos/Landing/mascotLanding3.png"
                 alt="mascot image"
-                width={300}
-                height={300}
+                width={800}
+                height={800}
                 priority
-                className="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72 h-auto pt3 lg:pt-0"
+                className="w-40 sm:w-48 md:w-[50hv] lg:w-64 xl:w-72 h-auto pt3 lg:pt-0"
               />
             </div>
 

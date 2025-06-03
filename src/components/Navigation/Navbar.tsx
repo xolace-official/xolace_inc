@@ -231,14 +231,14 @@ export default function Navigation() {
               <div className="flex items-center space-x-3">
                 <Image
                   className="dark:invert w-8 h-8 sm:w-10 sm:h-10"
-                  src="/logo.png"
+                  src="/assets/photos/Navbar/favicon.png"
                   alt="Xolace logo"
                   width={40}
                   height={40}
                   priority
                 />
                 <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Xolace
+                  xolace inc
                 </div>
               </div>
             </Link>

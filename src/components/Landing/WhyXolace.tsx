@@ -1,5 +1,6 @@
 import { Megaphone, Leaf, Shield, HeartHandshake } from "lucide-react";
 import { InteractiveHoverButton } from "../ui/magicui/interactive-hover-button";
+import Image from "next/image";
 
 export default function WhyXolaceSection() {
   const features = [
@@ -28,7 +29,7 @@ export default function WhyXolaceSection() {
   ];
 
   return (
-    <section className="relative w-full px-4 py-16 md:px-20 md:py-24 bg-teal-900 overflow-hidden">
+    <section className="relative w-full px-4 pb-16 pt-8 md:px-20 md:py-24 bg-teal-900 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.05),transparent_50%)]" />
@@ -45,10 +46,21 @@ export default function WhyXolaceSection() {
             story. At Xolace, you’re never alone. Your voice matters, and your
             journey deserves a safe space.
           </h1>
+
+          <div className="flex justify-center lg:justify-start w-full lg:w-1/2 absolute top-[11rem] lg:right-[-2.5rem] bg-black md:top-[0rem]">
+            <Image
+              src="/assets/photos/Landing/mascotLanding2.png"
+              alt="mascot image"
+              width={300}
+              height={300}
+              priority
+              className="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72 h-auto pt-3 lg:pt-0 absolute right-[-3rem]"
+            />
+          </div>
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-[8rem]">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
@@ -80,12 +92,13 @@ export default function WhyXolaceSection() {
           })}
         </div>
         {/* CTA button */}
-        <div className="md:flex justify-center py-10 hidden">
+        <div className="md:flex justify-center py-20 hidden">
           <InteractiveHoverButton>Explore Xolace</InteractiveHoverButton>
         </div>
         <div className="flex justify-center">
-          <button className="md:hidden bg-black text-teal-300 py-2 px-5 mt-10 border-teal-300 border-2 rounded-4xl">Explore Xolace</button>
-
+          <button className="md:hidden bg-black text-teal-300 py-2 px-5 mt-10 border-teal-300 border-2 rounded-4xl">
+            Explore Xolace
+          </button>
         </div>
       </div>
     </section>

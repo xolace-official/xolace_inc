@@ -11,7 +11,7 @@ const HeroSection = () => {
             {/* Image on Left (on large screens) */}
             <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
               <Image
-                src="/assets/photos/Landing/mascotLanding.webp"
+                src="/assets/photos/Landing/mascotLanding1.png"
                 alt="mascot image"
                 width={300}
                 height={300}

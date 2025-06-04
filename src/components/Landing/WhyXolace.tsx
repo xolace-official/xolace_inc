@@ -47,14 +47,14 @@ export default function WhyXolaceSection() {
             journey deserves a safe space.
           </h1>
 
-          <div className="flex justify-center lg:justify-start w-full lg:w-1/2 absolute top-[11rem] lg:right-[-2.5rem] bg-black md:top-[0rem]">
+          <div className="flex justify-center lg:justify-start w-full lg:w-1/2 absolute top-[11rem] lg:right-[-2.5rem] bg-black md:top-[-3.5rem]">
             <Image
               src="/assets/photos/Landing/mascotLanding2.png"
               alt="mascot image"
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               priority
-              className="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72 h-auto pt-3 lg:pt-0 absolute right-[-3rem]"
+              className="w-54 sm:w-72 md:w-[45vw] lg:w-80 xl:w-96 h-auto lg:pt-0 absolute right-[-3rem]"
             />
           </div>
         </div>

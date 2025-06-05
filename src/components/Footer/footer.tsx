@@ -184,7 +184,7 @@ export function Footer() {
               >
                 <MapPin className="h-5 w-5 text-gray-400 shrink-0 mt-0.5" />
                 <span className="text-gray-400">
-                  123 Innovation Street, Tech City, TC 10101
+                 Koforidua Ghana
                 </span>
               </motion.li>
               <motion.li
@@ -213,7 +213,7 @@ export function Footer() {
                 }}
               >
                 <Mail className="h-5 w-5 text-gray-400" />
-                <span className="text-gray-400">contact@company.com</span>
+                <span className="text-gray-400">xolace25@gmail.com</span>
               </motion.li>
             </ul>
           </motion.div>
@@ -265,9 +265,9 @@ export function Footer() {
           transition={{ delay: 0.8, duration: 0.5 }}
         >
           <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} Company, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} xolace inc. All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 md:mt-0">
+          {/* <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 md:mt-0">
             {[
               "Privacy Policy",
               "Terms of Service",
@@ -289,7 +289,7 @@ export function Footer() {
                 </Link>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
       </motion.div>
     </footer>

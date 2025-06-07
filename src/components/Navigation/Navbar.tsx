@@ -1,225 +1,172 @@
-"use client";
+"use client"
 
-import type React from "react";
+import type React from "react"
 
-import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import {
-  ChevronDown,
-  Menu,
-  X,
-  Building2,
-  Package,
-  BookOpen,
-  HelpCircle,
-} from "lucide-react";
-import { Button } from "../ui/button";
-import Image from "next/image";
-import Link from "next/link";
+import { useState, useRef, useEffect } from "react"
+import { motion, AnimatePresence } from "motion/react"
+import { ChevronDown, Menu, X, Package, BookOpen, UsersRound, Flame, Workflow, GlobeLock, ReceiptText, GalleryHorizontal } from "lucide-react"
+import { Button } from "../ui/button"
+import Image from "next/image"
 
 interface DropdownItem {
-  label: string;
-  href: string;
-  description?: string;
-  icon?: React.ReactNode;
+  label: string
+  href: string
+  description?: string
+  icon?: React.ReactNode
 }
 
 interface NavItem {
-  label: string;
-  href: string;
-  dropdown?: DropdownItem[];
+  label: string
+  href: string
+  dropdown?: DropdownItem[]
 }
 
 const navigationData: NavItem[] = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
   {
     label: "Company",
     href: "/company",
     dropdown: [
       {
-        label: "About Us",
-        href: "/about",
-        description: "Learn about our mission and values",
-        icon: <Building2 className="w-4 h-4" />,
+        label: "Our Mission",
+        href: "/company/mission",
+        description: "Learn about our purpose and values",
+        icon: <Flame className="w-4 h-4" />,
       },
       {
-        label: "Careers",
-        href: "/careers",
-        description: "Join our growing team",
-        icon: <Building2 className="w-4 h-4" />,
+        label: "Team",
+        href: "/company/team",
+        description: "Meet the people behind Xolace",
+        icon: <UsersRound className="w-4 h-4" />,
       },
       {
-        label: "News",
-        href: "/news",
-        description: "Latest company updates",
-        icon: <Building2 className="w-4 h-4" />,
+        label: "How Xolace Works",
+        href: "/company/how-it-works",
+        description: "Discover our process and methodology",
+        icon: <Workflow className="w-4 h-4" />,
       },
       {
-        label: "Contact",
-        href: "/contact",
-        description: "Get in touch with us",
-        icon: <Building2 className="w-4 h-4" />,
-      },
-    ],
-  },
-  {
-    label: "Products",
-    href: "/products",
-    dropdown: [
-      {
-        label: "Platform",
-        href: "/platform",
-        description: "Our core platform solution",
-        icon: <Package className="w-4 h-4" />,
+        label: "Privacy Policy",
+        href: "/company/privacy",
+        description: "Your privacy and data protection",
+        icon: <GlobeLock className="w-4 h-4" />,
       },
       {
-        label: "Analytics",
-        href: "/analytics",
-        description: "Advanced data insights",
-        icon: <Package className="w-4 h-4" />,
-      },
-      {
-        label: "API",
-        href: "/api",
-        description: "Developer tools and APIs",
-        icon: <Package className="w-4 h-4" />,
-      },
-      {
-        label: "Integrations",
-        href: "/integrations",
-        description: "Connect with your tools",
-        icon: <Package className="w-4 h-4" />,
+        label: "Terms of Service",
+        href: "/company/terms",
+        description: "Terms and conditions of use",
+        icon: <ReceiptText className="w-4 h-4" />,
       },
     ],
   },
   {
-    label: "Resources",
-    href: "/resources",
+    label: "Media",
+    href: "/media",
     dropdown: [
       {
-        label: "Documentation",
-        href: "/docs",
-        description: "Comprehensive guides",
-        icon: <BookOpen className="w-4 h-4" />,
+        label: "Press",
+        href: "/media/press",
+        description: "Latest news and press releases",
+        icon: <GalleryHorizontal className="w-4 h-4" />,
+      },
+      {
+        label: "Brand Assets",
+        href: "/media/brand-assets",
+        description: "Logos, images, and brand materials",
+        icon: <Package className="w-4 h-4" />,
       },
       {
         label: "Blog",
-        href: "/blog",
-        description: "Industry insights and tips",
-        icon: <BookOpen className="w-4 h-4" />,
-      },
-      {
-        label: "Case Studies",
-        href: "/case-studies",
-        description: "Customer success stories",
-        icon: <BookOpen className="w-4 h-4" />,
-      },
-      {
-        label: "Webinars",
-        href: "/webinars",
-        description: "Live and recorded sessions",
+        href: "/media/blog",
+        description: "Insights, updates, and stories",
         icon: <BookOpen className="w-4 h-4" />,
       },
     ],
   },
   {
-    label: "Support",
-    href: "/support",
-    dropdown: [
-      {
-        label: "Help Center",
-        href: "/help",
-        description: "Find answers quickly",
-        icon: <HelpCircle className="w-4 h-4" />,
-      },
-      {
-        label: "Community",
-        href: "/community",
-        description: "Connect with other users",
-        icon: <HelpCircle className="w-4 h-4" />,
-      },
-      {
-        label: "Status",
-        href: "/status",
-        description: "System status and updates",
-        icon: <HelpCircle className="w-4 h-4" />,
-      },
-      {
-        label: "Contact Support",
-        href: "/support/contact",
-        description: "Get personalized help",
-        icon: <HelpCircle className="w-4 h-4" />,
-      },
-    ],
+    label: "Careers",
+    href: "/careers",
   },
-];
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+]
 
 export default function Navigation() {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+      clearTimeout(timeoutRef.current)
     }
-    setActiveDropdown(label);
-  };
+    setActiveDropdown(label)
+  }
 
   const handleMouseLeave = () => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+      clearTimeout(timeoutRef.current)
     }
     timeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
-  };
+      setActiveDropdown(null)
+    }, 150)
+  }
 
   // Close mobile menu when clicking outside or on escape
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setIsMobileMenuOpen(false);
+        setIsMobileMenuOpen(false)
       }
-    };
+    }
 
     const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
+      const target = e.target as HTMLElement
       if (!target.closest("nav")) {
-        setIsMobileMenuOpen(false);
+        setIsMobileMenuOpen(false)
       }
-    };
+    }
 
     if (isMobileMenuOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.addEventListener("click", handleClickOutside);
+      document.addEventListener("keydown", handleEscape)
+      document.addEventListener("click", handleClickOutside)
     }
 
     return () => {
-      document.removeEventListener("keydown", handleEscape);
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape)
+      document.removeEventListener("click", handleClickOutside)
       if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
+        clearTimeout(timeoutRef.current)
       }
-    };
-  }, [isMobileMenuOpen]);
+    }
+  }, [isMobileMenuOpen])
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden"
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "unset"
     }
 
     return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isMobileMenuOpen]);
+      document.body.style.overflow = "unset"
+    }
+  }, [isMobileMenuOpen])
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 md:h-[7rem] md:flex items-center">
+    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20 gap-36">
+        <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <motion.div
             className="flex-shrink-0 flex items-center"
@@ -227,21 +174,19 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href={"/"}>
-              <div className="flex items-center space-x-3">
-                <Image
-                  className="dark:invert w-8 h-8 sm:w-10 sm:h-10"
-                  src="/assets/photos/Navbar/favicon.png"
-                  alt="Xolace logo"
-                  width={40}
-                  height={40}
-                  priority
-                />
-                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  xolace inc
-                </div>
+            <div className="flex items-center space-x-3">
+              <Image
+                className="dark:invert w-8 h-8 sm:w-10 sm:h-10"
+                src="/assets/photos/Navbar/favicon.png"
+                alt="Xolace logo"
+                width={40}
+                height={40}
+                priority
+              />
+              <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                xolace inc 
               </div>
-            </Link>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -263,11 +208,13 @@ export default function Navigation() {
                     whileTap={{ scale: 0.98 }}
                   >
                     {item.label}
-                    <ChevronDown
-                      className={`w-3 h-3 xl:w-4 xl:h-4 transition-transform duration-200 ${
-                        activeDropdown === item.label ? "rotate-180" : ""
-                      }`}
-                    />
+                    {item.dropdown && (
+                      <ChevronDown
+                        className={`w-3 h-3 xl:w-4 xl:h-4 transition-transform duration-200 ${
+                          activeDropdown === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
                   </motion.button>
 
                   {/* Desktop Dropdown Menu */}
@@ -287,19 +234,12 @@ export default function Navigation() {
                             className="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150 rounded-lg mx-2"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{
-                              duration: 0.2,
-                              delay: dropdownIndex * 0.05,
-                            }}
+                            transition={{ duration: 0.2, delay: dropdownIndex * 0.05 }}
                             whileHover={{ x: 5 }}
                           >
-                            <div className="text-blue-600 mt-0.5 flex-shrink-0">
-                              {dropdownItem.icon}
-                            </div>
+                            <div className="text-blue-600 mt-0.5 flex-shrink-0">{dropdownItem.icon}</div>
                             <div className="min-w-0">
-                              <div className="font-medium text-gray-900 truncate">
-                                {dropdownItem.label}
-                              </div>
+                              <div className="font-medium text-gray-900 truncate">{dropdownItem.label}</div>
                               {dropdownItem.description && (
                                 <div className="text-gray-500 text-xs mt-1 line-clamp-2">
                                   {dropdownItem.description}
@@ -343,6 +283,7 @@ export default function Navigation() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Button
+                size="sm"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-3 py-1.5 rounded-lg font-medium text-xs"
                 onClick={() => (window.location.href = "/xolace")}
               >
@@ -357,11 +298,7 @@ export default function Navigation() {
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle navigation menu"
             >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </motion.button>
           </div>
         </div>
@@ -376,7 +313,7 @@ export default function Navigation() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/20 z-40 lg:hidden"
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
@@ -397,17 +334,14 @@ export default function Navigation() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.3,
-                    delay: navigationData.length * 0.1,
-                  }}
+                  transition={{ duration: 0.3, delay: navigationData.length * 0.1 }}
                   className="pt-4 sm:hidden"
                 >
                   <Button
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium"
                     onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      window.location.href = "/xolace";
+                      setIsMobileMenuOpen(false)
+                      window.location.href = "/xolace"
                     }}
                   >
                     Head to Xolace
@@ -419,11 +353,11 @@ export default function Navigation() {
         )}
       </AnimatePresence>
     </nav>
-  );
+  )
 }
 
 function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <motion.div
@@ -438,11 +372,11 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
         aria-expanded={isOpen}
       >
         <span>{item.label}</span>
-        <ChevronDown
-          className={`w-5 h-5 transition-transform duration-200 flex-shrink-0 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
+        {item.dropdown && (
+          <ChevronDown
+            className={`w-5 h-5 transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
+          />
+        )}
       </button>
 
       <AnimatePresence>
@@ -464,17 +398,11 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: dropdownIndex * 0.05 }}
                 >
-                  <div className="text-blue-600 mt-1 flex-shrink-0">
-                    {dropdownItem.icon}
-                  </div>
+                  <div className="text-blue-600 mt-1 flex-shrink-0">{dropdownItem.icon}</div>
                   <div className="min-w-0 flex-1">
-                    <div className="font-medium text-gray-900">
-                      {dropdownItem.label}
-                    </div>
+                    <div className="font-medium text-gray-900">{dropdownItem.label}</div>
                     {dropdownItem.description && (
-                      <div className="text-gray-500 text-xs mt-1 line-clamp-2">
-                        {dropdownItem.description}
-                      </div>
+                      <div className="text-gray-500 text-xs mt-1 line-clamp-2">{dropdownItem.description}</div>
                     )}
                   </div>
                 </motion.a>
@@ -484,5 +412,5 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
         )}
       </AnimatePresence>
     </motion.div>
-  );
+  )
 }

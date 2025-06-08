@@ -32,6 +32,15 @@ const HeroSection = () => {
               it’s a community where your story matters, and healing begins
               through shared experiences. 🌿
             </h1>
+
+            <div className="flex flex-wrap gap-4 mt-10">
+              <button className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors">
+                Join Our Community
+              </button>
+              <button className="px-6 py-3 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </section>

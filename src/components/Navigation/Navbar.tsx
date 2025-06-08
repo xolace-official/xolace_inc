@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "motion/react"
-import { ChevronDown, Menu, X, Package, BookOpen, UsersRound, Flame, Workflow, GlobeLock, ReceiptText, GalleryHorizontal } from "lucide-react"
+import { ChevronDown, Menu, X, Package, BookOpen, Workflow, GlobeLock, ReceiptText, GalleryHorizontal, Flame, UsersRound } from "lucide-react"
 import { Button } from "../ui/button"
 import Image from "next/image"
 
@@ -24,24 +24,50 @@ interface NavItem {
 const navigationData: NavItem[] = [
   {
     label: "Home",
-    href: "/",
+    href: "#",
   },
   {
     label: "About",
     href: "/about",
-  },
-  {
-    label: "Company",
-    href: "/company",
     dropdown: [
       {
-        label: "Our Mission",
-        href: "/company/mission",
+        label: "Our Purpose",
+        href: "/about#mission",
+        description: "Learn about our purpose and values",
+        icon: <Flame className="w-4 h-4" />,
+      },
+       {
+        label: "Our Story",
+        href: "/about#mission",
+        description: "Learn about our purpose and values",
+        icon: <Flame className="w-4 h-4" />,
+      },
+       {
+        label: "Our Values",
+        href: "/about#mission",
         description: "Learn about our purpose and values",
         icon: <Flame className="w-4 h-4" />,
       },
       {
         label: "Team",
+        href: "/about#team",
+        description: "Meet the people behind Xolace",
+        icon: <UsersRound className="w-4 h-4" />,
+      },
+    ]
+  },
+  {
+    label: "Company",
+    href: "/company",
+    dropdown: [
+      // {
+      //   label: "Our Mission",
+      //   href: "/company/mission",
+      //   description: "Learn about our purpose and values",
+      //   icon: <Flame className="w-4 h-4" />,
+      // },
+      {
+        label: "Brand",
         href: "/company/team",
         description: "Meet the people behind Xolace",
         icon: <UsersRound className="w-4 h-4" />,
@@ -53,13 +79,19 @@ const navigationData: NavItem[] = [
         icon: <Workflow className="w-4 h-4" />,
       },
       {
-        label: "Privacy Policy",
+        label: "Press & Media",
         href: "/company/privacy",
         description: "Your privacy and data protection",
         icon: <GlobeLock className="w-4 h-4" />,
       },
       {
         label: "Terms of Service",
+        href: "/company/terms",
+        description: "Terms and conditions of use",
+        icon: <ReceiptText className="w-4 h-4" />,
+      },
+      {
+        label: "Contact",
         href: "/company/terms",
         description: "Terms and conditions of use",
         icon: <ReceiptText className="w-4 h-4" />,

@@ -14,26 +14,25 @@ import Image from "next/image";
 export default function BrandShowcase() {
   const mascotVariations = [
     {
-      image: "/assets/photos/About/aboutMascot1.png",
-      name: "Guardian Ollie",
+      image: "/assets/photos/Company/mascotBrandHero.png",
+      name: "Guardian FLux",
       description: "Representing privacy and protection",
       emotion: "Protective",
     },
     {
-      image: "/assets/photos/About/aboutMascot2.png",
-      name: "Caring Ollie",
+      image: "/assets/photos/Company/mascotBrandCare.png",
       description: "Showing empathy and compassion",
       emotion: "Empathetic",
     },
     {
       image: "/assets/photos/About/aboutMascot3.png",
-      name: "Community Ollie",
+      name: "Community Flux",
       description: "Celebrating togetherness and support",
       emotion: "Joyful",
     },
     {
       image: "/assets/photos/About/aboutMascot4.png",
-      name: "Wise Ollie",
+      name: "Wise Flux",
       description: "Providing expert guidance and wisdom",
       emotion: "Knowledgeable",
     },
@@ -140,40 +139,42 @@ export default function BrandShowcase() {
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">
-              Meet Ollie
+              Meet Flux
             </h2>
             <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
             <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-              Our beloved mascot embodies the heart of Xolace—a gentle guardian
+              Our beloved mascot embodies the heart of Xolace a gentle guardian
               who represents safety, understanding, and the transformative power
               of community support.
             </p>
           </div>
-
           {/* Mascot Story */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h3 className="text-xl sm:text-2xl font-medium text-gray-50 mb-6">
-                The Story Behind Ollie
+                The Story Behind Flux
               </h3>
               <div className="space-y-4 text-gray-50 leading-relaxed">
                 <p>
-                  <strong className="text-teal-300">Ollie</strong> (short for
-                  "Olive branch") represents peace, healing, and the extension
-                  of support to those in need. Designed as a gentle,
-                  approachable character, Ollie embodies the safe space that
-                  Xolace provides.
+                  <strong className="text-teal-300">Flux</strong> symbolizes
+                  continuous growth, transformation, and emotional resilience.
+                  The name “Flux” comes from the idea of change being a natural,
+                  flowing part of life—especially in our mental and emotional
+                  states.
                 </p>
                 <p>
-                  The soft, rounded features symbolize comfort and non-judgment,
-                  while the warm colors reflect the warmth of human connection.
-                  Ollie's various expressions show that it's okay to feel
-                  different emotions—all are welcome and understood.
+                  Designed with a soft flame-shaped head and a soothing rainbow
+                  gradient, Flux represents both the spark within each person
+                  and the beautiful spectrum of human emotion. Its glowing
+                  presence is a visual reminder that even in difficult times,
+                  there's warmth, color, and light within us.
                 </p>
                 <p>
-                  More than just a mascot, Ollie is a symbol of hope—reminding
-                  everyone that they're not alone in their journey and that
-                  support is always available.
+                  As the friendly face of Xolace, Flux stands for compassion,
+                  courage, and community. It encourages everyone to embrace
+                  their feelings, seek help without shame, and know they’re not
+                  alone in their journey. Just like mental health, Flux is
+                  always evolving—kind, open, and full of heart.
                 </p>
               </div>
             </div>
@@ -210,6 +211,7 @@ export default function BrandShowcase() {
               ))}
             </div>
           </div>
+          F
         </div>
       </section>
 

@@ -5,6 +5,7 @@ import Team from "@/components/About/Team";
 import CTA from "@/components/About/CTA";
 import CommunityImpact from "@/components/About/CommunityImpact";
 import Value from "@/components/About/Value";
+import BackToTopButton from "@/components/Button/Page";
 
 export default function AboutPage() {
   return (
@@ -16,6 +17,7 @@ export default function AboutPage() {
       <CommunityImpact/>
       <Team />
       <CTA />
+      <BackToTopButton/>
     </>
   );
 }

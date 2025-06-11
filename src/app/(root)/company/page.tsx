@@ -6,6 +6,7 @@ import CommunityShowcase from "@/components/Company/community-showcase"
 import ExpertTeam from "@/components/Company/expert-team"
 import SupportFinder from "@/components/Company/support-finder"
 import AccessibilityPrivacy from "@/components/Company/accessabilty-privacy"
+import BackToTopButton from "@/components/Button/Page"
 export default function Page() {
   return (
     <main>
@@ -17,6 +18,7 @@ export default function Page() {
       <ExpertTeam />
       <SupportFinder />
       <AccessibilityPrivacy />
+      <BackToTopButton/>
     </main>
   )
 }

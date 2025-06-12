@@ -9,6 +9,7 @@ import {
   Palette,
   Type,
 } from "lucide-react";
+import { div } from "motion/react-client";
 import Image from "next/image";
 
 export default function BrandShowcase() {
@@ -140,13 +141,13 @@ export default function BrandShowcase() {
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">
-              Meet Ollie
+              Meet Flux
             </h2>
             <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
             <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-              Our beloved mascot embodies the heart of Xolace—a gentle guardian
-              who represents safety, understanding, and the transformative power
-              of community support.
+              Flux is more than a mascot—it's the vibrant spirit of Xolace. With
+              a flame shaped head and a soft rainbow gradient body, Flux brings
+              warmth, comfort, and the spark of resilience to every journey.
             </p>
           </div>
 
@@ -154,26 +155,27 @@ export default function BrandShowcase() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h3 className="text-xl sm:text-2xl font-medium text-gray-50 mb-6">
-                The Story Behind Ollie
+                The Story Behind Flux
               </h3>
               <div className="space-y-4 text-gray-50 leading-relaxed">
                 <p>
-                  <strong className="text-teal-300">Ollie</strong> (short for
-                  "Olive branch") represents peace, healing, and the extension
-                  of support to those in need. Designed as a gentle,
-                  approachable character, Ollie embodies the safe space that
-                  Xolace provides.
+                  <strong className="text-teal-300">Flux</strong> is a
+                  comforting presence for anyone navigating emotional ups and
+                  downs. Its flame shaped head symbolizes transformation, while
+                  the soft gradients represent gentle transitions through
+                  emotion and healing.
                 </p>
                 <p>
-                  The soft, rounded features symbolize comfort and non-judgment,
-                  while the warm colors reflect the warmth of human connection.
-                  Ollie's various expressions show that it's okay to feel
-                  different emotions—all are welcome and understood.
+                  Designed to be colorful, cute, and emotionally expressive,
+                  Flux invites users into a safe space where every feeling is
+                  valid. Its black eyes show attentive care, and its glow-like
+                  presence mirrors the inner light we often forget we carry.
                 </p>
                 <p>
-                  More than just a mascot, Ollie is a symbol of hope—reminding
-                  everyone that they're not alone in their journey and that
-                  support is always available.
+                  Flux isn't just a visual symbol; it's a reminder that change is
+                  okay, and that you’re never alone. In moments of darkness,
+                  Flux is the light that gently says, “You’re seen. You matter.
+                  And you’re not alone.”
                 </p>
               </div>
             </div>

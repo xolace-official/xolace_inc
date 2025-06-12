@@ -11,7 +11,6 @@ import {
   Award,
 } from "lucide-react";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
-
 export default function AccessibilityPrivacy() {
   const privacyFeatures = [
     {

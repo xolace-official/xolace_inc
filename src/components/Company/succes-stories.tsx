@@ -55,25 +55,25 @@ export default function SuccessStories() {
 
   const impactStats = [
     {
-      icon: <Users className="w-8 h-8 text-blue-300" />,
+      icon: <Users className="w-8 h-8 text-teal-500" />,
       number: "50,000+",
       label: "Lives Touched",
       description: "People who found support and healing",
     },
     {
-      icon: <Heart className="w-8 h-8 text-rose-300" />,
+      icon: <Heart className="w-8 h-8 text-teal-500" />,
       number: "95%",
       label: "Feel Less Alone",
       description: "Report reduced isolation and loneliness",
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-green-300" />,
+      icon: <TrendingUp className="w-8 h-8 text-teal-500" />,
       number: "87%",
       label: "Improved Wellbeing",
       description: "Show measurable mental health progress",
     },
     {
-      icon: <Shield className="w-8 h-8 text-teal-300" />,
+      icon: <Shield className="w-8 h-8 text-teal-500" />,
       number: "100%",
       label: "Privacy Protected",
       description: "Anonymous support with zero data breaches",
@@ -81,21 +81,21 @@ export default function SuccessStories() {
   ]
 
   const journeyStages = [
-    { stage: "Crisis", percentage: 15, color: "bg-red-400" },
-    { stage: "Seeking Help", percentage: 25, color: "bg-orange-400" },
-    { stage: "Building Support", percentage: 35, color: "bg-yellow-400" },
-    { stage: "Growing Stronger", percentage: 45, color: "bg-green-400" },
-    { stage: "Helping Others", percentage: 25, color: "bg-blue-400" },
+    { stage: "Crisis", percentage: 15, color: "bg-teal-900" },
+    { stage: "Seeking Help", percentage: 25, color: "bg-teal-800" },
+    { stage: "Building Support", percentage: 35, color: "bg-teal-700" },
+    { stage: "Growing Stronger", percentage: 45, color: "bg-teal-600" },
+    { stage: "Helping Others", percentage: 25, color: "bg-teal-500" },
   ]
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-emerald-800 via-teal-800 to-green-900">
+    <section className="py-16 sm:py-20 bg-teal-900">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Stories of{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-teal-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">
               Transformation
             </span>
           </h2>
@@ -124,7 +124,7 @@ export default function SuccessStories() {
           <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm border border-white/20">
             <div className="flex items-start gap-6 mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-300/20 to-cyan-300/20 rounded-full flex items-center justify-center">
-                <Quote className="w-8 h-8 text-teal-300" />
+                <Quote className="w-8 h-8 text-teal-500" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-4">
@@ -160,7 +160,7 @@ export default function SuccessStories() {
                   key={index}
                   onClick={() => setActiveStory(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === activeStory ? "bg-teal-300" : "bg-white/30 hover:bg-white/50"
+                    index === activeStory ? "bg-teal-500" : "bg-white/30 hover:bg-white/50"
                   }`}
                 />
               ))}

@@ -33,7 +33,7 @@ export default function CommunityShowcase() {
       topic: "Managing daily anxiety",
       lastActivity: "2 min ago",
       mood: "supportive",
-      color: "from-blue-600 to-cyan-600",
+      color: "from-teal-900 to-teal-800",
     },
     {
       name: "Depression Warriors",
@@ -42,7 +42,7 @@ export default function CommunityShowcase() {
       topic: "Finding light in dark times",
       lastActivity: "5 min ago",
       mood: "hopeful",
-      color: "from-purple-600 to-pink-600",
+      color: "from-black to-gray-900",
     },
     {
       name: "New Parent Support",
@@ -51,7 +51,7 @@ export default function CommunityShowcase() {
       topic: "Postpartum mental health",
       lastActivity: "1 min ago",
       mood: "caring",
-      color: "from-green-600 to-teal-600",
+      color: "from-teal-900 to-teal-800",
     },
     {
       name: "LGBTQ+ Safe Space",
@@ -60,7 +60,7 @@ export default function CommunityShowcase() {
       topic: "Identity and acceptance",
       lastActivity: "3 min ago",
       mood: "inclusive",
-      color: "from-rose-600 to-orange-600",
+      color: "from-black to-gray-900",
     },
   ]
 
@@ -89,23 +89,21 @@ export default function CommunityShowcase() {
   ]
 
   const globalActivity = [
-    { region: "North America", active: 423, color: "bg-blue-400" },
-    { region: "Europe", active: 312, color: "bg-green-400" },
-    { region: "Asia Pacific", active: 267, color: "bg-purple-400" },
-    { region: "Latin America", active: 156, color: "bg-orange-400" },
-    { region: "Africa", active: 89, color: "bg-red-400" },
+    { region: "North America", active: 423, color: "bg-teal-900" },
+    { region: "Europe", active: 312, color: "bg-teal-800" },
+    { region: "Asia Pacific", active: 267, color: "bg-teal-700" },
+    { region: "Latin America", active: 156, color: "bg-teal-600" },
+    { region: "Africa", active: 89, color: "bg-teal-500" },
   ]
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-800 via-indigo-800 to-purple-900">
+    <section className="py-16 sm:py-20 bg-black">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Our Thriving{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">
-              Community
-            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">Community</span>
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-amber-300 to-yellow-400 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-gray-50 max-w-3xl mx-auto leading-relaxed">
@@ -125,7 +123,7 @@ export default function CommunityShowcase() {
 
           <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500/20 rounded-full mb-4">
-              <Users className="w-8 h-8 text-blue-300" />
+              <Users className="w-8 h-8 text-teal-500" />
             </div>
             <div className="text-3xl font-bold text-gray-50 mb-2">{liveStats.activeGroups}</div>
             <div className="text-sm text-gray-50/80">Active Groups</div>
@@ -133,7 +131,7 @@ export default function CommunityShowcase() {
 
           <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500/20 rounded-full mb-4">
-              <MessageCircle className="w-8 h-8 text-purple-300" />
+              <MessageCircle className="w-8 h-8 text-teal-500" />
             </div>
             <div className="text-3xl font-bold text-gray-50 mb-2">{liveStats.messagesLast24h.toLocaleString()}</div>
             <div className="text-sm text-gray-50/80">Messages (24h)</div>
@@ -141,7 +139,7 @@ export default function CommunityShowcase() {
 
           <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-500/20 rounded-full mb-4">
-              <Globe className="w-8 h-8 text-teal-300" />
+              <Globe className="w-8 h-8 text-teal-500" />
             </div>
             <div className="text-3xl font-bold text-gray-50 mb-2">{liveStats.countriesActive}</div>
             <div className="text-sm text-gray-50/80">Countries</div>
@@ -253,15 +251,15 @@ export default function CommunityShowcase() {
           <h3 className="text-xl font-medium text-gray-50 mb-4">Community Impact This Month</h3>
           <div className="grid sm:grid-cols-3 gap-6">
             <div>
-              <div className="text-2xl font-bold text-blue-300 mb-1">2,847</div>
+              <div className="text-2xl font-bold text-teal-500 mb-1">2,847</div>
               <div className="text-sm text-gray-50/80">New connections made</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-green-300 mb-1">156</div>
+              <div className="text-2xl font-bold text-teal-500 mb-1">156</div>
               <div className="text-sm text-gray-50/80">Crisis interventions</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-purple-300 mb-1">4.9/5</div>
+              <div className="text-2xl font-bold text-teal-500 mb-1">4.9/5</div>
               <div className="text-sm text-gray-50/80">Community satisfaction</div>
             </div>
           </div>

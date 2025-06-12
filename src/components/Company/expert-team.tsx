@@ -3,7 +3,6 @@
 import { Award, BookOpen, Heart, Shield, CheckCircle, Globe } from "lucide-react"
 import Image from "next/image"
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
-
 export default function ExpertTeam() {
   const teamMembers = [
     {

@@ -1,78 +1,47 @@
-"use client";
+"use client"
 
-import {
-  Shield,
-  Users,
-  Heart,
-  Clock,
-  ArrowRight,
-  CheckCircle,
-  Zap,
-} from "lucide-react";
+import { Shield, Users, Heart, Clock, CheckCircle, Zap } from "lucide-react"
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
 
 export default function ServicesSupport() {
   const supportOptions = [
     {
-      icon: <Users className="w-8 h-8 text-blue-300" />,
+      icon: <Users className="w-8 h-8 text-teal-500" />,
       title: "Peer Support Groups",
-      description:
-        "Connect with others who understand your journey in moderated group sessions",
-      features: [
-        "Anonymous participation",
-        "24/7 group availability",
-        "Topic-specific groups",
-        "Peer moderation",
-      ],
+      description: "Connect with others who understand your journey in moderated group sessions",
+      features: ["Anonymous participation", "24/7 group availability", "Topic-specific groups", "Peer moderation"],
       availability: "Always Available",
       fluxVariation: "Community Flux",
-      gradient: "from-blue-600 to-cyan-600",
+      gradient: "from-teal-900 to-teal-800",
     },
     {
-      icon: <Heart className="w-8 h-8 text-rose-300" />,
+      icon: <Heart className="w-8 h-8 text-teal-500" />,
       title: "Professional Therapy",
-      description:
-        "One-on-one sessions with licensed therapists in a completely private environment",
-      features: [
-        "Licensed professionals",
-        "Flexible scheduling",
-        "Complete anonymity",
-        "Specialized expertise",
-      ],
+      description: "One-on-one sessions with licensed therapists in a completely private environment",
+      features: ["Licensed professionals", "Flexible scheduling", "Complete anonymity", "Specialized expertise"],
       availability: "By Appointment",
       fluxVariation: "Wise Flux",
-      gradient: "from-rose-600 to-pink-600",
+      gradient: "from-black to-gray-900",
     },
     {
-      icon: <Zap className="w-8 h-8 text-amber-300" />,
+      icon: <Zap className="w-8 h-8 text-teal-500" />,
       title: "Crisis Support",
-      description:
-        "Immediate help when you need it most with trained crisis counselors",
-      features: [
-        "Instant connection",
-        "Crisis-trained staff",
-        "24/7 availability",
-        "Emergency protocols",
-      ],
+      description: "Immediate help when you need it most with trained crisis counselors",
+      features: ["Instant connection", "Crisis-trained staff", "24/7 availability", "Emergency protocols"],
       availability: "Immediate",
       fluxVariation: "Guardian Flux",
-      gradient: "from-amber-600 to-orange-600",
+      gradient: "from-teal-900 to-teal-800",
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-300" />,
+      icon: <Shield className="w-8 h-8 text-teal-500" />,
       title: "Self-Care Tools",
-      description:
-        "Guided resources and tools for daily mental wellness maintenance",
-      features: [
-        "Meditation guides",
-        "Mood tracking",
-        "Coping strategies",
-        "Progress insights",
-      ],
+      description: "Guided resources and tools for daily mental wellness maintenance",
+      features: ["Meditation guides", "Mood tracking", "Coping strategies", "Progress insights"],
       availability: "Self-Paced",
       fluxVariation: "Empathetic Flux",
-      gradient: "from-green-600 to-teal-600",
+      gradient: "from-black to-gray-900",
     },
-  ];
+  ]
 
   const howItWorksSteps = [
     {
@@ -84,34 +53,29 @@ export default function ServicesSupport() {
     {
       step: 2,
       title: "Connect Anonymously",
-      description:
-        "Join without revealing personal information - your privacy is protected",
+      description: "Join without revealing personal information - your privacy is protected",
       icon: <Shield className="w-6 h-6 text-blue-300" />,
     },
     {
       step: 3,
       title: "Start Your Journey",
-      description:
-        "Begin healing with community support and professional guidance",
+      description: "Begin healing with community support and professional guidance",
       icon: <Users className="w-6 h-6 text-purple-300" />,
     },
-  ];
+  ]
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-slate-900 via-teal-900 to-cyan-900">
+    <section className="py-16 sm:py-20 bg-black">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Your Path to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-300">
-              Healing
-            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">Healing</span>
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-amber-300 to-yellow-400 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-gray-50 max-w-3xl mx-auto leading-relaxed">
-            Multiple support options designed to meet you wherever you are in
-            your mental health journey
+            Multiple support options designed to meet you wherever you are in your mental health journey
           </p>
         </div>
 
@@ -129,17 +93,11 @@ export default function ServicesSupport() {
                   {option.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-medium text-gray-50 mb-2">
-                    {option.title}
-                  </h3>
-                  <p className="text-gray-50/80 leading-relaxed mb-4">
-                    {option.description}
-                  </p>
+                  <h3 className="text-xl font-medium text-gray-50 mb-2">{option.title}</h3>
+                  <p className="text-gray-50/80 leading-relaxed mb-4">{option.description}</p>
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full">
                     <Clock className="w-4 h-4 text-green-300" />
-                    <span className="text-sm text-green-300">
-                      {option.availability}
-                    </span>
+                    <span className="text-sm text-green-300">{option.availability}</span>
                   </div>
                 </div>
               </div>
@@ -153,19 +111,16 @@ export default function ServicesSupport() {
                 ))}
               </div>
 
-              <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-medium rounded-lg transition-all duration-300 group-hover:scale-105">
+              <InteractiveHoverButton className="w-full px-6 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">
                 Get Started
-                <ArrowRight className="w-4 h-4" />
-              </button>
+              </InteractiveHoverButton>
             </div>
           ))}
         </div>
 
         {/* How It Works */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">
-            How It Works
-          </h3>
+          <h3 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">How It Works</h3>
           <div className="w-20 h-1 bg-amber-300 mx-auto mb-8"></div>
         </div>
 
@@ -173,25 +128,19 @@ export default function ServicesSupport() {
           {howItWorksSteps.map((step, index) => (
             <div key={index} className="text-center">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">
-                    {step.step}
-                  </span>
+                <div className="w-20 h-20 bg-teal-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
                   {step.icon}
                 </div>
               </div>
-              <h4 className="text-lg font-medium text-gray-50 mb-3">
-                {step.title}
-              </h4>
-              <p className="text-gray-50/80 leading-relaxed">
-                {step.description}
-              </p>
+              <h4 className="text-lg font-medium text-gray-50 mb-3">{step.title}</h4>
+              <p className="text-gray-50/80 leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }

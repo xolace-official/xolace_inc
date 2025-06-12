@@ -2,6 +2,7 @@
 
 import { Award, BookOpen, Heart, Shield, CheckCircle, Globe } from "lucide-react"
 import Image from "next/image"
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
 
 export default function ExpertTeam() {
   const teamMembers = [
@@ -53,22 +54,22 @@ export default function ExpertTeam() {
 
   const qualifications = [
     {
-      icon: <Award className="w-6 h-6 text-amber-300" />,
+      icon: <Award className="w-6 h-6 text-teal-500" />,
       title: "Licensed Professionals",
       description: "All therapists are licensed in their respective states and countries",
     },
     {
-      icon: <BookOpen className="w-6 h-6 text-blue-300" />,
+      icon: <BookOpen className="w-6 h-6 text-teal-500" />,
       title: "Continuous Education",
       description: "Regular training in latest mental health research and digital therapy methods",
     },
     {
-      icon: <Shield className="w-6 h-6 text-green-300" />,
+      icon: <Shield className="w-6 h-6 text-teal-500" />,
       title: "Privacy Trained",
       description: "Specialized training in anonymous therapy and digital privacy protection",
     },
     {
-      icon: <Heart className="w-6 h-6 text-rose-300" />,
+      icon: <Heart className="w-6 h-6 text-teal-500" />,
       title: "Trauma-Informed",
       description: "All staff trained in trauma-informed care and crisis intervention",
     },
@@ -98,13 +99,13 @@ export default function ExpertTeam() {
   ]
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-purple-800 via-indigo-800 to-blue-900">
+    <section className="py-16 sm:py-20 bg-teal-900">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Meet Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">
               Expert Team
             </span>
           </h2>
@@ -170,7 +171,7 @@ export default function ExpertTeam() {
                     {member.specialties.map((specialty, specIndex) => (
                       <span
                         key={specIndex}
-                        className="inline-block px-3 py-1 bg-purple-300/20 text-purple-300 text-xs rounded-full"
+                        className="inline-block px-3 py-1 bg-teal-900/20 text-teal-500 text-xs rounded-full"
                       >
                         {specialty}
                       </span>
@@ -202,7 +203,7 @@ export default function ExpertTeam() {
             {vettingProcess.map((process, index) => (
               <div key={index} className="text-center">
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-teal-900 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-xl font-bold text-white">{process.step}</span>
                   </div>
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
@@ -219,15 +220,15 @@ export default function ExpertTeam() {
         {/* Team Stats */}
         <div className="grid sm:grid-cols-3 gap-8 mb-16">
           <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
-            <div className="text-3xl font-bold text-purple-300 mb-2">50+</div>
+            <div className="text-3xl font-bold text-teal-500 mb-2">50+</div>
             <div className="text-sm text-gray-50/80">Licensed Professionals</div>
           </div>
           <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
-            <div className="text-3xl font-bold text-blue-300 mb-2">15</div>
+            <div className="text-3xl font-bold text-teal-500 mb-2">15</div>
             <div className="text-sm text-gray-50/80">Languages Supported</div>
           </div>
           <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
-            <div className="text-3xl font-bold text-green-300 mb-2">24/7</div>
+            <div className="text-3xl font-bold text-teal-500 mb-2">24/7</div>
             <div className="text-sm text-gray-50/80">Crisis Support Available</div>
           </div>
         </div>
@@ -238,9 +239,9 @@ export default function ExpertTeam() {
           <p className="text-gray-50/80 mb-6 max-w-2xl mx-auto">
             Our matching system connects you with the right therapist based on your needs, preferences, and availability
           </p>
-          <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
+          <InteractiveHoverButton className="px-8 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">
             Find Your Therapist
-          </button>
+          </InteractiveHoverButton>
         </div>
       </div>
     </section>

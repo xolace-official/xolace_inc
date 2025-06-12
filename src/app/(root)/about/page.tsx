@@ -6,6 +6,7 @@ import CTA from "@/components/About/CTA";
 import CommunityImpact from "@/components/About/CommunityImpact";
 import Value from "@/components/About/Value";
 import BackToTopButton from "@/components/Button/Page";
+import TheFutureWeEnvision from "@/components/About/the-future-we-envision";
 
 export default function AboutPage() {
   return (
@@ -14,6 +15,7 @@ export default function AboutPage() {
       <MissionVision />
       <OurStory />
       <Value />
+      <TheFutureWeEnvision/>
       <CommunityImpact/>
       <Team />
       <CTA />

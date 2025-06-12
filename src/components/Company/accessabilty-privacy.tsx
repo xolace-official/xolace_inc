@@ -10,11 +10,12 @@ import {
   CheckCircle,
   Award,
 } from "lucide-react";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 export default function AccessibilityPrivacy() {
   const privacyFeatures = [
     {
-      icon: <Shield className="w-8 h-8 text-teal-300" />,
+      icon: <Shield className="w-8 h-8 text-teal-500" />,
       title: "Zero Data Collection",
       description:
         "We don't collect, store, or share any personal identifying information",
@@ -26,7 +27,7 @@ export default function AccessibilityPrivacy() {
       ],
     },
     {
-      icon: <Lock className="w-8 h-8 text-blue-300" />,
+      icon: <Lock className="w-8 h-8 text-teal-500" />,
       title: "End-to-End Encryption",
       description: "All conversations are encrypted and secure from end to end",
       details: [
@@ -37,7 +38,7 @@ export default function AccessibilityPrivacy() {
       ],
     },
     {
-      icon: <Eye className="w-8 h-8 text-purple-300" />,
+      icon: <Eye className="w-8 h-8 text-teal-500" />,
       title: "Anonymous Participation",
       description:
         "Participate in all activities without revealing your identity",
@@ -49,7 +50,7 @@ export default function AccessibilityPrivacy() {
       ],
     },
     {
-      icon: <Users className="w-8 h-8 text-green-300" />,
+      icon: <Users className="w-8 h-8 text-teal-500" />,
       title: "Safe Community",
       description: "Moderated spaces with strict community guidelines",
       details: [
@@ -63,22 +64,22 @@ export default function AccessibilityPrivacy() {
 
   const accessibilityFeatures = [
     {
-      icon: <Smartphone className="w-6 h-6 text-blue-300" />,
+      icon: <Smartphone className="w-6 h-6 text-teal-500" />,
       title: "Mobile Optimized",
       description: "Full functionality across all devices and screen sizes",
     },
     {
-      icon: <Globe className="w-6 h-6 text-green-300" />,
+      icon: <Globe className="w-6 h-6 text-teal-500" />,
       title: "Multi-Language Support",
       description: "Available in 15+ languages with cultural sensitivity",
     },
     {
-      icon: <Eye className="w-6 h-6 text-purple-300" />,
+      icon: <Eye className="w-6 h-6 text-teal-500" />,
       title: "Screen Reader Compatible",
       description: "Full compatibility with assistive technologies",
     },
     {
-      icon: <Users className="w-6 h-6 text-teal-300" />,
+      icon: <Users className="w-6 h-6 text-teal-500" />,
       title: "Inclusive Design",
       description: "Designed for users of all abilities and backgrounds",
     },
@@ -88,33 +89,33 @@ export default function AccessibilityPrivacy() {
     {
       name: "HIPAA Compliant",
       description: "Healthcare privacy standards",
-      icon: <Shield className="w-6 h-6 text-green-300" />,
+      icon: <Shield className="w-6 h-6 text-teal-500" />,
     },
     {
       name: "SOC 2 Type II",
       description: "Security and availability",
-      icon: <Lock className="w-6 h-6 text-blue-300" />,
+      icon: <Lock className="w-6 h-6 text-teal-500" />,
     },
     {
       name: "WCAG 2.1 AA",
       description: "Web accessibility guidelines",
-      icon: <Eye className="w-6 h-6 text-purple-300" />,
+      icon: <Eye className="w-6 h-6 text-teal-500" />,
     },
     {
       name: "ISO 27001",
       description: "Information security management",
-      icon: <Award className="w-6 h-6 text-amber-300" />,
+      icon: <Award className="w-6 h-6 text-teal-500" />,
     },
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900">
+    <section className="py-16 sm:py-20 bg-black">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Privacy &{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-gray-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">
               Accessibility
             </span>
           </h2>
@@ -217,9 +218,9 @@ export default function AccessibilityPrivacy() {
             Experience how our platform protects your privacy while providing
             full functionality. Try our interactive demo to see the difference.
           </p>
-          <button className="px-8 py-3 bg-gradient-to-r from-slate-600 to-gray-600 hover:from-slate-500 hover:to-gray-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
+          <InteractiveHoverButton className="px-8 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">
             Try Interactive Demo
-          </button>
+          </InteractiveHoverButton>
         </div>
       </div>
     </section>

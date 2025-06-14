@@ -40,7 +40,7 @@ export default function HowXolaceWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-10"
+          className="text-4xl md:text-5xl font-light text-center mb-10"
         >
           How Xolace Works
         </motion.h2>

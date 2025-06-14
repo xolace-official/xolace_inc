@@ -93,7 +93,7 @@ export default function SuccessStories() {
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-4xl font-bold text-white mb-6">
             Stories of{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">
               Transformation

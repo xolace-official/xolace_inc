@@ -55,7 +55,7 @@ export default function TheFutureWeEnvision() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-300/20 rounded-full mb-6">
             <Rocket className="w-8 h-8 text-teal-500" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">The Future We Envision</h2>
+          <h2 className="text-4xl sm:text-3xl font-light text-gray-50 mb-4">The Future We Envision</h2>
           <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
           <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
             We're building toward a world where mental health support is as natural and accessible as any other

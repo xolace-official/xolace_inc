@@ -37,7 +37,7 @@ export default function WhyXolaceSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 text-left">
+          <h2 className="text-4xl md:text-5xl font-light text-black mb-6 text-left">
             Why <span className="text-white">Xolace?</span>
           </h2>
           <h1 className="text-lg md:text-[18px] text-white max-w-3xl  leading-relaxed text-left">

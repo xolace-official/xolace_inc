@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 const HeroSection = () => {
   return (
@@ -22,7 +23,17 @@ const HeroSection = () => {
 
           {/* Text on Right */}
           <div className="w-full lg:w-1/2 text-left lg:text-left">
-            <h4 className="text-4xl sm:text-4xl md:text-6xl font-extrabold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 sm:mb-6 text-white">
+              Where minds connects and {" "}
+              <span className="font-medium text-teal-700">hearts heal.</span> 
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-50 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+             Xolace is a safe, anonymous space to share your struggles, seek
+              support, and connect with others. It’s more than just a platform;
+              it’s a community where your story matters, and healing begins
+              through shared experiences. 🌿
+            </p>
+            {/* <h4 className="text-4xl sm:text-4xl md:text-6xl font-extrabold mb-6">
               <span className="text-teal-200">The anonymous circle </span>
               where minds connect and hearts heal.
             </h4>
@@ -31,15 +42,15 @@ const HeroSection = () => {
               support, and connect with others. It’s more than just a platform;
               it’s a community where your story matters, and healing begins
               through shared experiences. 🌿
-            </h1>
+            </h1> */}
 
             <div className="flex flex-wrap gap-4 mt-10">
-              <button className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors">
+              <InteractiveHoverButton className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors">
                 Join Our Community
-              </button>
-              <button className="px-6 py-3 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors">
+              </InteractiveHoverButton>
+              <InteractiveHoverButton className="px-6 py-3 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors">
                 Learn More
-              </button>
+              </InteractiveHoverButton>
             </div>
           </div>
         </div>

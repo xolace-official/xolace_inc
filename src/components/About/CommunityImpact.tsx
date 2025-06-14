@@ -107,7 +107,7 @@ export default function CommunityImpact() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-green-300/20 rounded-full mb-6">
             <Award className="w-8 h-8 text-teal-500" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">
+          <h2 className="text-4xl sm:text-3xl font-light text-gray-50 mb-4">
             Community Impact
           </h2>
           <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>

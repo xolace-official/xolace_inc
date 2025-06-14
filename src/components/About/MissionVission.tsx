@@ -3,7 +3,7 @@ export default function MissionVision() {
     <section className="py-20 bg-white" id="mission">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-light text-teal-800 mb-4">Our Purpose</h2>
+          <h2 className="text-4xl font-light text-teal-800 mb-4">Our Purpose</h2>
           <div className="w-20 h-1 bg-amber-300 mx-auto"></div>
         </div>
 

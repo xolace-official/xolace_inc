@@ -4,9 +4,10 @@ import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "motion/react"
-import { ChevronDown, Menu, X, Package, BookOpen, Workflow, GlobeLock, ReceiptText, GalleryHorizontal, Flame, UsersRound } from "lucide-react"
+import { ChevronDown, Menu, X, Package, BookOpen, Workflow, GlobeLock, ReceiptText, GalleryHorizontal, Flame, UsersRound } from 'lucide-react'
 import { Button } from "../ui/button"
 import Image from "next/image"
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
 
 interface DropdownItem {
   label: string
@@ -31,28 +32,46 @@ const navigationData: NavItem[] = [
     href: "/about",
     dropdown: [
       {
-        label: "Our Purpose",
-        href: "/about#mission",
-        description: "Learn about our purpose and values",
+        label: "Our Mission & Vision",
+        href: "/about#mission-vision",
+        description: "Learn about our purpose and future goals",
         icon: <Flame className="w-4 h-4" />,
       },
-       {
+      {
+        label: "The Future We Envision",
+        href: "/about#future",
+        description: "Our vision for tomorrow",
+        icon: <GlobeLock className="w-4 h-4" />,
+      },
+      {
         label: "Our Story",
-        href: "/about#mission",
-        description: "Learn about our purpose and values",
-        icon: <Flame className="w-4 h-4" />,
+        href: "/about#story",
+        description: "How Xolace came to be",
+        icon: <BookOpen className="w-4 h-4" />,
       },
-       {
-        label: "Our Values",
-        href: "/about#mission",
-        description: "Learn about our purpose and values",
-        icon: <Flame className="w-4 h-4" />,
+      {
+        label: "Values",
+        href: "/about#values",
+        description: "The principles that guide us",
+        icon: <Workflow className="w-4 h-4" />,
       },
       {
         label: "Team",
         href: "/about#team",
-        description: "Meet the people behind Xolace",
+        description: "Meet our leadership team",
         icon: <UsersRound className="w-4 h-4" />,
+      },
+      {
+        label: "Expert Team",
+        href: "/about#expert-team",
+        description: "Our specialized professionals",
+        icon: <UsersRound className="w-4 h-4" />,
+      },
+      {
+        label: "Community Impact",
+        href: "/about#community-impact",
+        description: "How we're making a difference",
+        icon: <GalleryHorizontal className="w-4 h-4" />,
       },
     ]
   },
@@ -60,41 +79,41 @@ const navigationData: NavItem[] = [
     label: "Company",
     href: "/company",
     dropdown: [
-      // {
-      //   label: "Our Mission",
-      //   href: "/company/mission",
-      //   description: "Learn about our purpose and values",
-      //   icon: <Flame className="w-4 h-4" />,
-      // },
       {
-        label: "Brand",
-        href: "/company/team",
-        description: "Meet the people behind Xolace",
-        icon: <UsersRound className="w-4 h-4" />,
+        label: "Brand Showcase",
+        href: "/company#brand-showcase",
+        description: "Explore our brand identity and values",
+        icon: <Package className="w-4 h-4" />,
       },
       {
-        label: "How Xolace Works",
-        href: "/company/how-it-works",
-        description: "Discover our process and methodology",
+        label: "Services & Support",
+        href: "/company#services-support",
+        description: "Comprehensive support solutions",
         icon: <Workflow className="w-4 h-4" />,
       },
       {
-        label: "Press & Media",
-        href: "/company/privacy",
-        description: "Your privacy and data protection",
+        label: "Support Finder",
+        href: "/company#support-finder",
+        description: "Find the right support for you",
+        icon: <UsersRound className="w-4 h-4" />,
+      },
+      {
+        label: "Success Stories",
+        href: "/company#success-stories",
+        description: "Real stories from our community",
+        icon: <BookOpen className="w-4 h-4" />,
+      },
+      {
+        label: "Community Showcase",
+        href: "/company#community-showcase",
+        description: "Celebrating our community",
+        icon: <GalleryHorizontal className="w-4 h-4" />,
+      },
+      {
+        label: "Accessibility & Privacy",
+        href: "/company#accessibility-privacy",
+        description: "Our commitment to accessibility and privacy",
         icon: <GlobeLock className="w-4 h-4" />,
-      },
-      {
-        label: "Terms of Service",
-        href: "/company/terms",
-        description: "Terms and conditions of use",
-        icon: <ReceiptText className="w-4 h-4" />,
-      },
-      {
-        label: "Contact",
-        href: "/company/terms",
-        description: "Terms and conditions of use",
-        icon: <ReceiptText className="w-4 h-4" />,
       },
     ],
   },
@@ -103,22 +122,28 @@ const navigationData: NavItem[] = [
     href: "/media",
     dropdown: [
       {
-        label: "Press",
-        href: "/media/press",
-        description: "Latest news and press releases",
+        label: "Press Releases",
+        href: "/media#press",
+        description: "Latest news and announcements",
         icon: <GalleryHorizontal className="w-4 h-4" />,
       },
       {
-        label: "Brand Assets",
-        href: "/media/brand-assets",
-        description: "Logos, images, and brand materials",
+        label: "Media Kit",
+        href: "/media#media-kit",
+        description: "Brand assets and media resources",
         icon: <Package className="w-4 h-4" />,
       },
       {
-        label: "Blog",
-        href: "/media/blog",
-        description: "Insights, updates, and stories",
+        label: "News Coverage",
+        href: "/media#news",
+        description: "Xolace in the news",
         icon: <BookOpen className="w-4 h-4" />,
+      },
+      {
+        label: "Blog",
+        href: "/media#blog",
+        description: "Insights, updates, and stories",
+        icon: <ReceiptText className="w-4 h-4" />,
       },
     ],
   },
@@ -296,12 +321,12 @@ export default function Navigation() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
+              <InteractiveHoverButton
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 xl:px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl text-sm xl:text-base"
                 onClick={() => (window.location.href = "/xolace")}
               >
                 Head to Xolace
-              </Button>
+              </InteractiveHoverButton>
             </motion.div>
           </motion.div>
 
@@ -315,7 +340,6 @@ export default function Navigation() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Button
-                size="sm"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-3 py-1.5 rounded-lg font-medium text-xs"
                 onClick={() => (window.location.href = "/xolace")}
               >
@@ -369,7 +393,7 @@ export default function Navigation() {
                   transition={{ duration: 0.3, delay: navigationData.length * 0.1 }}
                   className="pt-4 sm:hidden"
                 >
-                  <Button
+                  <button
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium"
                     onClick={() => {
                       setIsMobileMenuOpen(false)
@@ -377,7 +401,7 @@ export default function Navigation() {
                     }}
                   >
                     Head to Xolace
-                  </Button>
+                  </button>
                 </motion.div>
               </div>
             </motion.div>

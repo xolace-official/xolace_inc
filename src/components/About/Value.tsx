@@ -89,7 +89,7 @@ export default function Values() {
       title: "Privacy & Anonymity",
       description:
         "At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can be yourself, find support, and grow—all while maintaining your privacy.",
-      imageSrc: "/assets/photos/About/aboutMascot1.png",
+      imageSrc: "/assets/photos/About/aboutMascot1.webp",
       imageAlt: "mascot with mask",
       backgroundColor: "bg-teal-900",
     },
@@ -98,7 +98,7 @@ export default function Values() {
       title: "Empathy First",
       description:
         "At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can be yourself, find support, and grow—all while maintaining your privacy.",
-      imageSrc: "/assets/photos/About/aboutMascot2.png",
+      imageSrc: "/assets/photos/About/aboutMascot2.webp",
       imageAlt: "mascot hugging",
       backgroundColor: "bg-black",
     },
@@ -107,7 +107,7 @@ export default function Values() {
       title: "Community Healing",
       description:
         "At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can be yourself, find support, and grow—all while maintaining your privacy.",
-      imageSrc: "/assets/photos/About/aboutMascot3.png",
+      imageSrc: "/assets/photos/About/aboutMascot3.webp",
       imageAlt: "mascot community",
       backgroundColor: "bg-teal-900",
     },
@@ -116,7 +116,7 @@ export default function Values() {
       title: "Expert Help",
       description:
         "At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can be yourself, find support, and grow—all while maintaining your privacy.",
-      imageSrc: "/assets/photos/About/aboutMascot4.png",
+      imageSrc: "/assets/photos/About/aboutMascot4.webp",
       imageAlt: "mascot expert help",
       backgroundColor: "bg-black",
     },
@@ -161,7 +161,7 @@ export default function Values() {
       <section className="bg-black py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">
+            <h2 className="text-4xl sm:text-3xl font-light text-gray-50 mb-4">
               Our Values
             </h2>
             <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>

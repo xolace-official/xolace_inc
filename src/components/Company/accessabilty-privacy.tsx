@@ -112,9 +112,9 @@ export default function AccessibilityPrivacy() {
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-light text-white mb-4">Our Purpose
+          <h2 className="text-4xl font-light text-white mb-4">Our Purpose
             Privacy &{" "}
-            <span className="text-3xl font-light text-transparent mb-4 bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">
+            <span className="text-3xl font-light text-transparent ddddddddmdb-4 bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">
               Accessibility
             </span>
           </h2>

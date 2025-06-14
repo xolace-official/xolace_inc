@@ -103,7 +103,7 @@ export default function ServicesSupport() {
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-4xl font-bold text-white mb-6">
             Your Path to{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-300">Healing</span>
           </h2>
@@ -146,7 +146,7 @@ export default function ServicesSupport() {
                   ))}
                 </div>
 
-                <InteractiveHoverButton className="w-full px-6 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">
+                <InteractiveHoverButton className="w-[430px] px-6 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">
                   Get Started
                 </InteractiveHoverButton>
               </div>
@@ -260,7 +260,7 @@ export default function ServicesSupport() {
                 <div className="w-20 h-20 bg-teal-900 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
                   {step.icon}
                 </div>
               </div>

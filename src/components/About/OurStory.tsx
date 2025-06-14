@@ -27,7 +27,7 @@ export default function OurStory() {
           </div>
 
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-light text-gray-50 mb-6">Our Story</h2>
+            <h2 className="text-4xl font-light text-gray-50 mb-6">Our Story</h2>
             <div className="w-16 h-1 bg-amber-300 mb-8"></div>
 
             <p className="text-gray-50 mb-6 leading-relaxed">

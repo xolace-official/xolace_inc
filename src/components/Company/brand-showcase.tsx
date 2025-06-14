@@ -15,26 +15,26 @@ import Image from "next/image";
 export default function BrandShowcase() {
   const mascotVariations = [
     {
-      image: "/assets/photos/About/aboutMascot1.png",
-      name: "Guardian Ollie",
+      image: "/assets/photos/Brand/guardian-flux.png",
+      name: "Guardian Flux",
       description: "Representing privacy and protection",
       emotion: "Protective",
     },
     {
-      image: "/assets/photos/About/aboutMascot2.png",
-      name: "Caring Ollie",
+      image: "/assets/photos/Brand/caring-flux.png",
+      name: "Caring Flux",
       description: "Showing empathy and compassion",
       emotion: "Empathetic",
     },
     {
-      image: "/assets/photos/About/aboutMascot3.png",
-      name: "Community Ollie",
+      image: "/assets/photos/Brand/community-flux.png",
+      name: "Community Flux",
       description: "Celebrating togetherness and support",
       emotion: "Joyful",
     },
     {
-      image: "/assets/photos/About/aboutMascot4.png",
-      name: "Wise Ollie",
+      image: "/assets/photos/Brand/wise-flux.png",
+      name: "Wise Flux",
       description: "Providing expert guidance and wisdom",
       emotion: "Knowledgeable",
     },
@@ -172,8 +172,8 @@ export default function BrandShowcase() {
                   presence mirrors the inner light we often forget we carry.
                 </p>
                 <p>
-                  Flux isn't just a visual symbol; it's a reminder that change is
-                  okay, and that you’re never alone. In moments of darkness,
+                  Flux isn't just a visual symbol; it's a reminder that change
+                  is okay, and that you’re never alone. In moments of darkness,
                   Flux is the light that gently says, “You’re seen. You matter.
                   And you’re not alone.”
                 </p>

@@ -35,7 +35,7 @@ const ValueItem = ({
   index,
 }: ValueItemProps) => {
   return (
-    <section className={cn("py-16 sm:py-20", backgroundColor)}>
+    <section className={cn("py-16 sm:py-20", backgroundColor)} id="vlaues">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         <div
           className={cn(

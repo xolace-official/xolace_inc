@@ -115,7 +115,7 @@ export default function BrandShowcase() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-teal-900 to-cyan-900">
+    <div className="bg-gradient-to-br from-slate-900 via-teal-900 to-cyan-900" id="brand-showcase">
       {/* Hero Section */}
       <section className="py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">

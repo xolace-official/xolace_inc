@@ -48,7 +48,7 @@ export default function TheFutureWeEnvision() {
   ]
 
   return (
-    <section className="bg-black py-16 sm:py-20">
+    <section className="bg-black py-16 sm:py-20" id="future">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -68,7 +68,7 @@ export default function TheFutureWeEnvision() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
           {/* Vision Points */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-medium text-gray-50 mb-8">Our Vision for Tomorrow</h3>
+            <h3 className="text-4xl sm:text-2xl font-medium text-gray-50 mb-8">Our Vision for Tomorrow</h3>
             <div className="space-y-6">
               {visionPoints.map((point, index) => (
                 <div

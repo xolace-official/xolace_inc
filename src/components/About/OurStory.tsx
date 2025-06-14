@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function OurStory() {
   return (
-    <section className="py-20 bg-teal-900">
+    <section className="py-20 bg-teal-900" id="story">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">

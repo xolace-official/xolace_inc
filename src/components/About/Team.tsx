@@ -29,7 +29,7 @@ export default function Team() {
   ]
 
   return (
-    <section className="py-20 bg-teal-50">
+    <section className="py-20 bg-teal-50" id="team">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-light text-teal-800 mb-4">Our Team</h2>

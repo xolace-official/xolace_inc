@@ -213,7 +213,7 @@ export default function SupportFinder() {
   const recommendation = showResults ? getRecommendation() : null
 
   return (
-    <section className="py-16 sm:py-20 bg-black">
+    <section className="py-16 sm:py-20 bg-black" id="support-finder">
       <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-12">

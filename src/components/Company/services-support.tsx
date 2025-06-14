@@ -99,7 +99,7 @@ export default function ServicesSupport() {
   }, [isTransitioning])
 
   return (
-    <section className="py-16 sm:py-20 bg-black">
+    <section className="py-16 sm:py-20 bg-black" id="services-support">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">

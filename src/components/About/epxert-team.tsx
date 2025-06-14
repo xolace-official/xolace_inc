@@ -98,7 +98,7 @@ export default function ExpertTeam() {
   ]
 
   return (
-    <section className="py-16 sm:py-20 bg-teal-900">
+    <section className="py-16 sm:py-20 bg-teal-900" id="expert-team">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">

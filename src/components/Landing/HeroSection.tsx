@@ -23,7 +23,7 @@ const HeroSection = () => {
 
           {/* Text on Right */}
           <div className="w-full lg:w-1/2 text-left lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 sm:mb-6 text-white">
+            <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 sm:mb-6 text-white">
               Where minds connects and {" "}
               <span className="font-medium text-teal-700">hearts heal.</span> 
             </h1>
@@ -33,24 +33,23 @@ const HeroSection = () => {
               it’s a community where your story matters, and healing begins
               through shared experiences. 🌿
             </p>
-            {/* <h4 className="text-4xl sm:text-4xl md:text-6xl font-extrabold mb-6">
-              <span className="text-teal-200">The anonymous circle </span>
-              where minds connect and hearts heal.
-            </h4>
-            <h1 className="text-[18px] text-left sm:text-2xl md:text-xl leading-relaxed">
-              Xolace is a safe, anonymous space to share your struggles, seek
-              support, and connect with others. It’s more than just a platform;
-              it’s a community where your story matters, and healing begins
-              through shared experiences. 🌿
-            </h1> */}
 
             <div className="flex flex-wrap gap-4 mt-10">
-              <InteractiveHoverButton className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors">
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <InteractiveHoverButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium text-sm sm:text-base">
+                Join Our Community
+              </InteractiveHoverButton>
+              <InteractiveHoverButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors font-medium text-sm sm:text-base">
+                Learn More
+              </InteractiveHoverButton>
+            </div>
+              {/* <InteractiveHoverButton className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors">
                 Join Our Community
               </InteractiveHoverButton>
               <InteractiveHoverButton className="px-6 py-3 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors">
                 Learn More
-              </InteractiveHoverButton>
+              </InteractiveHoverButton> */}
             </div>
           </div>
         </div>

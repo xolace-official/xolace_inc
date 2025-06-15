@@ -308,7 +308,7 @@ export default function BrandShowcase() {
             </h2>
             <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
             <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-              Xolace isn't just another mental health platform. Here's what sets
+              Xolace isn't just another mental health pla tform. Here's what sets
               us apart from the competition.
             </p>
           </div>

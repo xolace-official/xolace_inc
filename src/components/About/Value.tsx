@@ -88,7 +88,7 @@ export default function Values() {
       icon: <Shield className="w-8 h-8 text-teal-500" />,
       title: "Privacy & Anonymity",
       description:
-        "At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can be yourself, find support, and grow—all while maintaining your privacy.",
+        "Xolace protects user identity by design. Every experience shared is free from names or profiles, creating a safe space where users can be vulnerable without judgment or fear of exposure.",
       imageSrc: "/assets/photos/About/aboutMascot1.webp",
       imageAlt: "mascot with mask",
       backgroundColor: "bg-teal-900",
@@ -97,7 +97,7 @@ export default function Values() {
       icon: <Heart className="w-8 h-8 text-teal-500" />,
       title: "Empathy First",
       description:
-        "At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can be yourself, find support, and grow—all while maintaining your privacy.",
+        "Every response, every reaction, every interaction is rooted in understanding. Xolace prioritizes listening over lecturing. Meeting people where they are emotionally, not where we assume they should be.",
       imageSrc: "/assets/photos/About/aboutMascot2.webp",
       imageAlt: "mascot hugging",
       backgroundColor: "bg-black",
@@ -106,7 +106,7 @@ export default function Values() {
       icon: <Users className="w-8 h-8 text-teal-500" />,
       title: "Community Healing",
       description:
-        "At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can be yourself, find support, and grow—all while maintaining your privacy.",
+        "We believe in collective growth. Through shared stories and silent support, Xolace fosters a culture where healing isn’t isolated but communal. We grow stronger together.",
       imageSrc: "/assets/photos/About/aboutMascot3.webp",
       imageAlt: "mascot community",
       backgroundColor: "bg-teal-900",
@@ -115,7 +115,7 @@ export default function Values() {
       icon: <MessageCircle className="w-8 h-8 text-teal-500" />,
       title: "Expert Help",
       description:
-        "At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can be yourself, find support, and grow—all while maintaining your privacy.",
+        "While peer support is powerful, Xolace connects users with verified professionals when deeper guidance is needed. It’s a bridge between community care and clinical expertise, without pressure.",
       imageSrc: "/assets/photos/About/aboutMascot4.webp",
       imageAlt: "mascot expert help",
       backgroundColor: "bg-black",
@@ -158,7 +158,7 @@ export default function Values() {
   return (
     <main>
       {/* Header Section */}
-      <section className="bg-black py-16 sm:py-20">
+      <section className="bg-black py-16 sm:py-20 text-2xl">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-4xl sm:text-3xl font-light text-gray-50 mb-4">

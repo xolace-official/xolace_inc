@@ -24,7 +24,7 @@ export default function Hero() {
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can
-              be yourself, find support, and grow—all while maintaining your privacy.
+              be yourself, find support, and grow, all while maintaining your privacy.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium text-sm sm:text-base">
@@ -56,7 +56,7 @@ export default function Hero() {
                 <p className="text-teal-800 font-medium text-sm sm:text-base leading-snug">
                   I found my voice here when I thought I had lost it forever.
                 </p>
-                <p className="text-gray-500 text-xs sm:text-sm mt-2">— Anonymous Member</p>
+                <p className="text-gray-500 text-xs sm:text-sm mt-2">Anonymous Member</p>
               </div>
             </div>
           </div>

@@ -39,7 +39,7 @@ export default function OurStory() {
             <p className="text-gray-50 mb-6 leading-relaxed">
               What started as a small online forum has grown into a
               comprehensive platform where thousands find connection,
-              understanding, and professional guidance every day—all while
+              understanding, and professional guidance every day, all while
               maintaining the anonymity that makes honest sharing possible.
             </p>
 

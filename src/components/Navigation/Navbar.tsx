@@ -4,7 +4,19 @@ import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "motion/react"
-import { ChevronDown, Menu, X, Package, BookOpen, Workflow, GlobeLock, ReceiptText, GalleryHorizontal, Flame, UsersRound } from 'lucide-react'
+import {
+  ChevronDown,
+  Menu,
+  X,
+  Package,
+  BookOpen,
+  Workflow,
+  GlobeLock,
+  ReceiptText,
+  GalleryHorizontal,
+  Flame,
+  UsersRound,
+} from "lucide-react"
 import { Button } from "../ui/button"
 import Image from "next/image"
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
@@ -73,7 +85,7 @@ const navigationData: NavItem[] = [
         description: "How we're making a difference",
         icon: <GalleryHorizontal className="w-4 h-4" />,
       },
-    ]
+    ],
   },
   {
     label: "Company",
@@ -147,10 +159,10 @@ const navigationData: NavItem[] = [
       },
     ],
   },
-  {
-    label: "Careers",
-    href: "/careers",
-  },
+  // {
+  //   label: "Careers",
+  //   href: "/careers",
+  // },
   {
     label: "Contact",
     href: "/contact",
@@ -161,6 +173,19 @@ export default function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  const [scrolled, setScrolled] = useState(false)
+
+  // Add scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      setScrolled(scrollPosition > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) {
@@ -221,7 +246,13 @@ export default function Navigation() {
   }, [isMobileMenuOpen])
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 py-3">
+    <nav
+      className={`sticky top-0 z-50 border-b py-3 transition-all duration-300 ease-in-out ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-xl border-gray-200/60 shadow-lg"
+          : "bg-white/95 backdrop-blur-md border-gray-100"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
@@ -240,8 +271,12 @@ export default function Navigation() {
                 height={40}
                 priority
               />
-              <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                xolace inc 
+              <div
+                className={`text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-all duration-300 ${
+                  scrolled ? "opacity-90" : "opacity-100"
+                }`}
+              >
+                xolace inc
               </div>
             </div>
           </motion.div>
@@ -257,7 +292,9 @@ export default function Navigation() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <motion.button
-                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm xl:text-base font-medium flex items-center gap-1 transition-colors duration-200 rounded-lg hover:bg-gray-50"
+                    className={`text-gray-700 hover:text-blue-600 px-3 py-2 text-sm xl:text-base font-medium flex items-center gap-1 transition-all duration-300 rounded-lg hover:bg-gray-50 ${
+                      scrolled ? "text-gray-600" : "text-gray-700"
+                    }`}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}

@@ -11,12 +11,12 @@ import {
 const steps = [
   {
     title: "1. Share Anonymously",
-    description: "Open the app, post your thoughts without an identity. No pressure, no filters—just real you.",
+    description: "Open the app, post your thoughts without an identity. No pressure, no filters, just the real you.",
     Icon: Ghost,
   },
   {
     title: "2. Reactions Only",
-    description: "Get authentic feedback. Others react with emojis—no comments, no judgment.",
+    description: "Get authentic feedback. Others react with emojis no comments, no judgment.",
     Icon: SmilePlus,
   },
   {
@@ -26,7 +26,7 @@ const steps = [
   },
   {
     title: "4. Feel Lighter",
-    description: "Vent, express, release. Xolace is your safe space to feel heard—without saying a word.",
+    description: "Vent, express, release. Xolace is your safe space to feel heard without saying a word.",
     Icon: Feather,
   },
 ]
@@ -67,7 +67,7 @@ export default function HowXolaceWorks() {
         </div>
 
         <div className="md:flex justify-center py-20 hidden">
-          <InteractiveHoverButton>Explore Xolace</InteractiveHoverButton>
+          <InteractiveHoverButton className="bg-teal-400 text-black">Explore Xolace</InteractiveHoverButton>
         </div>
         <div className="flex justify-center">
           <button className="md:hidden bg-black text-teal-300 py-2 px-5 mt-10 border-teal-300 border-2 rounded-4xl">

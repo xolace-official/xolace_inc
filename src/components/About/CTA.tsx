@@ -9,8 +9,8 @@ export default function CTA() {
         </h2>
         <p className="text-teal-100 mb-8 sm:mb-10 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
           Be part of a community where understanding and support come first.
-          Share your story, connect with those who truly get it, and access
-          professional guidance—all in a safe, anonymous space.
+          Share your story and experiences, connect with those who truly get it, and access
+          professional guidance, all in a safe, anonymous space.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">

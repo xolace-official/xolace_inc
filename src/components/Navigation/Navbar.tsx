@@ -20,6 +20,7 @@ import {
 import { Button } from "../ui/button"
 import Image from "next/image"
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
+import Link from "next/link"
 
 interface DropdownItem {
   label: string
@@ -34,10 +35,12 @@ interface NavItem {
   dropdown?: DropdownItem[]
 }
 
+const MotionLink = motion(Link);
+
 const navigationData: NavItem[] = [
   {
     label: "Home",
-    href: "#",
+    href: "/",
   },
   {
     label: "About",
@@ -301,13 +304,19 @@ export default function Navigation() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    {item.label}
-                    {item.dropdown && (
-                      <ChevronDown
-                        className={`w-3 h-3 xl:w-4 xl:h-4 transition-transform duration-200 ${
-                          activeDropdown === item.label ? "rotate-180" : ""
-                        }`}
-                      />
+                    {item.dropdown ? (
+                      <>
+                        {item.label}
+                        <ChevronDown
+                          className={`w-3 h-3 xl:w-4 xl:h-4 transition-transform duration-200 ${
+                            activeDropdown === item.label ? "rotate-180" : ""
+                          }`}
+                        />
+                      </>
+                    ) : (
+                      <Link href={item.href}>
+                        {item.label}
+                      </Link>
                     )}
                   </motion.button>
 
@@ -322,7 +331,7 @@ export default function Navigation() {
                         className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-72 xl:w-80 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50"
                       >
                         {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                          <motion.a
+                          <MotionLink
                             key={dropdownItem.label}
                             href={dropdownItem.href}
                             className="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150 rounded-lg mx-2"
@@ -340,7 +349,7 @@ export default function Navigation() {
                                 </div>
                               )}
                             </div>
-                          </motion.a>
+                          </MotionLink>
                         ))}
                       </motion.div>
                     )}
@@ -464,11 +473,17 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
         className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 py-3 font-medium text-base transition-colors duration-200 min-h-[44px]"
         aria-expanded={isOpen}
       >
-        <span>{item.label}</span>
-        {item.dropdown && (
-          <ChevronDown
-            className={`w-5 h-5 transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
-          />
+        {item.dropdown ? (
+          <>
+            {item.label}
+            <ChevronDown
+              className={`w-5 h-5 transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
+            />
+          </>
+        ) : (
+          <Link href={item.href} className=" w-full">
+            {item.label}
+          </Link>
         )}
       </button>
 
@@ -483,7 +498,7 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
           >
             <div className="ml-4 mt-2 space-y-1">
               {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                <motion.a
+                <MotionLink
                   key={dropdownItem.label}
                   href={dropdownItem.href}
                   className="flex items-start gap-3 py-3 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg px-3 -mx-3 transition-colors duration-200 min-h-[44px]"
@@ -498,7 +513,7 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
                       <div className="text-gray-500 text-xs mt-1 line-clamp-2">{dropdownItem.description}</div>
                     )}
                   </div>
-                </motion.a>
+                </MotionLink>
               ))}
             </div>
           </motion.div>

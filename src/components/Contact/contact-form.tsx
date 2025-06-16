@@ -45,7 +45,7 @@ export default function ContactForm() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Card className="shadow-xl border-0 bg-gradient-to-br from-green-50 to-emerald-50">
+        <Card className="shadow-xl border-0 bg-gradient-to-br from-green-50 to-emerald-50 p-20">
           <CardContent className="p-12 text-center">
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Message Sent!</h3>

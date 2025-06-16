@@ -158,7 +158,7 @@ export default function CommunityShowcase() {
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h4 className="text-lg font-medium text-gray-50 mb-2">{group.name}</h4>
-                    <p className="text-gray-50/80 text-sm mb-3">"{group.topic}"</p>
+                    <p className="text-gray-50/80 text-sm mb-3">&quot;{group.topic}&quot;</p>
                     <div className="flex items-center gap-4 text-sm text-gray-50/70">
                       <span className="flex items-center gap-1">
                         <Users className="w-4 h-4" />

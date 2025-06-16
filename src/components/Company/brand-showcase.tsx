@@ -9,7 +9,6 @@ import {
   Palette,
   Type,
 } from "lucide-react";
-import { div } from "motion/react-client";
 import Image from "next/image";
 
 export default function BrandShowcase() {
@@ -129,7 +128,7 @@ export default function BrandShowcase() {
             <div className="w-24 h-1.5 bg-amber-300 mx-auto mb-8"></div>
             <p className="text-xl text-gray-50 max-w-3xl mx-auto leading-relaxed">
               Where mental health support meets community connection. Discover
-              the brand that's revolutionizing how we approach healing, growth,
+              the brand that&apos;s revolutionizing how we approach healing, growth,
               and human connection.
             </p>
           </div>
@@ -145,7 +144,7 @@ export default function BrandShowcase() {
             </h2>
             <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
             <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-              Flux is more than a mascot—it's the vibrant spirit of Xolace. With
+              Flux is more than a mascot—it&apos;s the vibrant spirit of Xolace. With
               a flame shaped head and a soft rainbow gradient body, Flux brings
               warmth, comfort, and the spark of resilience to every journey.
             </p>
@@ -172,7 +171,7 @@ export default function BrandShowcase() {
                   presence mirrors the inner light we often forget we carry.
                 </p>
                 <p>
-                  Flux isn't just a visual symbol; it's a reminder that change
+                  Flux isn&apos;t just a visual symbol; it&apos;s a reminder that change
                   is okay, and that you’re never alone. In moments of darkness,
                   Flux is the light that gently says, “You’re seen. You matter.
                   And you’re not alone.”
@@ -247,8 +246,8 @@ export default function BrandShowcase() {
                     Democratizing Support
                   </h4>
                   <p className="text-gray-50/90 leading-relaxed">
-                    Quality mental health support shouldn't be a privilege.
-                    We're committed to making it accessible, affordable, and
+                    Quality mental health support shouldn&apos;t be a privilege.
+                    We&apos;re committed to making it accessible, affordable, and
                     available to everyone, regardless of their circumstances.
                   </p>
                 </div>
@@ -271,8 +270,8 @@ export default function BrandShowcase() {
                   Our Promise
                 </h4>
                 <p className="text-lg text-gray-50 leading-relaxed">
-                  "Every person deserves a safe space to heal, grow, and thrive.
-                  We're here to ensure that space exists for everyone."
+                  &quot;Every person deserves a safe space to heal, grow, and thrive.
+                  We&apos;re here to ensure that space exists for everyone.&quot;
                 </p>
               </div>
 
@@ -308,7 +307,7 @@ export default function BrandShowcase() {
             </h2>
             <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
             <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-              Xolace isn't just another mental health pla tform. Here's what sets
+              Xolace isn&apos;t just another mental health pla tform. Here&apos;s what sets
               us apart from the competition.
             </p>
           </div>

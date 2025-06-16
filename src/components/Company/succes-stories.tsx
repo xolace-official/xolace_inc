@@ -133,7 +133,7 @@ export default function SuccessStories() {
                   ))}
                 </div>
                 <blockquote className="text-xl text-gray-50 leading-relaxed mb-6">
-                  "{testimonials[activeStory].quote}"
+                  &quot;{testimonials[activeStory].quote}&quot;
                 </blockquote>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>

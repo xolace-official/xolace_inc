@@ -112,8 +112,8 @@ export default function CommunityImpact() {
           </h2>
           <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
           <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-            Every day, our community creates ripples of positive change. Here's
-            how we're making a difference in the lives of people seeking mental
+            Every day, our community creates ripples of positive change. Here&apos;s
+            how we&apos;re making a difference in the lives of people seeking mental
             health support.
           </p>
         </div>
@@ -186,7 +186,7 @@ export default function CommunityImpact() {
                   ))}
                 </div>
                 <blockquote className="text-gray-50 mb-4 leading-relaxed">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div className="border-t border-white/20 pt-4">
                   <div className="font-medium text-gray-50">
@@ -227,7 +227,7 @@ export default function CommunityImpact() {
 
                     {/* Quote */}
                     <blockquote className="text-gray-50 mb-6 leading-relaxed text-lg">
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote}&quot;
                     </blockquote>
 
                     {/* Author Info */}

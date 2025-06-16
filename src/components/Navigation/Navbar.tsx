@@ -66,7 +66,7 @@ const navigationData: NavItem[] = [
       },
       {
         label: "Values",
-        href: "/about#values",
+        href: "/about#value",
         description: "The principles that guide us",
         icon: <Workflow className="w-4 h-4" />,
       },

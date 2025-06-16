@@ -442,7 +442,7 @@ function CommunityStories() {
                   <MessageSquare className="w-5 h-5 text-teal-300" />
                 </div>
                 <blockquote className="text-xl text-gray-50 italic leading-relaxed mb-6">
-                  "{stories[0].quote}"
+                  &quot;{stories[0].quote}&quot;
                 </blockquote>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -492,7 +492,7 @@ function CommunityStories() {
                   {story.title}
                 </h4>
                 <blockquote className="text-sm text-gray-50/90 mb-4 line-clamp-3">
-                  "{story.quote}"
+                  &quot;{story.quote}&quot;
                 </blockquote>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useRef, useEffect } from "react"
-import { motion, AnimatePresence } from "motion/react"
+import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import {
   ChevronDown,
   Menu,
@@ -16,23 +16,24 @@ import {
   GalleryHorizontal,
   Flame,
   UsersRound,
-} from "lucide-react"
-import { Button } from "../ui/button"
-import Image from "next/image"
-import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
-import Link from "next/link"
+} from "lucide-react";
+//import { Button } from "../ui/button";
+import Image from "next/image";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface DropdownItem {
-  label: string
-  href: string
-  description?: string
-  icon?: React.ReactNode
+  label: string;
+  href: string;
+  description?: string;
+  icon?: React.ReactNode;
 }
 
 interface NavItem {
-  label: string
-  href: string
-  dropdown?: DropdownItem[]
+  label: string;
+  href: string;
+  dropdown?: DropdownItem[];
 }
 
 const MotionLink = motion(Link);
@@ -170,83 +171,84 @@ const navigationData: NavItem[] = [
     label: "Contact",
     href: "/contact",
   },
-]
+];
 
 export default function Navigation() {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const router = useRouter();
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   // Add scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      setScrolled(scrollPosition > 50)
-    }
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 50);
+    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
-    setActiveDropdown(label)
-  }
+    setActiveDropdown(label);
+  };
 
   const handleMouseLeave = () => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
     timeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null)
-    }, 150)
-  }
+      setActiveDropdown(null);
+    }, 150);
+  };
 
   // Close mobile menu when clicking outside or on escape
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setIsMobileMenuOpen(false)
+        setIsMobileMenuOpen(false);
       }
-    }
+    };
 
     const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as HTMLElement
+      const target = e.target as HTMLElement;
       if (!target.closest("nav")) {
-        setIsMobileMenuOpen(false)
+        setIsMobileMenuOpen(false);
       }
-    }
+    };
 
     if (isMobileMenuOpen) {
-      document.addEventListener("keydown", handleEscape)
-      document.addEventListener("click", handleClickOutside)
+      document.addEventListener("keydown", handleEscape);
+      document.addEventListener("click", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener("keydown", handleEscape)
-      document.removeEventListener("click", handleClickOutside)
+      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("click", handleClickOutside);
       if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current)
+        clearTimeout(timeoutRef.current);
       }
-    }
-  }, [isMobileMenuOpen])
+    };
+  }, [isMobileMenuOpen]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset"
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = "unset"
-    }
-  }, [isMobileMenuOpen])
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <nav
@@ -314,9 +316,7 @@ export default function Navigation() {
                         />
                       </>
                     ) : (
-                      <Link href={item.href}>
-                        {item.label}
-                      </Link>
+                      <Link href={item.href}>{item.label}</Link>
                     )}
                   </motion.button>
 
@@ -337,12 +337,19 @@ export default function Navigation() {
                             className="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150 rounded-lg mx-2"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.2, delay: dropdownIndex * 0.05 }}
+                            transition={{
+                              duration: 0.2,
+                              delay: dropdownIndex * 0.05,
+                            }}
                             whileHover={{ x: 5 }}
                           >
-                            <div className="text-blue-600 mt-0.5 flex-shrink-0">{dropdownItem.icon}</div>
+                            <div className="text-blue-600 mt-0.5 flex-shrink-0">
+                              {dropdownItem.icon}
+                            </div>
                             <div className="min-w-0">
-                              <div className="font-medium text-gray-900 truncate">{dropdownItem.label}</div>
+                              <div className="font-medium text-gray-900 truncate">
+                                {dropdownItem.label}
+                              </div>
                               {dropdownItem.description && (
                                 <div className="text-gray-500 text-xs mt-1 line-clamp-2">
                                   {dropdownItem.description}
@@ -369,7 +376,7 @@ export default function Navigation() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <InteractiveHoverButton
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 xl:px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl text-sm xl:text-base"
-                onClick={() => (window.location.href = "/xolace")}
+                onClick={() => router.push("https://xolace.app/")}
               >
                 Head to Xolace
               </InteractiveHoverButton>
@@ -385,12 +392,13 @@ export default function Navigation() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Button
+              <Link
+                href="https://xolace.app/"
+                target="_blank"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-3 py-1.5 rounded-lg font-medium text-xs"
-                onClick={() => (window.location.href = "/xolace")}
               >
                 Xolace
-              </Button>
+              </Link>
             </motion.div>
 
             <motion.button
@@ -400,7 +408,11 @@ export default function Navigation() {
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle navigation menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </motion.button>
           </div>
         </div>
@@ -436,14 +448,17 @@ export default function Navigation() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: navigationData.length * 0.1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: navigationData.length * 0.1,
+                  }}
                   className="pt-4 sm:hidden"
                 >
                   <button
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium"
                     onClick={() => {
-                      setIsMobileMenuOpen(false)
-                      window.location.href = "/xolace"
+                      setIsMobileMenuOpen(false);
+                      router.push("https://xolace.app/");
                     }}
                   >
                     Head to Xolace
@@ -455,11 +470,11 @@ export default function Navigation() {
         )}
       </AnimatePresence>
     </nav>
-  )
+  );
 }
 
 function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.div
@@ -477,7 +492,9 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
           <>
             {item.label}
             <ChevronDown
-              className={`w-5 h-5 transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
+              className={`w-5 h-5 transition-transform duration-200 flex-shrink-0 ${
+                isOpen ? "rotate-180" : ""
+              }`}
             />
           </>
         ) : (
@@ -506,11 +523,17 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: dropdownIndex * 0.05 }}
                 >
-                  <div className="text-blue-600 mt-1 flex-shrink-0">{dropdownItem.icon}</div>
+                  <div className="text-blue-600 mt-1 flex-shrink-0">
+                    {dropdownItem.icon}
+                  </div>
                   <div className="min-w-0 flex-1">
-                    <div className="font-medium text-gray-900">{dropdownItem.label}</div>
+                    <div className="font-medium text-gray-900">
+                      {dropdownItem.label}
+                    </div>
                     {dropdownItem.description && (
-                      <div className="text-gray-500 text-xs mt-1 line-clamp-2">{dropdownItem.description}</div>
+                      <div className="text-gray-500 text-xs mt-1 line-clamp-2">
+                        {dropdownItem.description}
+                      </div>
                     )}
                   </div>
                 </MotionLink>
@@ -520,5 +543,5 @@ function MobileNavItem({ item, index }: { item: NavItem; index: number }) {
         )}
       </AnimatePresence>
     </motion.div>
-  )
+  );
 }

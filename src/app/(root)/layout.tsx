@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "xolaceinc.com",
-  description: "Welcome to xolace",
+  title: "Xolace Inc",
+  description: "Welcome to Xolace Inc",
 };
 
 export default function RootLayout({

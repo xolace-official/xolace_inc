@@ -199,7 +199,7 @@ export default function BrandSection() {
                 <div className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
                   <h5 className="text-lg font-medium text-teal-300 mb-3">Name Origin</h5>
                   <p className="text-gray-50/90 leading-relaxed">
-                    <strong>"Flux"</strong> represents constant, positive change—the natural flow of emotions, growth,
+                    <strong>&quot;Flux&quot;</strong> represents constant, positive change—the natural flow of emotions, growth,
                     and healing. Just as mental health is not a destination but a journey, Flux embodies the beautiful,
                     ever-changing nature of human experience.
                   </p>
@@ -208,7 +208,7 @@ export default function BrandSection() {
                 <div className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
                   <h5 className="text-lg font-medium text-blue-300 mb-3">Design Philosophy</h5>
                   <p className="text-gray-50/90 leading-relaxed">
-                    Flux's fluid, adaptable form reflects our belief that healing isn't linear. The soft, organic shapes
+                    Flux&apos;s fluid, adaptable form reflects our belief that healing isn&apos;t linear. The soft, organic shapes
                     create a sense of comfort and approachability, while the ability to transform represents resilience
                     and growth.
                   </p>
@@ -391,7 +391,7 @@ export default function BrandSection() {
             <h3 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">How Flux Embodies Our Values</h3>
             <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
             <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every aspect of Flux's design intentionally reflects our core values, creating a visual representation of
+              Every aspect of Flux&apos;s design intentionally reflects our core values, creating a visual representation of
               what Xolace stands for.
             </p>
           </div>
@@ -507,7 +507,7 @@ export default function BrandSection() {
                 <div className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
                   <h5 className="text-lg font-medium text-purple-300 mb-3">Democratizing Access</h5>
                   <p className="text-gray-50/90 leading-relaxed">
-                    Quality mental health support shouldn't be a privilege reserved for the few. We're committed to
+                    Quality mental health support shouldn&apos;t be a privilege reserved for the few. We&apos;re committed to
                     making it accessible, affordable, and available to everyone, everywhere.
                   </p>
                 </div>
@@ -526,8 +526,8 @@ export default function BrandSection() {
               <div className="p-8 bg-gradient-to-br from-white/15 to-white/5 rounded-2xl backdrop-blur-sm border border-white/20 text-center">
                 <h5 className="text-xl font-bold text-gray-50 mb-4">Our Promise</h5>
                 <p className="text-lg text-gray-50 leading-relaxed italic">
-                  "Every person deserves a safe space to heal, grow, and thrive. We're here to ensure that space exists
-                  for everyone."
+                &quot;Every person deserves a safe space to heal, grow, and thrive. We&apos;re here to ensure that space exists
+                  for everyone.&quot;
                 </p>
               </div>
 
@@ -568,7 +568,7 @@ export default function BrandSection() {
               <h3 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">What Makes Xolace Unique</h3>
               <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
               <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-                We're not just another mental health platform. Here's what sets us apart from the competition.
+                We&apos;re not just another mental health platform. Here&apos;s what sets us apart from the competition.
               </p>
             </div>
 
@@ -619,7 +619,7 @@ export default function BrandSection() {
               <h3 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">What Makes Xolace Unique</h3>
               <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
               <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-                We're not just another mental health platform. Here's what sets us apart from the competition.
+                We&apos;re not just another mental health platform. Here&apos;s what sets us apart from the competition.
               </p>
             </div>
 

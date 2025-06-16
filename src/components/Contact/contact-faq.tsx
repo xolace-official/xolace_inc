@@ -115,7 +115,7 @@ export default function ContactFAQ() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-12"
         >
-          <p className="text-gray-600 mb-6">Still have questions? We're here to help!</p>
+          <p className="text-gray-600 mb-6">Still have questions? We&apos;re here to help!</p>
           <InteractiveHoverButton
             onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600"

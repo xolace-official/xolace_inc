@@ -22,7 +22,7 @@ export default function ContactPage() {
           Mail us.
         </h1>
         <p className="text-center text-gray-400">
-          Whether you have feedback, a question, or just want to connect. We're
+          Whether you have feedback, a question, or just want to connect. We&apos;re
           here for you.
         </p>
 

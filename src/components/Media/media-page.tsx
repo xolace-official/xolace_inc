@@ -263,8 +263,8 @@ function PressResources() {
                     <ChevronRight className="w-3 h-3 text-green-400" />
                   </div>
                   <span>
-                    <strong className="text-white">Use:</strong> "Person with
-                    depression" instead of "depressed person"
+                    <strong className="text-white">Use:</strong> &quot;Person with
+                    depression&quot; instead of &quot;depressed person&quot;
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -272,8 +272,8 @@ function PressResources() {
                     <ChevronRight className="w-3 h-3 text-green-400" />
                   </div>
                   <span>
-                    <strong className="text-white">Use:</strong> "Died by
-                    suicide" instead of "committed suicide"
+                    <strong className="text-white">Use:</strong> &quot;Died by
+                    suicide&quot; instead of &quot;committed suicide&quot;
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -281,8 +281,8 @@ function PressResources() {
                     <ChevronRight className="w-3 h-3 text-green-400" />
                   </div>
                   <span>
-                    <strong className="text-white">Use:</strong> "Living with"
-                    instead of "suffering from"
+                    <strong className="text-white">Use:</strong> &quot;Living with&quot;
+                    instead of &quot;suffering from&quot;
                   </span>
                 </li>
               </ul>
@@ -543,7 +543,7 @@ function CommunityStories() {
                         {story.title}
                       </h3>
                       <blockquote className="text-gray-50/90 mb-4 text-sm">
-                        "{story.quote}"
+                        &quot;{story.quote}&quot;
                       </blockquote>
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-2">
@@ -615,8 +615,8 @@ function CommunityStories() {
             Share Your Story
           </h3>
           <p className="text-gray-50/80 mb-6 max-w-2xl mx-auto">
-            Your experience matters. If you'd like to share your mental health
-            journey to help others and reduce stigma, we'd love to hear from
+            Your experience matters. If you&apos;d like to share your mental health
+            journey to help others and reduce stigma, we&apos;d love to hear from
             you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -811,7 +811,7 @@ function EducationalContent() {
 
                 <div className="p-4 bg-white/10 rounded-lg">
                   <h4 className="font-medium text-gray-50 mb-2">
-                    Myth: You can't recover from mental illness
+                    Myth: You can&apos;t recover from mental illness
                   </h4>
                   <p className="text-sm text-gray-50/90">
                     <strong className="text-teal-300">Fact:</strong> With proper
@@ -1101,7 +1101,7 @@ function VisualGallery() {
                 Attribution
               </h4>
               <p className="text-sm text-gray-50/90">
-                Please credit "Xolace" when using any of our visual assets in
+                Please credit &quot;Xolace&quot; when using any of our visual assets in
                 your publications or content.
               </p>
             </div>
@@ -1111,7 +1111,7 @@ function VisualGallery() {
               </h4>
               <p className="text-sm text-gray-50/90">
                 Minor adjustments for size and format are permitted, but please
-                don't alter colors or remove watermarks.
+                don&apos;t alter colors or remove watermarks.
               </p>
             </div>
             <div>
@@ -1303,7 +1303,7 @@ function MediaContact() {
                     htmlFor="guidelines"
                     className="ml-2 block text-sm text-gray-50/80"
                   >
-                    I've read the media guidelines and agree to follow them
+                    I&apos;ve read the media guidelines and agree to follow them
                   </label>
                 </div>
 
@@ -1334,7 +1334,7 @@ function CrisisResources() {
       hours: "24/7",
     },
     {
-      name: "SAMHSA's National Helpline",
+      name: "SAMHSA&apos;s National Helpline",
       contact: "1-800-662-4357",
       website: "samhsa.gov/find-help",
       hours: "24/7",
@@ -1351,7 +1351,7 @@ function CrisisResources() {
                 Crisis Resources
               </h2>
               <p className="text-gray-50/90 mb-6">
-                If you're covering sensitive mental health topics, please
+                If you&apos;re covering sensitive mental health topics, please
                 include these crisis resources in your content. They could help
                 someone in need.
               </p>

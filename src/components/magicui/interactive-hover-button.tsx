@@ -2,6 +2,10 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+
+/*
+ @typescript-eslint/no-empty-object-type
+*/
 interface InteractiveHoverButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 

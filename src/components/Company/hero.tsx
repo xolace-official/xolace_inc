@@ -155,7 +155,7 @@ export default function CompanyHero() {
                     </div>
                   </div>
                   <p className="text-xs text-white/90">
-                    "You're not alone in this journey..."
+                    &quot;You&apos;re not alone in this journey...&quot;
                   </p>
                 </div>
               </div>

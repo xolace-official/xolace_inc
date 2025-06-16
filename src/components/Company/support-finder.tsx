@@ -138,7 +138,7 @@ export default function SupportFinder() {
   ]
 
   const getRecommendation = () => {
-    const { feeling, urgency, support_type, experience } = answers
+    const { feeling, urgency, support_type } = answers
 
     if (urgency === "crisis") {
       return {

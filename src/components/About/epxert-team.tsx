@@ -181,7 +181,7 @@ export default function ExpertTeam() {
                 <div>
                   <h4 className="font-medium text-gray-50 mb-2">About</h4>
                   <p className="text-sm text-gray-50/80 leading-relaxed mb-3">{member.bio}</p>
-                  <p className="text-sm text-gray-50/70 italic">"{member.approach}"</p>
+                  <p className="text-sm text-gray-50/70 italic">&quot;{member.approach}&quot;</p>
                 </div>
               </div>
             </div>

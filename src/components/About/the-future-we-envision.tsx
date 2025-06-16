@@ -72,7 +72,7 @@ export default function TheFutureWeEnvision() {
           </h2>
           <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
           <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-            We're building toward a world where mental health support is as
+            We&apos;re building toward a world where mental health support is as
             natural and accessible as any other healthcare service where
             technology and human connection combine to create unprecedented
             healing experiences.
@@ -174,8 +174,8 @@ export default function TheFutureWeEnvision() {
             Join Us in Building the Future
           </h3>
           <p className="text-lg text-gray-50 max-w-3xl mx-auto mb-8 leading-relaxed">
-            The future of experience sharing and mental health support isn't
-            just something we're building, it's something we're building
+            The future of experience sharing and mental health support isn&apos;t
+            just something we&apos;re building, it&apos;s something we&apos;re building
             together. Every member, every conversation, every moment of
             connection brings us closer to our vision.
           </p>

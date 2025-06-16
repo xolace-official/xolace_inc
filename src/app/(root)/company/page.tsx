@@ -7,7 +7,7 @@ import ServicesSupport from "@/components/Company/services-support";
 import SuccessStories from "@/components/Company/succes-stories";
 import SupportFinder from "@/components/Company/support-finder";
 
-export default function () {
+export default function CompanyPage () {
   return (
     <>
     <CompanyHero/>

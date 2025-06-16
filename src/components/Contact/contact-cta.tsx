@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { Rocket, Users, Zap } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
-import { section } from "motion/react-client";
 
 export default function ContactCTA() {
   return (

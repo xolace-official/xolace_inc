@@ -12,7 +12,7 @@ export default function OurStory() {
                   alt="People supporting each other"
                   width={400}
                   height={400}
-                  className="rounded-2xl shadow-lg object-cover w-full h-full"
+                  className="rounded-2xl object-cover w-full h-full"
                   priority
                   objectPosition="top"
                 />

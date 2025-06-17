@@ -15,8 +15,8 @@ const steps = [
     Icon: Ghost,
   },
   {
-    title: "2. Reactions Only",
-    description: "Get authentic feedback. Others react with emojis no comments, no judgment.",
+    title: "2. Comments & Reactions",
+    description: "Get authentic feedback. Others react with emojis and comments, no judgment.",
     Icon: SmilePlus,
   },
   {
@@ -45,7 +45,7 @@ export default function HowXolaceWorks() {
           How Xolace Works
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
           {steps.map(({ title, description, Icon }, index) => (
             <motion.div
               key={index}
@@ -66,13 +66,8 @@ export default function HowXolaceWorks() {
           ))}
         </div>
 
-        <div className="md:flex justify-center py-20 hidden">
+        <div className="flex justify-center py-20 items-center">
           <InteractiveHoverButton className="bg-teal-400 text-black">Explore Xolace</InteractiveHoverButton>
-        </div>
-        <div className="flex justify-center">
-          <button className="md:hidden bg-black text-teal-300 py-2 px-5 mt-10 border-teal-300 border-2 rounded-4xl">
-            Try Xolace Now
-          </button>
         </div>
       </div>
     </section>

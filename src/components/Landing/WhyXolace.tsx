@@ -60,7 +60,7 @@ export default function WhyXolaceSection() {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-[8rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-[10rem]">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
@@ -92,13 +92,10 @@ export default function WhyXolaceSection() {
           })}
         </div>
         {/* CTA button */}
-        <div className="md:flex justify-center py-20 hidden">
-          <InteractiveHoverButton>Explore Xolace</InteractiveHoverButton>
-        </div>
-        <div className="flex justify-center">
-          <button className="md:hidden bg-black text-teal-300 py-2 px-5 mt-10 border-teal-300 border-2 rounded-4xl">
+        <div className="flex justify-center py-20 items-centerb border-none">
+          <InteractiveHoverButton className="bg-teal-400 text-black">
             Explore Xolace
-          </button>
+          </InteractiveHoverButton>
         </div>
       </div>
     </section>

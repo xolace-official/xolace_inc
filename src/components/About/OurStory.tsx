@@ -6,20 +6,20 @@ export default function OurStory() {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
             <div className="relative">
-              <div className="aspect-[4/3] bg-transparent rounded-tr-3xl rounded-bl-3xl overflow-hidden">
+              <div className="rounded-tr-3xl rounded-bl-3xl overflow-hidden">
                 <Image
                   src="/assets/photos/About/aboutStory.webp?height=400&width=400"
                   alt="People supporting each other"
                   width={400}
                   height={400}
-                  className="rounded-2xl shadow-lg object-cover w-full h-full"
+                  className="rounded-2xl object-cover w-full h-full"
                   priority
                   objectPosition="top"
                 />
                 <div className="w-full lg:w-1/2 relative mt-8 lg:mt-0">
                   <div className="relative max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto w-full"></div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-600/20 to-amber-600/20"></div>
+                <div className="absolute inset-0"></div>
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-teal-100 rounded-full"></div>
               <div className="absolute -top-6 -left-6 w-20 h-20 bg-amber-100 rounded-full"></div>

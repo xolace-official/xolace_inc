@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState, useRef, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "motion/react"
 import {
   ChevronDown,
   Menu,
@@ -515,7 +515,6 @@ function MobileNavItem({
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 py-3 font-medium text-base transition-colors duration-200 min-h-[44px]"
-        aria-expanded={isOpen}
       >
         {item.dropdown ? (
           <>

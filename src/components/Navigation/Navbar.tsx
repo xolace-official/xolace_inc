@@ -296,7 +296,7 @@ export default function Navigation() {
                   priority
                 />
                 <div
-                  className={`text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-all duration-300 ${
+                  className={`text-xl sm:text-2xl font-aicon  bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-all duration-300 ${
                     scrolled ? "opacity-90" : "opacity-100"
                   }`}
                 >

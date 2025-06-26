@@ -3,21 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@font-face {
-  font-family: 'aicon';
-  src: url('/fonts/aicon-vf.ttf') format('ttf'),
-       url('/fonts/aicon-semibold.otf') format('otf');
-  font-weight: 400;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'aicon';
-  src: url('/fonts/aicon-medium.otf') format('woff2'),
-       url('/fonts/aicon-regular.otf') format('otf');
-  font-weight: 700;
-  font-style: normal;
-}
 
 @theme inline {
   --color-background: var(--background);
@@ -94,7 +80,7 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
-.dark {
+.dark { 
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);

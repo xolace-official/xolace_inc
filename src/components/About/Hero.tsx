@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
 
 export default function Hero() {
   return (
@@ -27,12 +28,12 @@ export default function Hero() {
               be yourself, find support, and grow, all while maintaining your privacy.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium text-sm sm:text-base">
+              <InteractiveHoverButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium text-sm sm:text-base">
                 Join Our Community
-              </button>
-              <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors font-medium text-sm sm:text-base">
+              </InteractiveHoverButton>
+              <InteractiveHoverButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors font-medium text-sm sm:text-base">
                 Learn More
-              </button>
+              </InteractiveHoverButton>
             </div>
           </div>
 

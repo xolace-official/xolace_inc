@@ -5,33 +5,35 @@ import {
   Ghost,
   SmilePlus,
   Waves,
-  Feather,
+  ListVideo
 } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 const steps = [
   {
-    title: "1. Share Anonymously",
-    description: "Open the app, post your thoughts without an identity. No pressure, no filters, just the real you.",
+    title: "Express Freely",
+    description: "Share Sparks✨ of your thoughts, moments, and experiences; anonymous or not",
     Icon: Ghost,
   },
   {
-    title: "2. Comments & Reactions",
-    description: "Get authentic feedback. Others react with emojis and comments, no judgment.",
+    title: "Get Support",
+    description: "Receive responses/tips/advice from peers and verified guides",
     Icon: SmilePlus,
   },
   {
-    title: "3. Connect Silently",
-    description: "Find your tribe through vibes. Follow and be followed based on your anonymous energy.",
+    title: "Mental Health Hub",
+    description: "Curated resources for therapy, coping strategies, and professional help.",
     Icon: Waves,
   },
   {
-    title: "4. Feel Lighter",
-    description: "Vent, express, release. Xolace is your safe space to feel heard without saying a word.",
-    Icon: Feather,
+    title: "Social Experiencing",
+    description: "Watch and learn from our curated “Experience feed” of video mentors sharing real-world experiences.",
+    Icon: ListVideo,
   },
 ]
 
 export default function HowXolaceWorks() {
+  const router = useRouter()
   return (
     <section className="bg-gradient-to-b from-[#fdfbfb] to-[#ebedee] py-16 px-6 md:px-20" id="how-it-works">
       <div className="max-w-6xl mx-auto">
@@ -40,7 +42,7 @@ export default function HowXolaceWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-light text-center mb-10"
+          className="text-4xl md:text-5xl font-medium text-center mb-10"
         >
           How Xolace Works
         </motion.h2>
@@ -67,7 +69,7 @@ export default function HowXolaceWorks() {
         </div>
 
         <div className="flex justify-center py-20 items-center">
-          <InteractiveHoverButton className="bg-teal-400 text-black">Explore Xolace</InteractiveHoverButton>
+          <InteractiveHoverButton onClick={()=> router.push("https://xolace.app/")} className="bg-teal-400 text-black">Explore Xolace</InteractiveHoverButton>
         </div>
       </div>
     </section>

@@ -42,7 +42,7 @@ const HeroSection = () => {
 
             <div className="flex flex-wrap gap-4 mt-10">
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                <InteractiveHoverButton onClick={()=>router.push('http://xolace.app/')} className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium text-sm sm:text-base">
+                <InteractiveHoverButton onClick={()=>router.push('https://xolace.app/')} className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium text-sm sm:text-base">
                   Join Our Community
                 </InteractiveHoverButton>
                 <InteractiveHoverButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors font-medium text-sm sm:text-base">

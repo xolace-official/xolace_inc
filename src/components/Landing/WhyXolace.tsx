@@ -38,7 +38,7 @@ export default function WhyXolaceSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-medium text-black mb-6 text-left">
+          <h2 className="text-4xl md:text-5xl font-medium text-black mb-3 text-left">
             Why <span className="text-white">Xolace?</span>
           </h2>
           <h1 className="text-lg md:text-[18px] text-white max-w-3xl  leading-relaxed text-left">
@@ -49,20 +49,20 @@ export default function WhyXolaceSection() {
             mission.
           </h1>
 
-          <div className="flex justify-center lg:justify-start w-full lg:w-1/2 absolute top-[11rem] lg:right-[-2.5rem] bg-black md:top-[-3.5rem]">
+          <div className="flex justify-center lg:justify-start w-full lg:w-1/2 absolute top-[13rem] sm:top-[8rem] lg:right-[-3rem] bg-black md:top-[6rem] lg:top-[-3.5rem]">
             <Image
               src="/assets/photos/Landing/mascotLanding2.png"
               alt="mascot image"
               width={400}
               height={400}
               priority
-              className="w-54 sm:w-72 md:w-[45vw] lg:w-80 xl:w-96 h-auto lg:pt-0 absolute right-[-3rem]"
+              className="w-54 sm:w-60 md:w-[35vw] lg:w-80 xl:w-96 h-auto lg:pt-0 absolute right-[-5rem] md:right-[-7rem] lg:right-[-3rem]"
             />
           </div>
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-[10rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-[11rem] md:mt-50 lg:mt-40">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (

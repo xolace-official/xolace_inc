@@ -1,30 +1,31 @@
 import { Megaphone, Leaf, Shield, HeartHandshake } from "lucide-react";
 import { InteractiveHoverButton } from "../ui/magicui/interactive-hover-button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WhyXolaceSection() {
   const features = [
     {
       icon: Megaphone,
-      title: "Share Without Fear",
+      title: "Anonymity empowers honesty",
       description:
-        "Post and share your thoughts and experiences anonymously, without judgment.",
+        "Many people hold back or avoid seeking help when they feel exposed.",
     },
     {
       icon: HeartHandshake,
-      title: " Find Your Tribe",
+      title: " Peer support meets expert guidance",
       description:
-        "Connect with people who understand and share your struggles.",
+        "Connect with those who’ve been there and tap into our Guides (licensed pros) to fuel your growth.",
     },
     {
       icon: Leaf,
-      title: "A Space to Heal",
-      description: "Quietly process, reflect, and grow at your own pace.",
+      title: "Warm, human support, not a cold help desk",
+      description: "Xolace is your digital campfire: a safe, empathetic space for sharing and connecting experiences.",
     },
     {
       icon: Shield,
-      title: "Your Privacy, Our Priority",
-      description: "Your data is safe. Your identity stays yours.",
+      title: "Trusted, Scalable, Barrier-Free Support",
+      description: "Guides earn organic trust through genuine community engagement, no waitlists, paywalls, or ads.",
     },
   ];
 
@@ -37,14 +38,15 @@ export default function WhyXolaceSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-black mb-6 text-left">
+          <h2 className="text-4xl md:text-5xl font-medium text-black mb-6 text-left">
             Why <span className="text-white">Xolace?</span>
           </h2>
           <h1 className="text-lg md:text-[18px] text-white max-w-3xl  leading-relaxed text-left">
-            Life can be overwhelming. Xolace is here to make it a little
-            lighter, by helping you share, connect, and heal. We all have a
-            story. At Xolace, you’re never alone. Your voice matters, and your
-            journey deserves a safe space.
+            Because mental health needs a scalable, low-barrier support network
+            especially for those who hesitate to seek help. Xolace unites social
+            validation with expert care, unlocking a larger, untapped market of
+            privacy-focused wellness seekers while fulfilling a deep social
+            mission.
           </h1>
 
           <div className="flex justify-center lg:justify-start w-full lg:w-1/2 absolute top-[11rem] lg:right-[-2.5rem] bg-black md:top-[-3.5rem]">
@@ -93,9 +95,11 @@ export default function WhyXolaceSection() {
         </div>
         {/* CTA button */}
         <div className="flex justify-center py-20 items-centerb border-none">
+          <Link href="https://xolace.app/">  
           <InteractiveHoverButton className="bg-teal-400 text-black">
             Explore Xolace
           </InteractiveHoverButton>
+          </Link>
         </div>
       </div>
     </section>

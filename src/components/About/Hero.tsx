@@ -36,8 +36,8 @@ export default function Hero() {
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               We asked,{" "}
               <span className="font-bold text-teal-700">
-                "What if a social platform could actually make us feel better,
-                not worse?"
+              &quot;What if a social platform could actually make us feel better,
+                not worse?&quot;
               </span>{" "}
               Xolace was born from that question. We looked at the world of
               likes, followers, and performative content and chose a different

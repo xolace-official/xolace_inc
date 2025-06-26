@@ -75,7 +75,7 @@ export default function TheFutureWeEnvision() {
           <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
             We envision a future where sharing our journey is second nature, and
             vulnerability is met with understanding, not judgment. We&apos;re
-            building a world where the 'Digital Campfire' is always lit, where
+            building a world where the &apos;Digital Campfire&apos; is always lit, where
             technology fades into the background, and the most powerful form of
             support is the shared wisdom of those who have walked the path
             before.

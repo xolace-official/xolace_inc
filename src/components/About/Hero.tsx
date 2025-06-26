@@ -1,5 +1,6 @@
-import Image from "next/image"
-import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
+import Image from "next/image";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -12,25 +13,42 @@ export default function Hero() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0,0 C40,33 60,67 100,100 L0,100 Z" fill="currentColor" className="text-teal-900" />
-          <path d="M0,0 C20,33 40,67 100,100 L0,100 Z" fill="currentColor" className="text-amber-300" />
+          <path
+            d="M0,0 C40,33 60,67 100,100 L0,100 Z"
+            fill="currentColor"
+            className="text-teal-900"
+          />
+          <path
+            d="M0,0 C20,33 40,67 100,100 L0,100 Z"
+            fill="currentColor"
+            className="text-amber-300"
+          />
         </svg>
       </div>
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Content Section */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 sm:mb-6 text-teal-800 leading-tight">
-              Your journey to <span className="font-medium text-teal-700">healing</span> starts with connection
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 sm:mb-6 text-teal-800 leading-tight">
+              The <span className="font-bold text-teal-700">soul </span> of the
+              internet
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              At Xolace, we believe in the power of shared experiences and expert guidance. A safe space where you can
-              be yourself, find support, and grow, all while maintaining your privacy.
+              We asked,{" "}
+              <span className="font-bold text-teal-700">
+              &quot;What if a social platform could actually make us feel better,
+                not worse?&quot;
+              </span>{" "}
+              Xolace was born from that question. We looked at the world of
+              likes, followers, and performative content and chose a different
+              path.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <InteractiveHoverButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium text-sm sm:text-base">
-                Join Our Community
-              </InteractiveHoverButton>
+              <Link href={"https://xolace.app"}>
+                <InteractiveHoverButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium text-sm sm:text-base">
+                  Join Our Community
+                </InteractiveHoverButton>
+              </Link>
               <InteractiveHoverButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors font-medium text-sm sm:text-base">
                 Learn More
               </InteractiveHoverButton>
@@ -57,7 +75,9 @@ export default function Hero() {
                 <p className="text-teal-800 font-medium text-sm sm:text-base leading-snug">
                   I found my voice here when I thought I had lost it forever.
                 </p>
-                <p className="text-gray-500 text-xs sm:text-sm mt-2">Anonymous Member</p>
+                <p className="text-gray-500 text-xs sm:text-sm mt-2">
+                  Anonymous Member
+                </p>
               </div>
             </div>
           </div>
@@ -71,23 +91,31 @@ export default function Hero() {
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 opacity-60">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
-              <span className="text-xs sm:text-sm text-gray-600 font-medium">24/7 Support</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">
+                24/7 Support
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-              <span className="text-xs sm:text-sm text-gray-600 font-medium">100% Anonymous</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">
+                100% Anonymous
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
-              <span className="text-xs sm:text-sm text-gray-600 font-medium">Licensed Professionals</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">
+                Licensed Professionals
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-              <span className="text-xs sm:text-sm text-gray-600 font-medium">Safe Community</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">
+                Safe Community
+              </span>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

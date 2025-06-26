@@ -12,21 +12,22 @@ export default function TheFutureWeEnvision() {
   const visionPoints = [
     {
       icon: <Globe className="w-6 h-6 text-teal-500" />,
-      title: "Global Accessibility",
+      title: "A Global Fireside",
       description:
-        "Mental health support available in every language, every timezone, every corner of the world.",
+        "A world where language, location, or income never stand in the way of getting the emotional support you need.",
     },
+    ,
     {
       icon: <Zap className="w-6 h-6 text-teal-500" />,
-      title: "AI-Powered Matching",
+      title: "Guided Discovery",
       description:
-        "Intelligent systems that connect you with the perfect support network and resources.",
+        "Intelligent, empathetic technology that gently guides you to the 'Sparks' and 'Guides' most relevant to your journey.",
     },
     {
       icon: <Star className="w-6 h-6 text-teal-500" />,
       title: "Preventive Care",
       description:
-        "Early intervention tools that help people before they reach crisis points.",
+        "Tools and nudges designed to build self-awareness and emotional strength, helping you navigate life's challenges before they become overwhelming.",
     },
   ];
 
@@ -72,10 +73,12 @@ export default function TheFutureWeEnvision() {
           </h2>
           <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
           <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-            We&apos;re building toward a world where mental health support is as
-            natural and accessible as any other healthcare service where
-            technology and human connection combine to create unprecedented
-            healing experiences.
+            We envision a future where sharing our journey is second nature, and
+            vulnerability is met with understanding, not judgment. We&apos;re
+            building a world where the &apos;Digital Campfire&apos; is always lit, where
+            technology fades into the background, and the most powerful form of
+            support is the shared wisdom of those who have walked the path
+            before.
           </p>
         </div>
 
@@ -83,7 +86,6 @@ export default function TheFutureWeEnvision() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
           {/* Vision Points */}
           <div>
-           
             <div className="space-y-6">
               {visionPoints.map((point, index) => (
                 <div
@@ -174,10 +176,10 @@ export default function TheFutureWeEnvision() {
             Join Us in Building the Future
           </h3>
           <p className="text-lg text-gray-50 max-w-3xl mx-auto mb-8 leading-relaxed">
-            The future of experience sharing and mental health support isn&apos;t
-            just something we&apos;re building, it&apos;s something we&apos;re building
-            together. Every member, every conversation, every moment of
-            connection brings us closer to our vision.
+            The future of experience sharing and mental health support
+            isn&apos;t just something we&apos;re building, it&apos;s something
+            we&apos;re building together. Every member, every conversation,
+            every moment of connection brings us closer to our vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <InteractiveHoverButton className="px-8 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">

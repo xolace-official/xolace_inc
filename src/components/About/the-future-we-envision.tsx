@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+import Link from "next/link";
+
 export default function TheFutureWeEnvision() {
   const visionPoints = [
     {
@@ -33,29 +35,31 @@ export default function TheFutureWeEnvision() {
 
   const roadmapItems = [
     {
-      year: "2024",
-      title: "Enhanced Platform",
+      year: "2025",
+      title: "Strengthen the Digital Campfire",
       description:
-        "Advanced matching algorithms and expanded therapist network",
+        "We’re building stronger community bonds, trust systems, and social experiencing to support mental wellness.",
       status: "in-progress",
     },
     {
-      year: "2025",
-      title: "Global Expansion",
-      description: "Launch in 10 new countries with localized support",
-      status: "planned",
-    },
-    {
       year: "2026",
-      title: "AI Integration",
+      title: "Expand Access to Care",
       description:
-        "Smart wellness tracking and personalized intervention tools",
+        "We're introducing deeper mental-health infrastructure so Campers can connect with trusted Guides more easily.",
       status: "planned",
     },
     {
       year: "2027",
-      title: "Community Hubs",
-      description: "Physical wellness centers integrated with digital platform",
+      title: "Intelligent Support",
+      description:
+        "Xolace will introduce smart, empathetic AI companions and personalized tools to support each person’s well-being journey.",
+      status: "planned",
+    },
+    {
+      year: "2028",
+      title: "Bridging Digital & Physical",
+      description:
+        "Our vision includes cozy real-world spaces that extend the warmth of the campfire—so support is never far away.",
       status: "planned",
     },
   ];
@@ -75,10 +79,10 @@ export default function TheFutureWeEnvision() {
           <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
             We envision a future where sharing our journey is second nature, and
             vulnerability is met with understanding, not judgment. We&apos;re
-            building a world where the &apos;Digital Campfire&apos; is always lit, where
-            technology fades into the background, and the most powerful form of
-            support is the shared wisdom of those who have walked the path
-            before.
+            building a world where the &apos;Digital Campfire&apos; is always
+            lit, where technology fades into the background, and the most
+            powerful form of support is the shared wisdom of those who have
+            walked the path before.
           </p>
         </div>
 
@@ -182,12 +186,11 @@ export default function TheFutureWeEnvision() {
             every moment of connection brings us closer to our vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <InteractiveHoverButton className="px-8 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">
-              Join Our Community
-            </InteractiveHoverButton>
-            <InteractiveHoverButton className="px-8 py-3 bg-white/10 hover:bg-white/20 text-gray-50 font-medium rounded-lg border border-white/20">
-              Learn More
-            </InteractiveHoverButton>
+            <Link href="https://xolace.app">
+              <InteractiveHoverButton className="px-8 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">
+                Join Our Community
+              </InteractiveHoverButton>
+            </Link>
           </div>
         </div>
       </div>

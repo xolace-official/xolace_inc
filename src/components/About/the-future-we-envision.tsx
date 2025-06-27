@@ -59,7 +59,7 @@ export default function TheFutureWeEnvision() {
       year: "2028",
       title: "Bridging Digital & Physical",
       description:
-        "Our vision includes cozy real-world spaces that extend the warmth of the campfire—so support is never far away.",
+        "Our vision includes cozy real-world spaces that extend the warmth of the campfire so support is never far away.",
       status: "planned",
     },
   ];

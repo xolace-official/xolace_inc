@@ -86,38 +86,38 @@ export default function Values() {
   const valuesData = [
     {
       icon: <Shield className="w-8 h-8 text-teal-500" />,
-      title: "Privacy & Anonymity",
+      title: "Safe by Design",
       description:
-        "Xolace protects user identity by design. Every experience shared is free from names or profiles, creating a safe space where users can be vulnerable without judgment or fear of exposure.",
+        "Privacy, anonymity, and proactive safety measures are built into every layer of Xolace, so Campers can open up without fear, pressure, or exposure.",
       imageSrc: "/assets/photos/About/aboutMascot1.webp",
-      imageAlt: "mascot with mask",
+      imageAlt: "mascot with shield",
       backgroundColor: "bg-teal-900",
     },
     {
       icon: <Heart className="w-8 h-8 text-teal-500" />,
-      title: "Empathy First",
+      title: "Empathy in Every Spark",
       description:
-        "Every response, every reaction, every interaction is rooted in understanding. Xolace prioritizes listening over lecturing. Meeting people where they are emotionally, not where we assume they should be.",
+        "Every interaction within our Digital Campfire is rooted in understanding. We listen more than we lecture. We meet people where they are emotionally, creating a culture of compassionate support.",
       imageSrc: "/assets/photos/About/aboutMascot2.webp",
       imageAlt: "mascot hugging",
       backgroundColor: "bg-black",
     },
     {
       icon: <Users className="w-8 h-8 text-teal-500" />,
-      title: "Community Healing",
+      title: "Authenticity is Our Foundation",
       description:
-        "We believe in collective growth. Through shared stories and silent support, Xolace fosters a culture where healing isn’t isolated but communal. We grow stronger together.",
+        "We are a refuge from performative content. We celebrate the messy, imperfect, and real. Every 'Spark' shared, no matter how small, adds to a culture where being genuine is the only expectation.",
       imageSrc: "/assets/photos/About/aboutMascot3.webp",
       imageAlt: "mascot community",
       backgroundColor: "bg-teal-900",
     },
     {
       icon: <MessageCircle className="w-8 h-8 text-teal-500" />,
-      title: "Expert Help",
+      title: "Wisdom in Experience",
       description:
-        "While peer support is powerful, Xolace connects users with verified professionals when deeper guidance is needed. It’s a bridge between community care and clinical expertise, without pressure.",
+        "We believe every journey holds valuable lessons. Whether from a peer's shared 'Spark' or a 'Guide's' story, we honor lived experience as a powerful source of learning, connection, and growth.",
       imageSrc: "/assets/photos/About/aboutMascot4.webp",
-      imageAlt: "mascot expert help",
+      imageAlt: "mascot wisdom in experience",
       backgroundColor: "bg-black",
     },
   ];

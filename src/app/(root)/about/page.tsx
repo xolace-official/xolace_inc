@@ -17,7 +17,7 @@ export default function AboutPage() {
       <OurStory />
       <Values />
       <Team />
-      <ExpertTeam />
+      {/* <ExpertTeam /> */}
       <CommunityImpact />
       <CTA />
       <BackToTopButton />

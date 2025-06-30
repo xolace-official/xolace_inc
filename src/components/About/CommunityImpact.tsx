@@ -11,6 +11,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { testimonials } from "@/constants/testimonials";
 
 export default function CommunityImpact() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,13 +20,13 @@ export default function CommunityImpact() {
   const stats = [
     {
       icon: <Users className="w-8 h-8 text-teal-500" />,
-      number: "50K+",
+      number: "100+",
       label: "Community Members",
       description: "People finding support and connection",
     },
     {
       icon: <MessageCircle className="w-8 h-8 text-teal-500" />,
-      number: "1M+",
+      number: "300+",
       label: "Support Messages",
       description: "Conversations that changed lives",
     },
@@ -40,30 +41,6 @@ export default function CommunityImpact() {
       number: "87%",
       label: "Improved Wellbeing",
       description: "Members show measurable progress",
-    },
-  ];
-
-  const testimonials = [
-    {
-      quote:
-        "Xolace gave me the courage to seek help. The anonymous support helped me open up about my anxiety for the first time.",
-      author: "Sarah M.",
-      role: "Community Member",
-      rating: 5,
-    },
-    {
-      quote:
-        "As a therapist on the platform, I've seen incredible breakthroughs. The community support amplifies the healing process.",
-      author: "Dr. James L.",
-      role: "Licensed Therapist",
-      rating: 5,
-    },
-    {
-      quote:
-        "I found my tribe here. People who understand my struggles and celebrate my victories. It's been life-changing.",
-      author: "Alex R.",
-      role: "Community Member",
-      rating: 5,
     },
   ];
 
@@ -140,7 +117,7 @@ export default function CommunityImpact() {
         </div>
 
         {/* Impact Visualization */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h3 className="text-xl sm:text-2xl font-medium text-gray-50 text-center mb-8">
             Growth Over Time
           </h3>
@@ -164,7 +141,7 @@ export default function CommunityImpact() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Testimonials - Desktop */}
         <div className="hidden md:block">
@@ -172,7 +149,13 @@ export default function CommunityImpact() {
             Stories of Impact
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
+            {/* when length of testimonials is zero show message */}
+            {testimonials.length === 0 ? (
+              <div className="col-span-12">
+                <p className="text-gray-400 text-center">Updating testimonials soon...</p>
+              </div>
+            ) : (
+              testimonials.map((testimonial, index) => (
               <div
                 key={index}
                 className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20"
@@ -197,7 +180,7 @@ export default function CommunityImpact() {
                   </div>
                 </div>
               </div>
-            ))}
+            )))}
           </div>
         </div>
 

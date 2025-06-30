@@ -2,30 +2,30 @@ import Image from "next/image"
 
 export default function Team() {
   const team = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Clinical Director",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Licensed psychologist with 15+ years specializing in trauma and anxiety disorders.",
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Community Lead",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Mental health advocate with experience building supportive online communities.",
-    },
-    {
-      name: "Dr. James Wilson",
-      role: "Head of Counseling",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Board-certified therapist focused on accessible mental healthcare for all.",
-    },
-    {
-      name: "Aisha Patel",
-      role: "User Experience Director",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Designs safe digital spaces that promote healing and genuine connection.",
-    },
+    // {
+    //   name: "Dr. Sarah Chen",
+    //   role: "Clinical Director",
+    //   image: "/placeholder.svg?height=300&width=300",
+    //   bio: "Licensed psychologist with 15+ years specializing in trauma and anxiety disorders.",
+    // },
+    // {
+    //   name: "Michael Rodriguez",
+    //   role: "Community Lead",
+    //   image: "/placeholder.svg?height=300&width=300",
+    //   bio: "Mental health advocate with experience building supportive online communities.",
+    // },
+    // {
+    //   name: "Dr. James Wilson",
+    //   role: "Head of Counseling",
+    //   image: "/placeholder.svg?height=300&width=300",
+    //   bio: "Board-certified therapist focused on accessible mental healthcare for all.",
+    // },
+    // {
+    //   name: "Aisha Patel",
+    //   role: "User Experience Director",
+    //   image: "/placeholder.svg?height=300&width=300",
+    //   bio: "Designs safe digital spaces that promote healing and genuine connection.",
+    // },
   ]
 
   return (
@@ -41,7 +41,13 @@ export default function Team() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, index) => (
+          {/* when length of team is zero show message */}
+          {team.length === 0 ? (
+            <div className="col-span-12">
+              <p className="text-gray-600 text-center">Updating team soon...</p>
+            </div>
+          ) : (
+            team.map((member, index) => (
             <div
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
@@ -55,7 +61,7 @@ export default function Team() {
                 <p className="text-gray-600 text-sm">{member.bio}</p>
               </div>
             </div>
-          ))}
+          )))}
         </div>
       </div>
     </section>

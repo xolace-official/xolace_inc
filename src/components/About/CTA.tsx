@@ -1,4 +1,5 @@
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -14,12 +15,15 @@ export default function CTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <InteractiveHoverButton className="px-6 py-3 sm:px-8 bg-white text-teal-700 rounded-lg hover:bg-teal-50 transition-colors font-medium">
-            Join Xolace
-          </InteractiveHoverButton>
-          <InteractiveHoverButton className="px-6 py-3 sm:px-8 bg-black/30 border border-white text-white rounded-lg hover:bg-teal-500 transition-colors">
+          <Link href="https://xolace.app">
+            <InteractiveHoverButton className="px-6 py-3 sm:px-8 bg-white text-teal-700 rounded-lg hover:bg-teal-50 transition-colors font-medium">
+              Join Xolace
+            </InteractiveHoverButton>
+          </Link>
+          {/* TODO: Add counselor button later */}
+          {/* <InteractiveHoverButton className="px-6 py-3 sm:px-8 bg-black/30 border border-white text-white rounded-lg hover:bg-teal-500 transition-colors">
             Speak With a Counselor
-          </InteractiveHoverButton>
+          </InteractiveHoverButton> */}
         </div>
 
         <p className="mt-6 sm:mt-8 text-sm text-teal-200 px-4">

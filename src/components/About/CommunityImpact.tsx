@@ -11,6 +11,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { testimonials } from "@/constants/testimonials";
 
 export default function CommunityImpact() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,13 +20,13 @@ export default function CommunityImpact() {
   const stats = [
     {
       icon: <Users className="w-8 h-8 text-teal-500" />,
-      number: "50K+",
+      number: "100+",
       label: "Community Members",
       description: "People finding support and connection",
     },
     {
       icon: <MessageCircle className="w-8 h-8 text-teal-500" />,
-      number: "1M+",
+      number: "300+",
       label: "Support Messages",
       description: "Conversations that changed lives",
     },
@@ -40,30 +41,6 @@ export default function CommunityImpact() {
       number: "87%",
       label: "Improved Wellbeing",
       description: "Members show measurable progress",
-    },
-  ];
-
-  const testimonials = [
-    {
-      quote:
-        "Xolace gave me the courage to seek help. The anonymous support helped me open up about my anxiety for the first time.",
-      author: "Sarah M.",
-      role: "Community Member",
-      rating: 5,
-    },
-    {
-      quote:
-        "As a therapist on the platform, I've seen incredible breakthroughs. The community support amplifies the healing process.",
-      author: "Dr. James L.",
-      role: "Licensed Therapist",
-      rating: 5,
-    },
-    {
-      quote:
-        "I found my tribe here. People who understand my struggles and celebrate my victories. It's been life-changing.",
-      author: "Alex R.",
-      role: "Community Member",
-      rating: 5,
     },
   ];
 
@@ -112,9 +89,9 @@ export default function CommunityImpact() {
           </h2>
           <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
           <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-            Every day, our community creates ripples of positive change. Here&apos;s
-            how we&apos;re making a difference in the lives of people seeking mental
-            health support.
+            Every day, our community creates ripples of positive change.
+            Here&apos;s how we&apos;re making a difference in the lives of
+            people seeking mental health support.
           </p>
         </div>
 
@@ -140,7 +117,7 @@ export default function CommunityImpact() {
         </div>
 
         {/* Impact Visualization */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h3 className="text-xl sm:text-2xl font-medium text-gray-50 text-center mb-8">
             Growth Over Time
           </h3>
@@ -164,7 +141,7 @@ export default function CommunityImpact() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Testimonials - Desktop */}
         <div className="hidden md:block">
@@ -172,32 +149,41 @@ export default function CommunityImpact() {
             Stories of Impact
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 text-teal-500 fill-current"
-                    />
-                  ))}
-                </div>
-                <blockquote className="text-gray-50 mb-4 leading-relaxed">
-                  &quot;{testimonial.quote}&quot;
-                </blockquote>
-                <div className="border-t border-white/20 pt-4">
-                  <div className="font-medium text-gray-50">
-                    {testimonial.author}
-                  </div>
-                  <div className="text-sm text-gray-50/70">
-                    {testimonial.role}
-                  </div>
-                </div>
+            {/* when length of testimonials is zero show message */}
+            {testimonials.length === 0 ? (
+              <div className="col-span-12">
+                <p className="text-gray-400 text-center">
+                  Updating testimonials soon...
+                </p>
               </div>
-            ))}
+            ) : (
+              testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 text-teal-500 fill-current"
+                      />
+                    ))}
+                  </div>
+                  <blockquote className="text-gray-50 mb-4 leading-relaxed">
+                    &quot;{testimonial.quote}&quot;
+                  </blockquote>
+                  <div className="border-t border-white/20 pt-4">
+                    <div className="font-medium text-gray-50">
+                      {testimonial.author}
+                    </div>
+                    <div className="text-sm text-gray-50/70">
+                      {testimonial.role}
+                    </div>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
 
@@ -207,95 +193,108 @@ export default function CommunityImpact() {
             Stories of Impact
           </h3>
 
-          <div className="relative overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 text-center">
-                    {/* Rating Stars */}
-                    <div className="flex items-center justify-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-5 h-5 text-teal-500 fill-current"
-                        />
-                      ))}
-                    </div>
+          {/* when length of testimonials is zero show message */}
+          {testimonials.length === 0 ? (
+            <div className="col-span-12">
+              <p className="text-gray-400 text-center">
+                Updating testimonials soon...
+              </p>
+            </div>
+          ) : (
+            <>
+              <div className="relative overflow-hidden">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {testimonials.map((testimonial, index) => (
+                    <div key={index} className="w-full flex-shrink-0 px-4">
+                      <div className="p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 text-center">
+                        {/* Rating Stars */}
+                        <div className="flex items-center justify-center mb-4">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-5 h-5 text-teal-500 fill-current"
+                            />
+                          ))}
+                        </div>
 
-                    {/* Quote */}
-                    <blockquote className="text-gray-50 mb-6 leading-relaxed text-lg">
-                      &quot;{testimonial.quote}&quot;
-                    </blockquote>
+                        {/* Quote */}
+                        <blockquote className="text-gray-50 mb-6 leading-relaxed text-lg">
+                          &quot;{testimonial.quote}&quot;
+                        </blockquote>
 
-                    {/* Author Info */}
-                    <div className="border-t border-white/20 pt-4">
-                      <div className="font-medium text-gray-50 text-lg">
-                        {testimonial.author}
-                      </div>
-                      <div className="text-sm text-gray-50/70 mt-1">
-                        {testimonial.role}
+                        {/* Author Info */}
+                        <div className="border-t border-white/20 pt-4">
+                          <div className="font-medium text-gray-50 text-lg">
+                            {testimonial.author}
+                          </div>
+                          <div className="text-sm text-gray-50/70 mt-1">
+                            {testimonial.role}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
 
-          {/* Navigation Controls */}
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <button
-              onClick={prevSlide}
-              disabled={isTransitioning}
-              className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm border border-white/20 transition-all duration-300 disabled:opacity-50"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-5 h-5 text-gray-50" />
-            </button>
-
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
+              {/* Navigation Controls */}
+              <div className="flex items-center justify-center gap-4 mt-6">
                 <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
+                  onClick={prevSlide}
                   disabled={isTransitioning}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? "bg-teal-500 scale-125"
-                      : "bg-white/30 hover:bg-white/50"
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
+                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm border border-white/20 transition-all duration-300 disabled:opacity-50"
+                  aria-label="Previous testimonial"
+                >
+                  <ChevronLeft className="w-5 h-5 text-gray-50" />
+                </button>
 
-            <button
-              onClick={nextSlide}
-              disabled={isTransitioning}
-              className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm border border-white/20 transition-all duration-300 disabled:opacity-50"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-5 h-5 text-gray-50" />
-            </button>
-          </div>
+                <div className="flex gap-2">
+                  {testimonials.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      disabled={isTransitioning}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentSlide
+                          ? "bg-teal-500 scale-125"
+                          : "bg-white/30 hover:bg-white/50"
+                      }`}
+                      aria-label={`Go to testimonial ${index + 1}`}
+                    />
+                  ))}
+                </div>
 
-          {/* Progress Indicator */}
-          <div className="mt-4 text-center">
-            <div className="text-sm text-gray-50/60 mb-2">
-              {currentSlide + 1} of {testimonials.length}
-            </div>
-            <div className="w-full max-w-xs mx-auto bg-white/20 rounded-full h-1">
-              <div
-                className="bg-teal-500 h-1 rounded-full transition-all duration-500 ease-out"
-                style={{
-                  width: `${((currentSlide + 1) / testimonials.length) * 100}%`,
-                }}
-              />
-            </div>
-          </div>
+                <button
+                  onClick={nextSlide}
+                  disabled={isTransitioning}
+                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm border border-white/20 transition-all duration-300 disabled:opacity-50"
+                  aria-label="Next testimonial"
+                >
+                  <ChevronRight className="w-5 h-5 text-gray-50" />
+                </button>
+              </div>
+
+              {/* Progress Indicator */}
+              <div className="mt-4 text-center">
+                <div className="text-sm text-gray-50/60 mb-2">
+                  {currentSlide + 1} of {testimonials.length}
+                </div>
+                <div className="w-full max-w-xs mx-auto bg-white/20 rounded-full h-1">
+                  <div
+                    className="bg-teal-500 h-1 rounded-full transition-all duration-500 ease-out"
+                    style={{
+                      width: `${
+                        ((currentSlide + 1) / testimonials.length) * 100
+                      }%`,
+                    }}
+                  />
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

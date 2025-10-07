@@ -13,9 +13,9 @@ export default function CompanyPage () {
     <CompanyHero/>
       <BrandShowcase/>
       <ServicesSupport/>
-      <SupportFinder/>
-      <SuccessStories/>
-      <CommunityShowcase/>
+      {/* <SupportFinder/> */}
+      {/* <SuccessStories/> */}
+      {/* <CommunityShowcase/> */}
       <AccessibilityPrivacy/>
       <BackToTopButton/>
     </>

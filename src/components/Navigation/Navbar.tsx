@@ -107,24 +107,24 @@ const navigationData: NavItem[] = [
         description: "Comprehensive support solutions",
         icon: <Workflow className="w-4 h-4" />,
       },
-      {
-        label: "Support Finder",
-        href: "/company#support-finder",
-        description: "Find the right support for you",
-        icon: <UsersRound className="w-4 h-4" />,
-      },
-      {
-        label: "Success Stories",
-        href: "/company#success-stories",
-        description: "Real stories from our community",
-        icon: <BookOpen className="w-4 h-4" />,
-      },
-      {
-        label: "Community Showcase",
-        href: "/company#community-showcase",
-        description: "Celebrating our community",
-        icon: <GalleryHorizontal className="w-4 h-4" />,
-      },
+      // {
+      //   label: "Support Finder",
+      //   href: "/company#support-finder",
+      //   description: "Find the right support for you",
+      //   icon: <UsersRound className="w-4 h-4" />,
+      // },
+      // {
+      //   label: "Success Stories",
+      //   href: "/company#success-stories",
+      //   description: "Real stories from our community",
+      //   icon: <BookOpen className="w-4 h-4" />,
+      // },
+      // {
+      //   label: "Community Showcase",
+      //   href: "/company#community-showcase",
+      //   description: "Celebrating our community",
+      //   icon: <GalleryHorizontal className="w-4 h-4" />,
+      // },
       {
         label: "Accessibility & Privacy",
         href: "/company#accessibility-privacy",

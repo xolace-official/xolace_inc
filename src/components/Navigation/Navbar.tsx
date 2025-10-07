@@ -77,12 +77,12 @@ const navigationData: NavItem[] = [
         description: "Meet our leadership team",
         icon: <UsersRound className="w-4 h-4" />,
       },
-      {
-        label: "Expert Team",
-        href: "/about#expert-team",
-        description: "Our specialized professionals",
-        icon: <UsersRound className="w-4 h-4" />,
-      },
+      // {
+      //   label: "Expert Team",
+      //   href: "/about#expert-team",
+      //   description: "Our specialized professionals",
+      //   icon: <UsersRound className="w-4 h-4" />,
+      // },
       {
         label: "Community Impact",
         href: "/about#community-impact",

@@ -59,51 +59,51 @@ export default function AccessibilityPrivacy() {
     },
   ];
 
-  const accessibilityFeatures = [
-    {
-      icon: <Smartphone className="w-6 h-6 text-teal-500" />,
-      title: "Mobile Optimized",
-      description: "Full functionality across all devices and screen sizes",
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-teal-500" />,
-      title: "Multi-Language Support",
-      description: "Available in 15+ languages with cultural sensitivity",
-    },
-    {
-      icon: <Eye className="w-6 h-6 text-teal-500" />,
-      title: "Screen Reader Compatible",
-      description: "Full compatibility with assistive technologies",
-    },
-    {
-      icon: <Users className="w-6 h-6 text-teal-500" />,
-      title: "Inclusive Design",
-      description: "Designed for users of all abilities and backgrounds",
-    },
-  ];
+  // const accessibilityFeatures = [
+  //   {
+  //     icon: <Smartphone className="w-6 h-6 text-teal-500" />,
+  //     title: "Mobile Optimized",
+  //     description: "Full functionality across all devices and screen sizes",
+  //   },
+  //   {
+  //     icon: <Globe className="w-6 h-6 text-teal-500" />,
+  //     title: "Multi-Language Support",
+  //     description: "Available in 15+ languages with cultural sensitivity",
+  //   },
+  //   {
+  //     icon: <Eye className="w-6 h-6 text-teal-500" />,
+  //     title: "Screen Reader Compatible",
+  //     description: "Full compatibility with assistive technologies",
+  //   },
+  //   {
+  //     icon: <Users className="w-6 h-6 text-teal-500" />,
+  //     title: "Inclusive Design",
+  //     description: "Designed for users of all abilities and backgrounds",
+  //   },
+  // ];
 
-  const certifications = [
-    {
-      name: "HIPAA Compliant",
-      description: "Healthcare privacy standards",
-      icon: <Shield className="w-6 h-6 text-teal-500" />,
-    },
-    {
-      name: "SOC 2 Type II",
-      description: "Security and availability",
-      icon: <Lock className="w-6 h-6 text-teal-500" />,
-    },
-    {
-      name: "WCAG 2.1 AA",
-      description: "Web accessibility guidelines",
-      icon: <Eye className="w-6 h-6 text-teal-500" />,
-    },
-    {
-      name: "ISO 27001",
-      description: "Information security management",
-      icon: <Award className="w-6 h-6 text-teal-500" />,
-    },
-  ];
+  // const certifications = [
+  //   {
+  //     name: "HIPAA Compliant",
+  //     description: "Healthcare privacy standards",
+  //     icon: <Shield className="w-6 h-6 text-teal-500" />,
+  //   },
+  //   {
+  //     name: "SOC 2 Type II",
+  //     description: "Security and availability",
+  //     icon: <Lock className="w-6 h-6 text-teal-500" />,
+  //   },
+  //   {
+  //     name: "WCAG 2.1 AA",
+  //     description: "Web accessibility guidelines",
+  //     icon: <Eye className="w-6 h-6 text-teal-500" />,
+  //   },
+  //   {
+  //     name: "ISO 27001",
+  //     description: "Information security management",
+  //     icon: <Award className="w-6 h-6 text-teal-500" />,
+  //   },
+  // ];
 
   return (
     <section className="py-16 sm:py-20 bg-black" id="accessibility-privacy">

@@ -6,8 +6,6 @@ import {
   Zap,
   Globe,
   Award,
-  Palette,
-  Type,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -71,22 +69,22 @@ export default function BrandShowcase() {
     },
   ];
 
-  const colorPalette = [
-    {
-      name: "Primary Teal",
-      hex: "#0f766e",
-      usage: "Main brand color, headers, CTAs",
-    },
-    { name: "Teal Light", hex: "#5eead4", usage: "Accents, highlights, icons" },
-    {
-      name: "Amber Accent",
-      hex: "#fbbf24",
-      usage: "Dividers, special highlights",
-    },
-    { name: "Slate Dark", hex: "#1e293b", usage: "Text, backgrounds" },
-    { name: "Gray Light", hex: "#f9fafb", usage: "Light backgrounds, cards" },
-    { name: "White", hex: "#ffffff", usage: "Text on dark backgrounds" },
-  ];
+  // const colorPalette = [
+  //   {
+  //     name: "Primary Teal",
+  //     hex: "#0f766e",
+  //     usage: "Main brand color, headers, CTAs",
+  //   },
+  //   { name: "Teal Light", hex: "#5eead4", usage: "Accents, highlights, icons" },
+  //   {
+  //     name: "Amber Accent",
+  //     hex: "#fbbf24",
+  //     usage: "Dividers, special highlights",
+  //   },
+  //   { name: "Slate Dark", hex: "#1e293b", usage: "Text, backgrounds" },
+  //   { name: "Gray Light", hex: "#f9fafb", usage: "Light backgrounds, cards" },
+  //   { name: "White", hex: "#ffffff", usage: "Text on dark backgrounds" },
+  // ];
 
   const brandValues = [
     {

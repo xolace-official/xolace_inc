@@ -1,6 +1,6 @@
 "use client"
 
-import { Shield, Users, Heart, Clock, CheckCircle, Zap, ChevronLeft, ChevronRight } from "lucide-react"
+import { Shield, Users, Heart, Clock, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
 

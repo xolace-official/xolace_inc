@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Download,
   FileText,
   ImageIcon,
   Mail,
@@ -116,55 +115,55 @@ function MediaHero() {
 }
 
 function PressResources() {
-  const pressKits = [
-    {
-      title: "Brand Media Kit",
-      description: "Logos, color guidelines, and brand assets",
-      icon: <ImageIcon className="w-6 h-6 text-teal-500" />,
-      fileSize: "12.4 MB",
-      fileType: "ZIP",
-    },
-    {
-      title: "Press Release Bundle",
-      description: "Recent announcements and milestones",
-      icon: <Newspaper className="w-6 h-6 text-teal-500" />,
-      fileSize: "3.2 MB",
-      fileType: "PDF",
-    },
-    {
-      title: "Impact Report 2023",
-      description: "Data and stories about our community impact",
-      icon: <FileText className="w-6 h-6 text-teal-500" />,
-      fileSize: "8.7 MB",
-      fileType: "PDF",
-    },
-    {
-      title: "Flux Mascot Package",
-      description: "Illustrations and animations of our mascot",
-      icon: <ImageIcon className="w-6 h-6 text-teal-500" />,
-      fileSize: "18.5 MB",
-      fileType: "ZIP",
-    },
-  ];
+  // const pressKits = [
+  //   {
+  //     title: "Brand Media Kit",
+  //     description: "Logos, color guidelines, and brand assets",
+  //     icon: <ImageIcon className="w-6 h-6 text-teal-500" />,
+  //     fileSize: "12.4 MB",
+  //     fileType: "ZIP",
+  //   },
+  //   {
+  //     title: "Press Release Bundle",
+  //     description: "Recent announcements and milestones",
+  //     icon: <Newspaper className="w-6 h-6 text-teal-500" />,
+  //     fileSize: "3.2 MB",
+  //     fileType: "PDF",
+  //   },
+  //   {
+  //     title: "Impact Report 2023",
+  //     description: "Data and stories about our community impact",
+  //     icon: <FileText className="w-6 h-6 text-teal-500" />,
+  //     fileSize: "8.7 MB",
+  //     fileType: "PDF",
+  //   },
+  //   {
+  //     title: "Flux Mascot Package",
+  //     description: "Illustrations and animations of our mascot",
+  //     icon: <ImageIcon className="w-6 h-6 text-teal-500" />,
+  //     fileSize: "18.5 MB",
+  //     fileType: "ZIP",
+  //   },
+  // ];
 
-  const factSheets = [
-    {
-      title: "Mental Health Statistics",
-      description: "Key facts and figures about mental health",
-    },
-    {
-      title: "Privacy in Digital Mental Health",
-      description: "How Xolace protects user privacy",
-    },
-    {
-      title: "Community Support Research",
-      description: "Evidence on peer support effectiveness",
-    },
-    {
-      title: "Accessibility Commitment",
-      description: "How we make mental health support accessible",
-    },
-  ];
+  // const factSheets = [
+  //   {
+  //     title: "Mental Health Statistics",
+  //     description: "Key facts and figures about mental health",
+  //   },
+  //   {
+  //     title: "Privacy in Digital Mental Health",
+  //     description: "How Xolace protects user privacy",
+  //   },
+  //   {
+  //     title: "Community Support Research",
+  //     description: "Evidence on peer support effectiveness",
+  //   },
+  //   {
+  //     title: "Accessibility Commitment",
+  //     description: "How we make mental health support accessible",
+  //   },
+  // ];
 
   return (
     <section className="py-16 sm:py-20 bg-black">
@@ -258,8 +257,9 @@ function PressResources() {
                     <ChevronRight className="w-3 h-3 text-green-400" />
                   </div>
                   <span>
-                    <strong className="text-white">Use:</strong> &quot;Person with
-                    depression&quot; instead of &quot;depressed person&quot;
+                    <strong className="text-white">Use:</strong> &quot;Person
+                    with depression&quot; instead of &quot;depressed
+                    person&quot;
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -276,8 +276,8 @@ function PressResources() {
                     <ChevronRight className="w-3 h-3 text-green-400" />
                   </div>
                   <span>
-                    <strong className="text-white">Use:</strong> &quot;Living with&quot;
-                    instead of &quot;suffering from&quot;
+                    <strong className="text-white">Use:</strong> &quot;Living
+                    with&quot; instead of &quot;suffering from&quot;
                   </span>
                 </li>
               </ul>
@@ -1180,7 +1180,9 @@ function MediaContact() {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-50 mb-1">Phone</h4>
-                    <p className="text-gray-50/90 mb-1">0596285090 / +233 596 285 090</p>
+                    <p className="text-gray-50/90 mb-1">
+                      0596285090 / +233 596 285 090
+                    </p>
                     <p className="text-sm text-gray-50/70">
                       Monday-Friday, 9am-5pm GMT
                     </p>
@@ -1337,7 +1339,10 @@ function CrisisResources() {
   ];
 
   return (
-    <section id="crisis-resources" className="py-12 sm:py-16 bg-gradient-to-br from-teal-900 via-slate-900 to-cyan-900">
+    <section
+      id="crisis-resources"
+      className="py-12 sm:py-16 bg-gradient-to-br from-teal-900 via-slate-900 to-cyan-900"
+    >
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         <div className="p-8 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
           <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
@@ -1346,10 +1351,11 @@ function CrisisResources() {
                 Crisis Resources
               </h2>
               <p className="text-gray-50/90 mb-6">
-                If you are in critical mental condition or crisis, please contact the nearest emergency services. Check out our provided resources.
-                If you&apos;re covering sensitive mental health topics, please
-                include these crisis resources in your content. They could help
-                someone in need.
+                If you are in critical mental condition or crisis, please
+                contact the nearest emergency services. Check out our provided
+                resources. If you&apos;re covering sensitive mental health
+                topics, please include these crisis resources in your content.
+                They could help someone in need.
               </p>
               {/* <div className="hidden md:block">
                 <InteractiveHoverButton className="px-6 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">

@@ -1,8 +1,6 @@
 "use client";
 
 import {
-  FileText,
-  ImageIcon,
   Mail,
   MessageSquare,
   Newspaper,

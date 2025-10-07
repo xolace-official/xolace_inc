@@ -3,12 +3,8 @@
 import {
   Shield,
   Eye,
-  Lock,
-  Globe,
-  Smartphone,
   Users,
   CheckCircle,
-  Award,
 } from "lucide-react";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 export default function AccessibilityPrivacy() {

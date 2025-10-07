@@ -11,10 +11,10 @@ import {
   BookOpen,
   Workflow,
   GlobeLock,
-  ReceiptText,
   GalleryHorizontal,
   Flame,
   UsersRound,
+  Phone,
 } from "lucide-react"
 import Image from "next/image"
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
@@ -138,29 +138,43 @@ const navigationData: NavItem[] = [
     href: "/media",
     dropdown: [
       {
-        label: "Press Releases",
-        href: "/media#press",
-        description: "Latest news and announcements",
+        label: "Xolace Media",
+        href: "/media",
+        description: "Xolace Media Resources",
         icon: <GalleryHorizontal className="w-4 h-4" />,
       },
+      // {
+      //   label: "Media Kit",
+      //   href: "/media#media-kit",
+      //   description: "Brand assets and media resources",
+      //   icon: <Package className="w-4 h-4" />,
+      // },
+      // {
+      //   label: "News Coverage",
+      //   href: "/media#news",
+      //   description: "Xolace in the news",
+      //   icon: <BookOpen className="w-4 h-4" />,
+      // },
+
       {
-        label: "Media Kit",
-        href: "/media#media-kit",
-        description: "Brand assets and media resources",
-        icon: <Package className="w-4 h-4" />,
+        label: "Media Contact",
+        href: "/media#media-contact",
+        description: "Contact Xolace for media inquiries",
+        icon: <Phone className="w-4 h-4" />,
       },
+
       {
-        label: "News Coverage",
-        href: "/media#news",
-        description: "Xolace in the news",
+        label: "Crisis Resources",
+        href: "/media#crisis-resources",
+        description: "Crisis resources",
         icon: <BookOpen className="w-4 h-4" />,
       },
-      {
-        label: "Blog",
-        href: "/media#blog",
-        description: "Insights, updates, and stories",
-        icon: <ReceiptText className="w-4 h-4" />,
-      },
+      // {
+      //   label: "Blog",
+      //   href: "/media#blog",
+      //   description: "Insights, updates, and stories",
+      //   icon: <ReceiptText className="w-4 h-4" />,
+      // },
     ],
   },
   // {

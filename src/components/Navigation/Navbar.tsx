@@ -11,10 +11,10 @@ import {
   BookOpen,
   Workflow,
   GlobeLock,
-  ReceiptText,
   GalleryHorizontal,
   Flame,
   UsersRound,
+  Phone,
 } from "lucide-react"
 import Image from "next/image"
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
@@ -77,12 +77,12 @@ const navigationData: NavItem[] = [
         description: "Meet our leadership team",
         icon: <UsersRound className="w-4 h-4" />,
       },
-      {
-        label: "Expert Team",
-        href: "/about#expert-team",
-        description: "Our specialized professionals",
-        icon: <UsersRound className="w-4 h-4" />,
-      },
+      // {
+      //   label: "Expert Team",
+      //   href: "/about#expert-team",
+      //   description: "Our specialized professionals",
+      //   icon: <UsersRound className="w-4 h-4" />,
+      // },
       {
         label: "Community Impact",
         href: "/about#community-impact",
@@ -107,24 +107,24 @@ const navigationData: NavItem[] = [
         description: "Comprehensive support solutions",
         icon: <Workflow className="w-4 h-4" />,
       },
-      {
-        label: "Support Finder",
-        href: "/company#support-finder",
-        description: "Find the right support for you",
-        icon: <UsersRound className="w-4 h-4" />,
-      },
-      {
-        label: "Success Stories",
-        href: "/company#success-stories",
-        description: "Real stories from our community",
-        icon: <BookOpen className="w-4 h-4" />,
-      },
-      {
-        label: "Community Showcase",
-        href: "/company#community-showcase",
-        description: "Celebrating our community",
-        icon: <GalleryHorizontal className="w-4 h-4" />,
-      },
+      // {
+      //   label: "Support Finder",
+      //   href: "/company#support-finder",
+      //   description: "Find the right support for you",
+      //   icon: <UsersRound className="w-4 h-4" />,
+      // },
+      // {
+      //   label: "Success Stories",
+      //   href: "/company#success-stories",
+      //   description: "Real stories from our community",
+      //   icon: <BookOpen className="w-4 h-4" />,
+      // },
+      // {
+      //   label: "Community Showcase",
+      //   href: "/company#community-showcase",
+      //   description: "Celebrating our community",
+      //   icon: <GalleryHorizontal className="w-4 h-4" />,
+      // },
       {
         label: "Accessibility & Privacy",
         href: "/company#accessibility-privacy",
@@ -138,29 +138,43 @@ const navigationData: NavItem[] = [
     href: "/media",
     dropdown: [
       {
-        label: "Press Releases",
-        href: "/media#press",
-        description: "Latest news and announcements",
+        label: "Xolace Media",
+        href: "/media",
+        description: "Xolace Media Resources",
         icon: <GalleryHorizontal className="w-4 h-4" />,
       },
+      // {
+      //   label: "Media Kit",
+      //   href: "/media#media-kit",
+      //   description: "Brand assets and media resources",
+      //   icon: <Package className="w-4 h-4" />,
+      // },
+      // {
+      //   label: "News Coverage",
+      //   href: "/media#news",
+      //   description: "Xolace in the news",
+      //   icon: <BookOpen className="w-4 h-4" />,
+      // },
+
       {
-        label: "Media Kit",
-        href: "/media#media-kit",
-        description: "Brand assets and media resources",
-        icon: <Package className="w-4 h-4" />,
+        label: "Media Contact",
+        href: "/media#media-contact",
+        description: "Contact Xolace for media inquiries",
+        icon: <Phone className="w-4 h-4" />,
       },
+
       {
-        label: "News Coverage",
-        href: "/media#news",
-        description: "Xolace in the news",
+        label: "Crisis Resources",
+        href: "/media#crisis-resources",
+        description: "Crisis resources",
         icon: <BookOpen className="w-4 h-4" />,
       },
-      {
-        label: "Blog",
-        href: "/media#blog",
-        description: "Insights, updates, and stories",
-        icon: <ReceiptText className="w-4 h-4" />,
-      },
+      // {
+      //   label: "Blog",
+      //   href: "/media#blog",
+      //   description: "Insights, updates, and stories",
+      //   icon: <ReceiptText className="w-4 h-4" />,
+      // },
     ],
   },
   // {

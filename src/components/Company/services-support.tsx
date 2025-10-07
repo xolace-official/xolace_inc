@@ -1,6 +1,6 @@
 "use client"
 
-import { Shield, Users, Heart, Clock, CheckCircle, Zap, ChevronLeft, ChevronRight } from "lucide-react"
+import { Shield, Users, Heart, Clock, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useEffect } from "react"
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button"
 
@@ -27,15 +27,15 @@ export default function ServicesSupport() {
       fluxVariation: "Wise Flux",
       gradient: "from-black to-gray-900",
     },
-    {
-      icon: <Zap className="w-8 h-8 text-teal-500" />,
-      title: "Crisis Support",
-      description: "Immediate help when you need it most with trained crisis counselors",
-      features: ["Instant connection", "Crisis-trained staff", "24/7 availability", "Emergency protocols"],
-      availability: "Immediate",
-      fluxVariation: "Guardian Flux",
-      gradient: "from-teal-900 to-teal-800",
-    },
+    // {
+    //   icon: <Zap className="w-8 h-8 text-teal-500" />,
+    //   title: "Crisis Support",
+    //   description: "Immediate help when you need it most with trained crisis counselors",
+    //   features: ["Instant connection", "Crisis-trained staff", "24/7 availability", "Emergency protocols"],
+    //   availability: "Immediate",
+    //   fluxVariation: "Guardian Flux",
+    //   gradient: "from-teal-900 to-teal-800",
+    // },
     {
       icon: <Shield className="w-8 h-8 text-teal-500" />,
       title: "Self-Care Tools",
@@ -50,20 +50,20 @@ export default function ServicesSupport() {
   const howItWorksSteps = [
     {
       step: 1,
-      title: "Choose Your Path",
-      description: "Select the type of support that feels right for you today",
+      title: "Join Our Campfire",
+      description: "Create an account and join our community of supporters for free",
       icon: <Heart className="w-6 h-6 text-teal-300" />,
     },
     {
       step: 2,
       title: "Connect Anonymously",
-      description: "Join without revealing personal information - your privacy is protected",
+      description: "Find a peer support campfire, professional therapist or Mentors to connect with anonymously",
       icon: <Shield className="w-6 h-6 text-blue-300" />,
     },
     {
       step: 3,
-      title: "Start Your Journey",
-      description: "Begin healing with community support and professional guidance",
+      title: "Professional Support Just a Step Away",
+      description: "Easily scale up to one-on-one sessions with health professionals by means of video calls, voice calls, or chat",
       icon: <Users className="w-6 h-6 text-purple-300" />,
     },
   ]

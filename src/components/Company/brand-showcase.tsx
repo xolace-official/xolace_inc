@@ -6,8 +6,6 @@ import {
   Zap,
   Globe,
   Award,
-  Palette,
-  Type,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -71,22 +69,22 @@ export default function BrandShowcase() {
     },
   ];
 
-  const colorPalette = [
-    {
-      name: "Primary Teal",
-      hex: "#0f766e",
-      usage: "Main brand color, headers, CTAs",
-    },
-    { name: "Teal Light", hex: "#5eead4", usage: "Accents, highlights, icons" },
-    {
-      name: "Amber Accent",
-      hex: "#fbbf24",
-      usage: "Dividers, special highlights",
-    },
-    { name: "Slate Dark", hex: "#1e293b", usage: "Text, backgrounds" },
-    { name: "Gray Light", hex: "#f9fafb", usage: "Light backgrounds, cards" },
-    { name: "White", hex: "#ffffff", usage: "Text on dark backgrounds" },
-  ];
+  // const colorPalette = [
+  //   {
+  //     name: "Primary Teal",
+  //     hex: "#0f766e",
+  //     usage: "Main brand color, headers, CTAs",
+  //   },
+  //   { name: "Teal Light", hex: "#5eead4", usage: "Accents, highlights, icons" },
+  //   {
+  //     name: "Amber Accent",
+  //     hex: "#fbbf24",
+  //     usage: "Dividers, special highlights",
+  //   },
+  //   { name: "Slate Dark", hex: "#1e293b", usage: "Text, backgrounds" },
+  //   { name: "Gray Light", hex: "#f9fafb", usage: "Light backgrounds, cards" },
+  //   { name: "White", hex: "#ffffff", usage: "Text on dark backgrounds" },
+  // ];
 
   const brandValues = [
     {
@@ -144,7 +142,7 @@ export default function BrandShowcase() {
             </h2>
             <div className="w-20 h-1 bg-amber-300 mx-auto mb-6"></div>
             <p className="text-gray-50 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-              Flux is more than a mascot—it&apos;s the vibrant spirit of Xolace. With
+              Flux is more than a mascot, it&apos;s the vibrant spirit of Xolace. With
               a flame shaped head and a soft rainbow gradient body, Flux brings
               warmth, comfort, and the spark of resilience to every journey.
             </p>
@@ -343,8 +341,8 @@ export default function BrandShowcase() {
         </div>
       </section>
 
-      {/* Visual Identity Section */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-purple-800 via-pink-800 to-rose-900">
+    
+      {/* <section className="py-16 sm:py-20 bg-gradient-to-br from-purple-800 via-pink-800 to-rose-900">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-light text-gray-50 mb-4">
@@ -354,7 +352,7 @@ export default function BrandShowcase() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Logo Section */}
+         
             <div>
               <h3 className="text-xl font-medium text-gray-50 mb-6 flex items-center gap-2">
                 <Type className="w-6 h-6 text-teal-300" />
@@ -387,7 +385,7 @@ export default function BrandShowcase() {
               </div>
             </div>
 
-            {/* Color Palette */}
+          
             <div>
               <h3 className="text-xl font-medium text-gray-50 mb-6 flex items-center gap-2">
                 <Palette className="w-6 h-6 text-teal-300" />
@@ -414,7 +412,7 @@ export default function BrandShowcase() {
             </div>
           </div>
 
-          {/* Brand Personality */}
+   
           <div className="mt-12 p-8 bg-gradient-to-r from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border border-white/20">
             <h3 className="text-xl font-medium text-gray-50 mb-6 text-center">
               Brand Personality
@@ -443,7 +441,7 @@ export default function BrandShowcase() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

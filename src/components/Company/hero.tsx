@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function CompanyHero() {
   const stats = [
-    { number: "50K+", label: "Community Members" },
-    { number: "1M+", label: "Support Messages" },
+    { number: "100+", label: "Community Members" },
+    { number: "300+", label: "Support Messages" },
     { number: "95%", label: "Feel Less Alone" },
     { number: "24/7", label: "Support Available" },
   ];
@@ -169,7 +169,7 @@ export default function CompanyHero() {
       </div>
 
       {/* Bottom Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center hidden md:block">
         <div className="flex flex-col items-center gap-2 text-gray-50/60">
           <span className="text-sm">Discover More</span>
           <div className="w-6 h-10 border-2 border-gray-50/30 rounded-full flex justify-center">

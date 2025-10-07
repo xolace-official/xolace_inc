@@ -3,12 +3,8 @@
 import {
   Shield,
   Eye,
-  Lock,
-  Globe,
-  Smartphone,
   Users,
   CheckCircle,
-  Award,
 } from "lucide-react";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 export default function AccessibilityPrivacy() {
@@ -17,25 +13,23 @@ export default function AccessibilityPrivacy() {
       icon: <Shield className="w-8 h-8 text-teal-500" />,
       title: "Zero Data Collection",
       description:
-        "We don't collect, store, or share any personal identifying information",
+        "We only collect data that is necessary for the operation of our platform",
       details: [
         "No real names required",
-        "No email verification",
-        "No location tracking",
-        "Anonymous user IDs only",
+        "Email for verification purposes only",
       ],
     },
-    {
-      icon: <Lock className="w-8 h-8 text-teal-500" />,
-      title: "End-to-End Encryption",
-      description: "All conversations are encrypted and secure from end to end",
-      details: [
-        "Military-grade encryption",
-        "Secure data transmission",
-        "Encrypted storage",
-        "Regular security audits",
-      ],
-    },
+    // {
+    //   icon: <Lock className="w-8 h-8 text-teal-500" />,
+    //   title: "End-to-End Encryption",
+    //   description: "All conversations are encrypted and secure from end to end",
+    //   details: [
+    //     "Military-grade encryption",
+    //     "Secure data transmission",
+    //     "Encrypted storage",
+    //     "Regular security audits",
+    //   ],
+    // },
     {
       icon: <Eye className="w-8 h-8 text-teal-500" />,
       title: "Anonymous Participation",
@@ -61,51 +55,51 @@ export default function AccessibilityPrivacy() {
     },
   ];
 
-  const accessibilityFeatures = [
-    {
-      icon: <Smartphone className="w-6 h-6 text-teal-500" />,
-      title: "Mobile Optimized",
-      description: "Full functionality across all devices and screen sizes",
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-teal-500" />,
-      title: "Multi-Language Support",
-      description: "Available in 15+ languages with cultural sensitivity",
-    },
-    {
-      icon: <Eye className="w-6 h-6 text-teal-500" />,
-      title: "Screen Reader Compatible",
-      description: "Full compatibility with assistive technologies",
-    },
-    {
-      icon: <Users className="w-6 h-6 text-teal-500" />,
-      title: "Inclusive Design",
-      description: "Designed for users of all abilities and backgrounds",
-    },
-  ];
+  // const accessibilityFeatures = [
+  //   {
+  //     icon: <Smartphone className="w-6 h-6 text-teal-500" />,
+  //     title: "Mobile Optimized",
+  //     description: "Full functionality across all devices and screen sizes",
+  //   },
+  //   {
+  //     icon: <Globe className="w-6 h-6 text-teal-500" />,
+  //     title: "Multi-Language Support",
+  //     description: "Available in 15+ languages with cultural sensitivity",
+  //   },
+  //   {
+  //     icon: <Eye className="w-6 h-6 text-teal-500" />,
+  //     title: "Screen Reader Compatible",
+  //     description: "Full compatibility with assistive technologies",
+  //   },
+  //   {
+  //     icon: <Users className="w-6 h-6 text-teal-500" />,
+  //     title: "Inclusive Design",
+  //     description: "Designed for users of all abilities and backgrounds",
+  //   },
+  // ];
 
-  const certifications = [
-    {
-      name: "HIPAA Compliant",
-      description: "Healthcare privacy standards",
-      icon: <Shield className="w-6 h-6 text-teal-500" />,
-    },
-    {
-      name: "SOC 2 Type II",
-      description: "Security and availability",
-      icon: <Lock className="w-6 h-6 text-teal-500" />,
-    },
-    {
-      name: "WCAG 2.1 AA",
-      description: "Web accessibility guidelines",
-      icon: <Eye className="w-6 h-6 text-teal-500" />,
-    },
-    {
-      name: "ISO 27001",
-      description: "Information security management",
-      icon: <Award className="w-6 h-6 text-teal-500" />,
-    },
-  ];
+  // const certifications = [
+  //   {
+  //     name: "HIPAA Compliant",
+  //     description: "Healthcare privacy standards",
+  //     icon: <Shield className="w-6 h-6 text-teal-500" />,
+  //   },
+  //   {
+  //     name: "SOC 2 Type II",
+  //     description: "Security and availability",
+  //     icon: <Lock className="w-6 h-6 text-teal-500" />,
+  //   },
+  //   {
+  //     name: "WCAG 2.1 AA",
+  //     description: "Web accessibility guidelines",
+  //     icon: <Eye className="w-6 h-6 text-teal-500" />,
+  //   },
+  //   {
+  //     name: "ISO 27001",
+  //     description: "Information security management",
+  //     icon: <Award className="w-6 h-6 text-teal-500" />,
+  //   },
+  // ];
 
   return (
     <section className="py-16 sm:py-20 bg-black" id="accessibility-privacy">
@@ -163,7 +157,7 @@ export default function AccessibilityPrivacy() {
         </div>
 
         {/* Accessibility Features */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h3 className="text-2xl font-medium text-gray-50 text-center mb-8">
             Accessibility Commitment
           </h3>
@@ -185,10 +179,10 @@ export default function AccessibilityPrivacy() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Certifications */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h3 className="text-2xl font-medium text-gray-50 text-center mb-8">
             Trust & Certifications
           </h3>
@@ -206,19 +200,18 @@ export default function AccessibilityPrivacy() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        {/* Interactive Demo */}
+
         <div className="text-center p-8 bg-gradient-to-r from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border border-white/20">
           <h3 className="text-xl font-medium text-gray-50 mb-4">
-            See Our Privacy in Action
+            Disclaimer
           </h3>
           <p className="text-gray-50/80 mb-6 max-w-2xl mx-auto">
-            Experience how our platform protects your privacy while providing
-            full functionality. Try our interactive demo to see the difference.
+            If you are in crisis or in critical need of help , Xolace is not for you yet. Please contact your local emergency services.
           </p>
           <InteractiveHoverButton className="px-8 py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-lg border-teal-700">
-            Try Interactive Demo
+            Contact Emergency Services
           </InteractiveHoverButton>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import WhyXolaceSection from "@/components/Landing/WhyXolace";
 import HeroSection from "../../components/Landing/HeroSection";
 import HowXolaceWorks from "@/components/Landing/HowItWorks";
-import WhatMakesXolaceDifferent from "@/components/About/WhatMakesXolaceDifferent";
+import XolaceComparisonSection from "@/components/About/XolaceComparisonSection";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <HeroSection />
       <WhyXolaceSection />
       <HowXolaceWorks />
-      <WhatMakesXolaceDifferent/>
+      <XolaceComparisonSection/>
     </main>
   );
 }

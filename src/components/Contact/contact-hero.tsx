@@ -43,7 +43,7 @@ export default function ContactHero() {
             <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
               <Phone className="w-8 h-8 mb-4 text-yellow-300" />
               <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-              <p className="text-blue-100 text-sm">+233xxxxxxxxx</p>
+              <p className="text-blue-100 text-sm">+233 558 218 741</p>
             </div>
             <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
               <MapPin className="w-8 h-8 mb-4 text-yellow-300" />

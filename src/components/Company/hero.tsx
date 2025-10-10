@@ -1,7 +1,8 @@
 "use client";
 
-import { ArrowRight, Play, Users, Shield, Heart, Star } from "lucide-react";
+import { ArrowRight, Users, Shield, Heart, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CompanyHero() {
   const stats = [
@@ -83,19 +84,19 @@ export default function CompanyHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <button className="group px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <Link href={"https://xolace.app"} target="_blank" className="group px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 <span className="flex items-center justify-center gap-2">
                   Join Our Community
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </button>
+              </Link>
 
-              <button className="group px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm">
+              {/* <button className="group px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm">
                 <span className="flex items-center justify-center gap-2">
                   <Play className="w-5 h-5" />
                   Watch Our Story
                 </span>
-              </button>
+              </button> */}
             </div>
 
             {/* Stats */}
@@ -122,11 +123,11 @@ export default function CompanyHero() {
                 {/* Hero Image */}
                 <div className="relative w-full h-full">
                   <Image
-                    src="/placeholder.svg?height=500&width=500"
+                    src="/assets/photos/Company/campfire-hero.JPG"
                     alt="Xolace community support illustration"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain drop-shadow-2xl"
+                    className="object-cover drop-shadow-2xl rounded-2xl"
                     quality={95}
                     priority
                   />
@@ -169,7 +170,7 @@ export default function CompanyHero() {
       </div>
 
       {/* Bottom Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center hidden md:block">
+      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-center hidden">
         <div className="flex flex-col items-center gap-2 text-gray-50/60">
           <span className="text-sm">Discover More</span>
           <div className="w-6 h-10 border-2 border-gray-50/30 rounded-full flex justify-center">

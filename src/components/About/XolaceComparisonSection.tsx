@@ -30,17 +30,23 @@ export default function XolaceComparisonSection() {
       social: true,
     },
     {
-      feature: "Privacy & anonymity options",
+      feature: "Mentor Support",
       xolace: true,
       therapy: false,
       social: false,
     },
     {
-      feature: "AI-powered emotional insights",
+      feature: "Privacy & anonymity options",
       xolace: true,
       therapy: false,
       social: false,
     },
+    // {
+    //   feature: "AI-powered emotional insights",
+    //   xolace: true,
+    //   therapy: false,
+    //   social: false,
+    // },
     {
       feature: "Structured professional help",
       xolace: true,
@@ -59,12 +65,12 @@ export default function XolaceComparisonSection() {
       therapy: false,
       social: true,
     },
-    {
-      feature: "Personal growth tracking tools",
-      xolace: true,
-      therapy: false,
-      social: false,
-    },
+    // {
+    //   feature: "Personal growth tracking tools",
+    //   xolace: true,
+    //   therapy: false,
+    //   social: false,
+    // },
   ];
 
   return (

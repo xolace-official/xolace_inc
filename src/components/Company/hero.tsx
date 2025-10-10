@@ -122,11 +122,11 @@ export default function CompanyHero() {
                 {/* Hero Image */}
                 <div className="relative w-full h-full">
                   <Image
-                    src="/placeholder.svg?height=500&width=500"
+                    src="/assets/photos/Company/campfire-hero.JPG"
                     alt="Xolace community support illustration"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain drop-shadow-2xl"
+                    className="object-cover drop-shadow-2xl rounded-2xl"
                     quality={95}
                     priority
                   />
@@ -169,7 +169,7 @@ export default function CompanyHero() {
       </div>
 
       {/* Bottom Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center hidden md:block">
+      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-center hidden">
         <div className="flex flex-col items-center gap-2 text-gray-50/60">
           <span className="text-sm">Discover More</span>
           <div className="w-6 h-10 border-2 border-gray-50/30 rounded-full flex justify-center">

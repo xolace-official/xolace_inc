@@ -9,10 +9,6 @@ import { motion } from "motion/react";
 import { Input } from "../ui/input";
 import { Button } from "@/components/ui/button";
 import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
   Mail,
   MapPin,
   Phone,

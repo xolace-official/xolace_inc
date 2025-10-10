@@ -17,6 +17,8 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+import { quickLinks } from "@/constants/footer/quick-links";
+import { socialLinks } from "@/constants/footer/social-links";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -107,30 +109,21 @@ export function Footer() {
               dedicated to supporting mental well-being through thoughtful,
               meaningful technology
             </p>
-            <div className="flex space-x-4">
-              {["Facebook", "Instagram", "Twitter", "Linkedin"].map(
+            <div className="flex space-x-4 align-center">
+              {socialLinks.map(
                 (social) => (
                   <motion.div
-                    key={social}
+                    key={social.name}
                     initial="initial"
                     whileHover="hover"
                     variants={socialHoverVariants}
                   >
                     <Link
-                      href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      href={social.link}
+                      className=" hover:text-white transition-colors"
                     >
-                      {social === "Facebook" && (
-                        <Facebook className="h-5 w-5" />
-                      )}
-                      {social === "Instagram" && (
-                        <Instagram className="h-5 w-5" />
-                      )}
-                      {social === "Twitter" && <Twitter className="h-5 w-5" />}
-                      {social === "Linkedin" && (
-                        <Linkedin className="h-5 w-5" />
-                      )}
-                      <span className="sr-only">{social}</span>
+                      {social.icon}
+                      <span className="sr-only">{social.name}</span>
                     </Link>
                   </motion.div>
                 )
@@ -144,10 +137,9 @@ export function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              {["Company", "Product", "Resources", "Support", "About Us"].map(
-                (link, index) => (
+              {quickLinks.map((link, index) => (
                   <motion.li
-                    key={link}
+                    key={link.title}
                     variants={{
                       hidden: { opacity: 0, x: -20 },
                       visible: {
@@ -158,10 +150,10 @@ export function Footer() {
                     }}
                   >
                     <Link
-                      href="#"
+                      href={link.link}
                       className="text-gray-400 hover:text-white transition-colors"
                     >
-                      {link}
+                      {link.title}
                     </Link>
                   </motion.li>
                 )
@@ -241,6 +233,7 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 aria-label="Email address"
+                disabled
               />
               <motion.div
                 whileHover={{ scale: 1.02 }}
@@ -249,6 +242,7 @@ export function Footer() {
                 <Button
                   type="submit"
                   className="w-full bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white"
+                  disabled
                 >
                   Subscribe
                 </Button>

@@ -2,6 +2,7 @@
 
 import { ArrowRight, Play, Users, Shield, Heart, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CompanyHero() {
   const stats = [
@@ -83,19 +84,19 @@ export default function CompanyHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <button className="group px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <Link href={"https://xolace.app"} target="_blank" className="group px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 <span className="flex items-center justify-center gap-2">
                   Join Our Community
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </button>
+              </Link>
 
-              <button className="group px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm">
+              {/* <button className="group px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm">
                 <span className="flex items-center justify-center gap-2">
                   <Play className="w-5 h-5" />
                   Watch Our Story
                 </span>
-              </button>
+              </button> */}
             </div>
 
             {/* Stats */}

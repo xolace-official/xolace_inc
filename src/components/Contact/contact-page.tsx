@@ -42,6 +42,7 @@ export default function OurContactPage() {
               </label>
               <Input
                 className="bg-[#131325] border border-[#2e2e45] text-white"
+                disabled
                 required
               />
             </div>
@@ -52,6 +53,7 @@ export default function OurContactPage() {
               <Input
                 type="email"
                 className="bg-[#131325] border border-[#2e2e45] text-white"
+                disabled
                 required
               />
             </div>
@@ -61,6 +63,7 @@ export default function OurContactPage() {
               </label>
               <Textarea
                 className="bg-[#131325] border border-[#2e2e45] text-white"
+                disabled
                 rows={5}
                 required
               />
@@ -68,6 +71,7 @@ export default function OurContactPage() {
             <Button
               type="submit"
               className="w-full bg-[#7c4dff] hover:bg-[#693de5] transition-colors"
+              disabled
             >
               Send Message
             </Button>
